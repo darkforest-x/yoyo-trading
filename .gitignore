@@ -1,16 +1,24 @@
-# pip install -e build metadata: regenerated on every install
-*.egg-info/
-build/
-dist/
-
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
 .DS_Store
-# Data, models and run artefacts never enter this repo (iron rule 6).
-data/
-datasets/
-models/
-runs/
-output/
+
+# pip install -e build metadata: regenerated on every install
+*.egg-info/
+build/
+dist/
+
+# Data, models and run artefacts never enter this repo (iron rule 6). Anchored
+# with a leading slash on purpose: a bare "data/" also matches yoyo/data/, which
+# is a source package, and silently left indicators.py out of the first commit --
+# a fresh clone would have been missing a module L1 imports.
+/data/
+/datasets/
+/models/
+/runs/
+/output/
+
+# Scratch renders. The detector writes these next to whatever it thinks the
+# project root is; they are never source.
+_yolo_cand_tmp_*.png
