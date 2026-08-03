@@ -63,9 +63,39 @@ forward log(L2 写、L4 读)和 barrier 参数(L1/L2/L3 都要读)本来就不�
 | `yoyo/data/` | 已迁 — indicators |
 | `yoyo/layers/l1_detection/` | 已迁 — render · data · candidates |
 | `yoyo/layers/l4_execution/` | 已迁 — config · executor · ledger · okx_client · symbols |
-| `yoyo/layers/l2_judgment/` | **未迁** — 最难,要拆 `forward_scan` 那 725 行 |
+| `yoyo/layers/l2_judgment/` | 部分 — features · frozen · train · labeling · forward_types 已迁;`forward_scan` / `forward` 未迁 |
 | `yoyo/layers/l3_backtest/` | **未迁** |
 | `yoyo/cli/` | 空 — 真入口待建(不是 253 个脚本) |
+
+## 剩下的那台手术:`forward_scan.py`
+
+`~/fable-trading/src/judgment/forward_scan.py`(725 行)+ `forward.py`(326 行)**故意没搬**。
+它们是这次重构里唯一不能"搬"、只能"重新设计"的部分,原因写在这里,免得下一个人以为是遗漏。
+
+**为什么不能直接搬**:`scan_forward_records` 用 **3 线程池并行跑 L1 候选发现**,
+再**顺序跑 L2 打分**,中间的 `discover_wall` / `phase2_wall` 是**铁律「脉冲 <15min」的监控点**。
+把 L1/L2 拆进不同模块 = 重构这套并发。超预算的后果不是慢,是**结构性挡住 tip 信号**。
+
+**已确定的设计**(不必重新讨论,直接照做):
+
+```
+yoyo/layers/l1_detection/scan.py     series → 候选下标(现 _discover / forward_candidate_indices
+                                     / _rule_candidate_indices,约 60 行)
+yoyo/layers/l2_judgment/score.py     候选 + frame → 分数 + ForwardExit
+                                     (现 _artifact_* / _extract_rows_for_artifact
+                                     / resolve_forward_exit* 适配器,约 250 行)
+yoyo/cli/forward_pulse.py            编排:调 L1 → 调 L2 → 写 contracts/forward_log
+                                     **编排器不是层** —— 这就是它现在卡住的原因
+```
+
+**动手前必须做的两件事**:
+1. 先量一次当前 `discover_wall` / `phase2_wall` 的基线,拆完再量,**不得变慢**。
+2. 出场解算**已经没有分叉**:`resolve_forward_exit_short` 只是把
+   `contracts/outcomes.resolve_barrier_outcome` 适配成 `ForwardExit`(P0.5 已治好)。
+   **不要再"统一"一次**,那会造出第三套。
+
+`src/judgment` 下另有 17 个研究/工具模块(barrier_sweep · p1_build · p2_l2 · shadow_* 等),
+**不属于四层骨架**,不要因为它们同在一个目录就升进 `layers/`。
 
 ## 代码标准
 
