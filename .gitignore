@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+# Data, models and run artefacts never enter this repo (iron rule 6).
+data/
+datasets/
+models/
+runs/
+output/

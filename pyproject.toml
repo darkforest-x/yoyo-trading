@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yoyo-trading"
+version = "0.1.0"
+description = "Four-layer short-signal system: YOLO detection, LightGBM judgment, backtest, execution"
+requires-python = ">=3.9"
+# Deliberately empty. CLAUDE.md forbids new heavy dependencies; pandas, lightgbm
+# and ultralytics come from the environment that already has them, so installing
+# this package never drags a solver into a working venv.
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["yoyo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
