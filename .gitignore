@@ -9,14 +9,10 @@ __pycache__/
 build/
 dist/
 
-# Data, models and run artefacts never enter this repo (iron rule 6). Anchored
-# with a leading slash on purpose: a bare "data/" also matches yoyo/data/, which
-# is a source package, and silently left indicators.py out of the first commit --
-# a fresh clone would have been missing a module L1 imports.
+# A bare "data/" also matches yoyo/data/ (source package) — keep that anchored.
+# Dataset images, labels and run artefacts now live in this repo (V5 home).
 /data/
-/datasets/
 /models/
-/runs/
 /output/
 
 # Scratch renders. The detector writes these next to whatever it thinks the

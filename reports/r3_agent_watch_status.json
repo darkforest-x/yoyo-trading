@@ -1,0 +1,10 @@
+{
+  "ts": "2026-08-12T23:39:57+0800",
+  "poll": 7,
+  "canary_alive": false,
+  "canary_done": true,
+  "canary_line": "}",
+  "r3b_epochs": 20,
+  "r3b_complete": true,
+  "both_ready": true
+}

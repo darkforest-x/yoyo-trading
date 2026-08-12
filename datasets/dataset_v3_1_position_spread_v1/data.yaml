@@ -1,0 +1,5 @@
+path: /Users/zhangzc/yoyo-trading/datasets/dataset_v3_1_position_spread_v1
+train: images/train
+val: images/val
+names:
+  0: ma_dense_core

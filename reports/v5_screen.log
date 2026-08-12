@@ -1,0 +1,20 @@
+V3.1 canary scanning
+V3.1 canary scanning
+scan symbols=215 stale=0 latest=2026-05-03 12:00:00+00:00 start=2026-05-03 00:00:00+00:00 W=12-19 conf=0.25
+scan [5/215] exposures=1920 raw=33 wall_min=0.9
+scan [10/215] exposures=3840 raw=295 wall_min=2.3
+scan [15/215] exposures=5760 raw=382 wall_min=3.7
+scan [20/215] exposures=7680 raw=508 wall_min=5.0
+scan [25/215] exposures=9600 raw=760 wall_min=6.4
+scan [30/215] exposures=11520 raw=990 wall_min=8.0
+scan [35/215] exposures=13440 raw=1162 wall_min=9.4
+scan [40/215] exposures=15360 raw=1301 wall_min=10.8
+scan [45/215] exposures=17280 raw=1342 wall_min=12.5
+scan [50/215] exposures=19200 raw=1421 wall_min=14.1
+scan [55/215] exposures=21120 raw=1628 wall_min=15.4
+scan [60/215] exposures=23040 raw=1706 wall_min=16.7
+scan [65/215] exposures=24960 raw=1870 wall_min=17.9
+scan [70/215] exposures=26880 raw=2057 wall_min=19.1
+scan [75/215] exposures=28800 raw=2166 wall_min=20.2
+scan [80/215] exposures=30720 raw=2270 wall_min=21.5
+scan [85/215] exposures=32640 raw=2320 wall_min=22.9

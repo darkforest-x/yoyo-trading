@@ -1,0 +1,40 @@
+{
+  "protocol": "yoyo_dataset_v3_1_position_spread_v1_20260812",
+  "generated_at": "2026-08-12T16:01:59.533727+00:00",
+  "parent_dataset": "dataset_v3_gold_core_v1",
+  "class_name": "ma_dense_core",
+  "direction_scope": "short_pipeline",
+  "window_protocol": "owner_w12_19_causal_end_at_decision_position_spread",
+  "feature_stack": "SMA20/60/120 + EMA20/60/120",
+  "single_variable": "positive_crop_W_in_12_19",
+  "dataset_dir": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_1_position_spread_v1",
+  "builder_commit": "cb1e23a",
+  "source_repo": "/Users/zhangzc/fable-trading",
+  "counts": {
+    "total": 3453,
+    "positive": 1345,
+    "negative": 2108,
+    "train_positive": 1143,
+    "val_positive": 202
+  },
+  "positive_core_position": {
+    "left": 72,
+    "middle": 636,
+    "right": 637
+  },
+  "window_lengths": {
+    "12": 72,
+    "14": 65,
+    "15": 118,
+    "17": 97,
+    "18": 39,
+    "19": 954
+  },
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_read": false,
+  "future_used_for_l1_label": false,
+  "manifest_path": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_1_position_spread_v1/manifest.jsonl",
+  "manifest_sha256": "1e6f087a8a5c7f5918f44da9b9d3f54694518228034760edee119ef311bc7b3e",
+  "training_eligible": true,
+  "note": "Left is capped by geometry: only cores far enough before decision can sit in the left third at W>=12. This is the maximum causal spread."
+}

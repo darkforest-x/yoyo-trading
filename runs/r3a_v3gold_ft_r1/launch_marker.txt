@@ -1,0 +1,12 @@
+22:03:45 py_begin 2026-08-12T22:03:45
+22:03:45 executable=C:\fable\.venv\Scripts\python.exe
+22:03:45 version=3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AMD64)]
+22:03:45 tar_exists=True size=198376448
+22:03:45 extracting tar...
+22:03:47 tar_rc=0
+22:03:47 tar removed
+22:03:47 base_exists=True size=19185882
+22:03:47 yaml ok: path: C:/fable/datasets/dataset_v3_gold_core_v1 | train: images/train | val: images/val | names: |   0: ma_dense_core | 
+22:03:47 spawned pid=11524
+22:03:53 log_bytes=100
+22:03:53 py_end ok
