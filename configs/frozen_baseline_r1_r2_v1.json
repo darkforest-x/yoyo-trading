@@ -28,7 +28,7 @@
     "perspective", "flipud", "fliplr", "mosaic", "mixup", "cutmix", "copy_paste", "erasing"
   ],
   "static_metrics": {
-    "baseline_v1_ft": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/mac_val_metrics.json",
+    "baseline_v1_ft": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/local_val_metrics.json",
     "r1": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/mac_val_metrics.json",
     "r2": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r2_ownerconfirmed_ft/mac_val_metrics.json"
   },

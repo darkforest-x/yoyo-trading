@@ -98,6 +98,23 @@ def scalar_yaml(path: Path, keys: list[str]) -> dict[str, Any]:
     return found
 
 
+REQUIRED_METRICS = ("precision", "recall", "map50", "map50_95")
+
+
+def static_metrics(payload: dict[str, Any], path: Path) -> dict[str, Any]:
+    """Accept both val-metric shapes written by this project.
+
+    The Mac re-validation runs wrap their numbers in ``metrics``; the earlier
+    baseline run wrote them flat. Guessing wrong here would freeze an empty
+    baseline, so unwrap explicitly and insist the four headline metrics exist.
+    """
+    metrics = payload.get("metrics") if isinstance(payload.get("metrics"), dict) else payload
+    missing = [key for key in REQUIRED_METRICS if key not in metrics]
+    if missing:
+        raise KeyError(f"{path} has no {missing} to freeze")
+    return {key: metrics[key] for key in metrics if isinstance(metrics[key], (int, float))}
+
+
 def dataset_facts(root: Path) -> dict[str, Any]:
     facts: dict[str, Any] = {"path": str(root), "data_yaml_sha256": None, "manifests": {}}
     data_yaml = require(root / "data.yaml", f"data.yaml of {root.name}")
@@ -164,7 +181,7 @@ def freeze(source_config: Path, spec_path: Path, out_path: Path) -> dict[str, An
         payload = read_json(path)
         static[name] = {
             "weights_sha256": payload.get("weights_sha256"),
-            "metrics": payload.get("metrics"),
+            "metrics": static_metrics(payload, path),
             "evaluation_scope": payload.get("evaluation_scope"),
             "data_yaml_sha256": payload.get("data_yaml_sha256"),
             "path": rel,

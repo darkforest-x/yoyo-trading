@@ -5,7 +5,7 @@ import json
 
 import pytest
 
-from tools.freeze_baseline import freeze, scalar_yaml
+from tools.freeze_baseline import freeze, scalar_yaml, static_metrics
 
 ARGS_YAML = """task: detect
 model: C:/fable/models/yolo11s_w20.pt
@@ -68,7 +68,13 @@ def build_source(tmp_path, canary_overrides=None):
     (repo / "run").mkdir()
     (repo / "run/args.yaml").write_text(ARGS_YAML, encoding="utf-8")
     (repo / "run/val.json").write_text(
-        json.dumps({"weights_sha256": "abc", "metrics": {"map50": 0.9}}), encoding="utf-8"
+        json.dumps(
+            {
+                "weights_sha256": "abc",
+                "metrics": {"precision": 0.86, "recall": 0.78, "map50": 0.9, "map50_95": 0.74},
+            }
+        ),
+        encoding="utf-8",
     )
     dataset = repo / "datasets/ds"
     dataset.mkdir(parents=True)
@@ -124,6 +130,17 @@ def test_scalar_yaml_rejects_missing_recipe_key(tmp_path) -> None:
     path.write_text("epochs: 40\n", encoding="utf-8")
     with pytest.raises(KeyError, match="missing recipe keys"):
         scalar_yaml(path, ["epochs", "seed"])
+
+
+def test_static_metrics_accepts_wrapped_and_flat_shapes(tmp_path) -> None:
+    flat = {"precision": 0.85, "recall": 0.90, "map50": 0.92, "map50_95": 0.73}
+    assert static_metrics(flat, tmp_path / "flat.json") == flat
+    assert static_metrics({"metrics": flat, "weights_sha256": "x"}, tmp_path / "w.json") == flat
+
+
+def test_static_metrics_rejects_a_file_with_no_headline_numbers(tmp_path) -> None:
+    with pytest.raises(KeyError, match="map50"):
+        static_metrics({"precision": 0.85, "recall": 0.9}, tmp_path / "half.json")
 
 
 def test_freeze_records_shas_and_flags_augmentation_off(tmp_path) -> None:
