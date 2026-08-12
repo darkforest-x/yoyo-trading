@@ -107,3 +107,33 @@ python3 + pandas/lightgbm/ultralytics。模块级 docstring 说明**来源与决
 
 holdout、阈值预设、障碍参数(TP/SL 倍数、atr 下限)、成本假设、
 ACTIVE/bundle 切换、promote、真下单、新鲜度门 —— **一律先问 owner,不要"先试试"。**
+
+---
+
+## L1 Dataset V3 / R3 阶段锁定(Owner V5 简报,2026-08-12)
+
+本阶段只抓两个结果:**数据集准确**、**模型训练准确**。目录美化、完整历史迁移、
+文档扩写和无关重构**不得阻塞**这两件事。
+
+1. 只服务 **SHORT pipeline**,第一阶段不开发 LONG,不新增方向类别。
+2. L1 唯一类别 `ma_dense_core`;L1 只回答"decision 及以前有没有 Owner 认可的均线密集核心、在哪"。
+3. **L1 标签不由未来涨跌决定**。当时密集成立、后来上涨/横盘/做空失败 —— 仍是 L1 正样本,
+   只可能是 L2 的 outcome 负样本。
+4. 优先复用 `fable-trading`(REUSE → ADAPT → REFERENCE → 有证据才 REWRITE),不得无理由重写。
+5. 数据集准确与模型准确 **优先于** 完整重构。
+6. **类别确认与框几何确认必须分开**:`class_status` 与 `box_status` 分列;
+   `model_proposed` 框未经审核不得进训练金标;协议级确认 ≠ 逐样本确认。
+7. 时间切分优先,**禁止随机图片切分**;split 之间 purge,同一 event 不跨 split。
+8. 禁止未来 K、事件重复、增强泄漏;`visible_end_bar <= decision_bar`。
+9. **不得只看 mAP 宣布成功**;裁决靠连续行情事件密度 + Gold Core 召回(见 `docs/EVALUATION_PROTOCOL.md`)。
+10. 每个实验必须有 lineage、配置、日志与 SHA(见 `docs/EXPERIMENT_PROTOCOL.md`)。
+11. 不得擅自读取 holdout、部署或下单。
+12. 关键结果及时更新 `HANDOFF.md`,但**报告先给简洁结论**,细节放附件。
+
+**窗口协议(Owner 2026-08-12 裁定)**:Dataset V3 沿用 R1 的 **W12–19 动态 center-crop**,
+首轮只改数据。V5 §7 字面的 W=30 属更早的 P1 `dense_start` 血统,留作后续单变量臂;
+代价是 center-crop 的位置 shortcut 本轮修不掉,左/中/右召回必须照报。
+
+**本仓存放范围的修订**:原则仍是"本仓只放代码",但本阶段允许 `configs/`、`manifests/`、
+`reports/` 存放**小体积 JSON / Markdown**(冻结基线、数据集 manifest、给 Owner 的结论页)。
+图片、权重、K 线、runs 仍然只在 `fable-trading`。

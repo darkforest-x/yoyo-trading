@@ -1,0 +1,481 @@
+{
+  "protocol": "yoyo_l1_frozen_baseline_r1_r2_v1_20260812",
+  "frozen_at": "2026-08-12T10:44:02.863195+00:00",
+  "detection_class": "ma_dense_core",
+  "direction_scope": "short_pipeline",
+  "window_protocol": {
+    "name": "owner_gold_center_crop_w12_19",
+    "window_lengths": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "owner_decision": "2026-08-12 owner chose to keep R1's dynamic W12-19 for Dataset V3 so the first R3 round changes data only; the V5 brief's literal W=30 belongs to the older P1 dense_start lineage.",
+    "known_limitation": "center-crop keeps the core near the middle; left/right position coverage cannot be fixed in this round and must be reported, not claimed."
+  },
+  "repos": {
+    "fable_trading": {
+      "path": "/Users/zhangzc/fable-trading",
+      "commit": "92b2571ba5084f71d129874438f7e99323d49de4"
+    },
+    "yoyo_trading": {
+      "path": "/Users/zhangzc/yoyo-trading",
+      "commit": "f431c41700f0078620f66e00e82bee232a60aee1"
+    }
+  },
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_read": false,
+  "weights": {
+    "stage_a_base": {
+      "path": "analysis/output/lsv2_stagea/owner_lsv2_stagea_randomcrop_v1_cold/weights/best.pt",
+      "sha256": "c0e94f47df125e298b044d9f10acd0b8e4f525ccd6143ce34f8d174af802bf1a",
+      "bytes": 19185818
+    },
+    "baseline_v1_ft": {
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/weights/best.pt",
+      "sha256": "da278820f2d96a64006d9ff6358b7c98faec52249ec8a6f4fe6bf55254fc65b4",
+      "bytes": 19185818
+    },
+    "r1": {
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/weights/best.pt",
+      "sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+      "bytes": 19185882
+    },
+    "r2": {
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r2_ownerconfirmed_ft/weights/best.pt",
+      "sha256": "52cd38fda253f052c3c8eb712d93557c0125dceb336fb4cd58136236dca32afe",
+      "bytes": 19185882
+    },
+    "official_pretrained": {
+      "path": "models/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "bytes": 19313732
+    }
+  },
+  "training_recipe": {
+    "source": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/args.yaml",
+    "values": {
+      "epochs": 40,
+      "patience": 10,
+      "batch": 8,
+      "imgsz": 960,
+      "optimizer": "AdamW",
+      "seed": 0,
+      "deterministic": true,
+      "rect": true,
+      "augment": false,
+      "hsv_h": 0.0,
+      "hsv_s": 0.0,
+      "hsv_v": 0.0,
+      "degrees": 0.0,
+      "translate": 0.02,
+      "scale": 0.1,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.0,
+      "mosaic": 0.0,
+      "mixup": 0.0,
+      "cutmix": 0.0,
+      "copy_paste": 0.0,
+      "erasing": 0.0
+    },
+    "augmentation_fully_disabled": true
+  },
+  "static_val_metrics": {
+    "baseline_v1_ft": {
+      "weights_sha256": null,
+      "metrics": {
+        "precision": 0.8467162461203842,
+        "recall": 0.9024156120357999,
+        "map50": 0.9205666162960785,
+        "map50_95": 0.7293979124366936,
+        "fitness": 0.7293979124366936
+      },
+      "evaluation_scope": null,
+      "data_yaml_sha256": null,
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/local_val_metrics.json"
+    },
+    "r1": {
+      "weights_sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+      "metrics": {
+        "fitness": 0.740481255838809,
+        "map50": 0.8979896196062742,
+        "map50_95": 0.740481255838809,
+        "precision": 0.8626075548683261,
+        "recall": 0.7770332816777026
+      },
+      "evaluation_scope": "frozen_rendered_val",
+      "data_yaml_sha256": "bb8fa22299567b3fa59f3a2987e59c0be3a8f953a5058049c2c3c1b1158c47c5",
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/mac_val_metrics.json"
+    },
+    "r2": {
+      "weights_sha256": "52cd38fda253f052c3c8eb712d93557c0125dceb336fb4cd58136236dca32afe",
+      "metrics": {
+        "fitness": 0.7412686245583077,
+        "map50": 0.8774116274649548,
+        "map50_95": 0.7412686245583077,
+        "precision": 0.8474713107155035,
+        "recall": 0.7524752475247525
+      },
+      "evaluation_scope": "frozen_rendered_val",
+      "data_yaml_sha256": "1181e05b718b9437da53339dd7ee0f3037f6034cbc99cb0cb699d9eface7efc2",
+      "path": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r2_ownerconfirmed_ft/mac_val_metrics.json"
+    }
+  },
+  "datasets": {
+    "gold_center_v1": {
+      "path": "/Users/zhangzc/fable-trading/datasets/owner_short_gold_center_v1",
+      "data_yaml_sha256": "71cd82c0f93996f3a9d79bff1026534232cac9e5c2aa52368e4c38a3991526af",
+      "manifests": {
+        "positive_manifest": {
+          "sha256": "8f4119fbf634ec976077e8eb50b36e57ae3aa0471759cad04f2eaeaeacd6d21b",
+          "rows": 1345,
+          "by_split": {
+            "train": 1143,
+            "val": 202
+          },
+          "by_win_len": {
+            "12": 213,
+            "13": 335,
+            "14": 278,
+            "15": 130,
+            "16": 231,
+            "17": 86,
+            "18": 25,
+            "19": 47
+          }
+        },
+        "negative_manifest": {
+          "sha256": "3a32bd618e6944036316a1244329f411bed9b3988740cb9cb54d03a6eaa3c6f0",
+          "rows": 1343,
+          "by_split": {
+            "train": 1143,
+            "val": 200
+          },
+          "by_win_len": {
+            "12": 213,
+            "13": 335,
+            "14": 277,
+            "15": 130,
+            "16": 230,
+            "17": 86,
+            "18": 25,
+            "19": 47
+          }
+        }
+      }
+    },
+    "gold_center_hardneg_r1": {
+      "path": "/Users/zhangzc/fable-trading/datasets/owner_short_gold_center_hardneg_r1",
+      "data_yaml_sha256": "bb8fa22299567b3fa59f3a2987e59c0be3a8f953a5058049c2c3c1b1158c47c5",
+      "manifests": {
+        "positive_manifest": {
+          "sha256": "4a8351081ab295eb98f6dc76c53584975798f859688f3c0c768dc71f49d62217",
+          "rows": 1345,
+          "by_split": {
+            "train": 1143,
+            "val": 202
+          },
+          "by_win_len": {
+            "12": 213,
+            "13": 335,
+            "14": 278,
+            "15": 130,
+            "16": 231,
+            "17": 86,
+            "18": 25,
+            "19": 47
+          }
+        },
+        "negative_manifest": {
+          "sha256": "7e1debb3c0ea4240730c20722c09287f58dda3f0a09270435439d66cff9b22a6",
+          "rows": 3629,
+          "by_split": {
+            "train": 3429,
+            "val": 200
+          },
+          "by_win_len": {
+            "12": 561,
+            "13": 915,
+            "14": 755,
+            "15": 358,
+            "16": 622,
+            "17": 222,
+            "18": 67,
+            "19": 129
+          }
+        },
+        "hard_negative_manifest": {
+          "sha256": "be5b524db328748fdde0668732a0b3199e06fb69548efa4f3af4bc817831a044",
+          "rows": 2286,
+          "by_split": {
+            "train": 2286
+          },
+          "by_win_len": {
+            "12": 348,
+            "13": 580,
+            "14": 478,
+            "15": 228,
+            "16": 392,
+            "17": 136,
+            "18": 42,
+            "19": 82
+          }
+        }
+      }
+    },
+    "gold_center_hardneg_r2": {
+      "path": "/Users/zhangzc/fable-trading/datasets/owner_short_gold_center_hardneg_r2_ownerconfirmed",
+      "data_yaml_sha256": "1181e05b718b9437da53339dd7ee0f3037f6034cbc99cb0cb699d9eface7efc2",
+      "manifests": {
+        "positive_manifest": {
+          "sha256": "dc82541c8404468d7b0dc38424535b478bbb79f14106690690870b38e1318492",
+          "rows": 1345,
+          "by_split": {
+            "train": 1143,
+            "val": 202
+          },
+          "by_win_len": {
+            "12": 213,
+            "13": 335,
+            "14": 278,
+            "15": 130,
+            "16": 231,
+            "17": 86,
+            "18": 25,
+            "19": 47
+          }
+        },
+        "negative_manifest": {
+          "sha256": "f18da61f7e19afabff68678963b431a483e30641eff8907ba8f3098356239bb2",
+          "rows": 3629,
+          "by_split": {
+            "train": 3429,
+            "val": 200
+          },
+          "by_win_len": {
+            "12": 561,
+            "13": 915,
+            "14": 755,
+            "15": 358,
+            "16": 622,
+            "17": 222,
+            "18": 67,
+            "19": 129
+          }
+        },
+        "hard_negative_manifest": {
+          "sha256": "0e85e23e4f2f972cf1999b507a28ab99eaf2986a2bc3b51e07a5de64e85da8c0",
+          "rows": 2286,
+          "by_split": {
+            "train": 2286
+          },
+          "by_win_len": {
+            "12": 348,
+            "13": 580,
+            "14": 478,
+            "15": 228,
+            "16": 392,
+            "17": 136,
+            "18": 42,
+            "19": 82
+          }
+        }
+      }
+    }
+  },
+  "gold_geometry_source": {
+    "path": "analysis/output/owner_side_review/review_sheet.csv",
+    "sha256": "bb7081e7e1821c5f791486fae0f29caf18307b104bbb07156c35883781071c9a"
+  },
+  "continuous_canary": {
+    "am": {
+      "baseline_v1_ft": {
+        "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+        "latest_bar": "2026-05-03T12:00:00+00:00",
+        "replay_start_exclusive": "2026-05-03T00:00:00+00:00",
+        "hours": 12.0,
+        "window_lengths": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "confidence": 0.25,
+        "nms_iou": 0.7,
+        "event_gap_bars": 5,
+        "bar_endpoints": 10320,
+        "window_exposures": 82560,
+        "evaluation_scope": "preholdout_postval_canary",
+        "holdout_use_number": 0,
+        "weights_sha256": "da278820f2d96a64006d9ff6358b7c98faec52249ec8a6f4fe6bf55254fc65b4",
+        "scanned_symbols": 215,
+        "raw_detections": 22037,
+        "deduplicated_events": 732,
+        "summary_path": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/merged_baseline/scan_summary.json",
+        "summary_sha256": "f22200b094483546bb3b06de02207a9f0e858286adc6c8b73061f74c02de19b8"
+      },
+      "r1": {
+        "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+        "latest_bar": "2026-05-03T12:00:00+00:00",
+        "replay_start_exclusive": "2026-05-03T00:00:00+00:00",
+        "hours": 12.0,
+        "window_lengths": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "confidence": 0.25,
+        "nms_iou": 0.7,
+        "event_gap_bars": 5,
+        "bar_endpoints": 10320,
+        "window_exposures": 82560,
+        "evaluation_scope": "preholdout_postval_canary",
+        "holdout_use_number": 0,
+        "weights_sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+        "scanned_symbols": 215,
+        "raw_detections": 8268,
+        "deduplicated_events": 331,
+        "summary_path": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/merged_hardneg/scan_summary.json",
+        "summary_sha256": "dfa03f81b4bb86feedf5f9138a470cfdf5e2b10db5deb611839cef1eb8c24895"
+      }
+    },
+    "pm": {
+      "r1": {
+        "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+        "latest_bar": "2026-05-03T23:45:00+00:00",
+        "replay_start_exclusive": "2026-05-03T12:00:00+00:00",
+        "hours": 11.75,
+        "window_lengths": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "confidence": 0.25,
+        "nms_iou": 0.7,
+        "event_gap_bars": 5,
+        "bar_endpoints": 10105,
+        "window_exposures": 80840,
+        "evaluation_scope": "preholdout_postval_canary",
+        "holdout_use_number": 0,
+        "weights_sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+        "scanned_symbols": 215,
+        "raw_detections": 3964,
+        "deduplicated_events": 223,
+        "summary_path": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_pm_v1/merged_r1/scan_summary.json",
+        "summary_sha256": "9bda22c3a81a8f9fa0f1dbf343eb8ff58b8cf74ff30841d1e25088d16e0dac13"
+      },
+      "r2": {
+        "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+        "latest_bar": "2026-05-03T23:45:00+00:00",
+        "replay_start_exclusive": "2026-05-03T12:00:00+00:00",
+        "hours": 11.75,
+        "window_lengths": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "confidence": 0.25,
+        "nms_iou": 0.7,
+        "event_gap_bars": 5,
+        "bar_endpoints": 10105,
+        "window_exposures": 80840,
+        "evaluation_scope": "preholdout_postval_canary",
+        "holdout_use_number": 0,
+        "weights_sha256": "52cd38fda253f052c3c8eb712d93557c0125dceb336fb4cd58136236dca32afe",
+        "scanned_symbols": 215,
+        "raw_detections": 3538,
+        "deduplicated_events": 195,
+        "summary_path": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_pm_v1/merged_r2/scan_summary.json",
+        "summary_sha256": "d9799ac0d6700fa330237e2bf0b24dc42b4b85b45310fedc167cf026f6e4d6c5"
+      }
+    }
+  },
+  "owner_review_packs": {
+    "hardneg_review200_v1": {
+      "path": "analysis/output/owner_short_train_hardneg_review200_v1/owner_review_summary.json",
+      "present": true,
+      "sha256": "28fd6893f41ea1e14290d72deeff1e0e5ff265be28fe2396658d0c4369f90ecb",
+      "rows": 200,
+      "owner_yes": 18,
+      "owner_no": 182,
+      "protocol": "owner_short_train_hardneg_review200_v1_20260811"
+    },
+    "positive_retrieval100_v1": {
+      "path": "analysis/output/owner_short_train_positive_retrieval100_v1/owner_review_summary.json",
+      "present": true,
+      "sha256": "b1e9f1a7d76103aa350685367fa33a036ced5ed932f196fd12de9a2f8add50e8",
+      "rows": 100,
+      "owner_yes": 45,
+      "owner_no": 55,
+      "protocol": "owner_short_train_positive_retrieval100_v1_20260811"
+    },
+    "hardneg_expansion200_v2": {
+      "path": "analysis/output/owner_short_train_hardneg_expansion200_v2/owner_review_summary.json",
+      "present": true,
+      "sha256": "6bff261c5bd5c797ea4df7ff38828f684bbcaa46abd72c5e7a97fd912cf41b93",
+      "rows": 200,
+      "owner_yes": 25,
+      "owner_no": 175,
+      "protocol": "owner_short_train_hardneg_expansion200_v2_20260811"
+    },
+    "hardneg_newblocks200_v3": {
+      "path": "analysis/output/owner_short_train_hardneg_newblocks200_v3/owner_review_summary.json",
+      "present": true,
+      "sha256": "72c58bdf5ba51d9de15d54c9641346e34f9d28d80a97097c64261beebb1b9aa5",
+      "rows": 200,
+      "owner_yes": 26,
+      "owner_no": 172,
+      "protocol": "owner_short_train_hardneg_newblocks200_v3_20260811"
+    },
+    "semantic_review200_v2": {
+      "path": "analysis/output/local_signal_v2_positive_semantic_review200_v2/owner_review_summary.json",
+      "present": true,
+      "sha256": "d06f0165e5903abbf00a7746c7b70c6f445f64429c66d001913a4c21b23451d3",
+      "rows": null,
+      "owner_yes": null,
+      "owner_no": null,
+      "protocol": "local_signal_v2_positive_semantic_review200_v2_20260812"
+    },
+    "early_frontier_review300_v1": {
+      "path": "analysis/output/local_signal_v2_early_frontier_review300_v1/owner_review_summary.json",
+      "present": true,
+      "sha256": "8d96823e0d0b85ae2970ba335948237e0296aa5272dd7202e3b3becc3f9cbe0c",
+      "rows": 300,
+      "owner_yes": 119,
+      "owner_no": 181,
+      "protocol": "local_signal_v2_early_frontier_review300_v1_20260812"
+    }
+  },
+  "config_sha256": {
+    "source_repo": "5b41087ee9a6223d5a46c92276119bec6b9cee940555a3a3131a8df6c8f5bb3f",
+    "spec": "af3b8864243a148c61c74e0be35a7f36dc65af04e4826961de205ca4ef811fb2"
+  },
+  "promoted": false,
+  "orders_placed": false
+}
