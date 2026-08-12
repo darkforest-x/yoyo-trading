@@ -1,0 +1,135 @@
+{
+  "schema": "yoyo_run_manifest_v1",
+  "per_v5": true,
+  "arm": "R3A",
+  "name": "r3a_v3gold_ft_r1",
+  "generated_at": "2026-08-12T15:15:02.444625+00:00",
+  "status": "train_complete_canary_am_done_r3b_pending",
+  "holdout_read": false,
+  "holdout_consumption_n": 0,
+  "promoted": false,
+  "lineage": {
+    "yoyo_trading_commit": "cb1e23a0aeb3e9d3a861e64f505ce1db336481e0",
+    "fable_trading_source_commit": "bb59960910c6138ddd0f20e7c5cda63b2e343adf",
+    "dataset_manifest_path": "manifests/dataset_v3_gold_core_v1.json",
+    "dataset_manifest_sha256": "6d21a9b960cd314d2a2db70d34424193530fa339bcf7eda273a68cee217b45d8",
+    "dataset_protocol": "yoyo_dataset_v3_gold_core_v1_20260812",
+    "dataset_counts": {
+      "total": 3453,
+      "positive": 1345,
+      "negative": 2108,
+      "train_positive": 1143,
+      "train_negative": 1908,
+      "val_positive": 202,
+      "val_negative": 200,
+      "hard_negative": 765
+    },
+    "window_protocol": "owner_gold_center_crop_w12_19",
+    "init_weights": {
+      "role": "frozen_R1",
+      "path_fable": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/weights/best.pt",
+      "sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+      "bytes": 19185882,
+      "expected_prefix": "029f80a5"
+    },
+    "train_config": {
+      "epochs": 40,
+      "patience": 10,
+      "batch": 8,
+      "imgsz": 960,
+      "optimizer": "AdamW",
+      "seed": 0,
+      "rect": true,
+      "finetune": true,
+      "augment": {
+        "hsv_h": 0,
+        "hsv_s": 0,
+        "hsv_v": 0,
+        "degrees": 0,
+        "translate": 0.02,
+        "scale": 0.1,
+        "shear": 0,
+        "perspective": 0,
+        "flipud": 0,
+        "fliplr": 0,
+        "mosaic": 0,
+        "mixup": 0,
+        "cutmix": 0,
+        "copy_paste": 0,
+        "erasing": 0
+      }
+    },
+    "train_config_sha256": "d4e7bbf10cd36585bbe8a10c6d4b725bc989c9d7ac6c4e3778c7e23e5119a45c",
+    "args_yaml_sha256": "d4e7bbf10cd36585bbe8a10c6d4b725bc989c9d7ac6c4e3778c7e23e5119a45c",
+    "hardware": {
+      "host": "zzc@192.168.1.4",
+      "gpu": "NVIDIA GeForce RTX 3060 12GB"
+    },
+    "deps_note": "remote C:/fable/.venv ultralytics+torch CUDA; see train.log"
+  },
+  "weights": {
+    "best": {
+      "path": "runs/r3a_v3gold_ft_r1/weights/best.pt",
+      "sha256": "3042c16d766ede358e89db0a33fa2983ec7a2d22893731d2b34ed44c39f010f7",
+      "bytes": 19185818
+    },
+    "last": {
+      "path": "runs/r3a_v3gold_ft_r1/weights/last.pt",
+      "sha256": "cf816c830cb67d45f649de0cb10bb4af72c46ad8e56c650973c700f8836aebc3",
+      "bytes": 19185818
+    },
+    "mirror_fable_artifact": "analysis/output/lsv2_stageb/yoyo_r3a_v3gold_ft_r1/weights/best.pt"
+  },
+  "static_val": {
+    "note": "V5 §8.5: mAP is not a promotion criterion",
+    "best_epoch": {
+      "epoch": 33,
+      "precision": 0.8279,
+      "recall": 0.85731,
+      "mAP50": 0.90324,
+      "mAP50_95": 0.79689
+    },
+    "final_epoch": {
+      "epoch": 40,
+      "precision": 0.8146,
+      "recall": 0.84831,
+      "mAP50": 0.89506,
+      "mAP50_95": 0.78935
+    },
+    "wall_time_s": 2350.52
+  },
+  "evaluation": {
+    "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+    "scope": "preholdout_postval_canary",
+    "canary_am": {
+      "status": "complete",
+      "snapshot": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/kline_snapshot",
+      "out_dir": "/Users/zhangzc/fable-trading/analysis/output/yoyo_r3a_v3gold_ft_r1_preholdout_canary_20260503_am",
+      "window": "W12-19",
+      "conf": 0.25,
+      "nms": 0.7,
+      "event_gap_bars": 5,
+      "range": "2026-05-03T00:00:00+00:00 exclusive start → 2026-05-03T12:00:00+00:00",
+      "symbols": 215,
+      "raw_detections": 10057,
+      "deduplicated_events": 464,
+      "bar_endpoints": 10320,
+      "window_exposures": 82560,
+      "wall_seconds": 2695.491,
+      "summary_path": "runs/r3a_v3gold_ft_r1/canary_am_20260503/scan_summary.json",
+      "compare_path": "manifests/runs/r3a_canary_am_20260503_compare.json"
+    },
+    "compare_to": [
+      "frozen_baseline.am.baseline_v1_ft",
+      "frozen_baseline.am.r1"
+    ]
+  },
+  "v5_compliance": {
+    "arm_definition": "pass",
+    "both_arms": "R3B pending",
+    "lineage_fields": "pass_core",
+    "home_repo": "yoyo-trading (this file + runs/)",
+    "window_note": "V5 §8.2 printed W30; Owner 2026-08-12 locked W12-19 for V3 — EXPERIMENT_PROTOCOL follows Owner"
+  },
+  "feature_stack": "SMA20/60/120 + EMA20/60/120"
+}

@@ -1,0 +1,29 @@
+{
+  "protocol": "yoyo_dataset_v3_1_position_spread_plan_20260812",
+  "generated_at": "2026-08-12T16:01:10.538070+00:00",
+  "parent_dataset": "dataset_v3_gold_core_v1",
+  "single_variable": "causal_window_length_in_w12_19_ending_at_decision",
+  "feature_stack": "SMA20/60/120 + EMA20/60/120",
+  "holdout_read": false,
+  "counts": {
+    "parent_rows": 3453,
+    "positives": 1345,
+    "negatives": 2108,
+    "assigned_ok": 1345,
+    "no_legal_window": 0,
+    "window_len_changed": 1345,
+    "window_len_unchanged": 0
+  },
+  "achievable_if_we_could_pick_freely": {
+    "can_left": 72,
+    "can_middle": 1345,
+    "can_right": 956
+  },
+  "greedy_assignment": {
+    "left": 72,
+    "middle": 636,
+    "right": 637
+  },
+  "geometry_limit": "A core only a few bars before decision cannot enter the left third at W>=12 if the window must end at decision. Left count is therefore bounded by how many gold cores sit far enough before decision.",
+  "assignments_path": "manifests/dataset_v3_1_position_spread_assignments.jsonl"
+}

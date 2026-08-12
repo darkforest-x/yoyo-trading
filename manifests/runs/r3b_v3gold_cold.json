@@ -1,0 +1,103 @@
+{
+  "schema": "yoyo_run_manifest_v1",
+  "per_v5": true,
+  "arm": "R3B",
+  "name": "r3b_v3gold_cold",
+  "generated_at": "2026-08-12T15:16:41.841382+00:00",
+  "updated_at": "2026-08-12T16:55:00+00:00",
+  "status": "train_complete_early_stop_canary_pending",
+  "holdout_read": false,
+  "holdout_consumption_n": 0,
+  "promoted": false,
+  "single_variable": "init_weights = official yolo11s vs frozen R1 (same Dataset V3)",
+  "feature_stack": "SMA20/60/120 + EMA20/60/120",
+  "lineage": {
+    "yoyo_trading_commit": "cb1e23a0aeb3e9d3a861e64f505ce1db336481e0",
+    "fable_trading_source_commit": "bb59960910c6138ddd0f20e7c5cda63b2e343adf",
+    "dataset": "dataset_v3_gold_core_v1",
+    "dataset_manifest_path": "manifests/dataset_v3_gold_core_v1.json",
+    "dataset_manifest_sha256": "6d21a9b960cd314d2a2db70d34424193530fa339bcf7eda273a68cee217b45d8",
+    "window_protocol": "owner_gold_center_crop_w12_19",
+    "init_weights": {
+      "role": "official_yolo11s",
+      "path": "fable-trading/models/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "expected_prefix": "85a76fe8"
+    },
+    "train_config": {
+      "epochs": 40,
+      "patience": 10,
+      "batch": 8,
+      "imgsz": 960,
+      "seed": 0,
+      "finetune": false,
+      "optimizer": "auto",
+      "note": "Cold start: ultralytics optimizer=auto (AdamW lr≈0.002). R3A finetune uses AdamW lr=1e-4. Documented difference."
+    },
+    "args_yaml_sha256": "c10076765e05ef496152110d6fcd3d1c5034d0cdd9ad287d3f03e161d0e51f16",
+    "hardware": {
+      "host": "zzc@192.168.1.4",
+      "gpu": "RTX 3060"
+    },
+    "remote_name": "yoyo_r3b_v3gold_cold",
+    "remote_log": "C:/fable/logs/yoyo_r3b_v3gold_cold.train.log",
+    "remote_run_dir": "C:/fable/runs/detect/yoyo_r3b_v3gold_cold"
+  },
+  "weights": {
+    "best": {
+      "path": "runs/r3b_v3gold_cold/weights/best.pt",
+      "sha256": "b890997e50e9daffe834ff3706ce7a54f74a94a5bf4714e7f0c23976eca39973",
+      "bytes": 19185818
+    },
+    "last": {
+      "path": "runs/r3b_v3gold_cold/weights/last.pt",
+      "sha256": "33d7f183b3d573f62aa7d76db0cb150f64d20d9a7f93030fa727972e73d34926",
+      "bytes": 19185818
+    }
+  },
+  "static_val": {
+    "note": "V5 §8.5: mAP is not a promotion criterion. Earlier status incomplete_stopped_ep20 was wrong — log shows EarlyStopping completed 20/40.",
+    "early_stop": {
+      "stopped_epoch": 20,
+      "patience": 10,
+      "ultralytics_best_epoch": 10,
+      "ultralytics_fitness_rule": "0.1*mAP50 + 0.9*mAP50-95",
+      "wall_hours": 0.334
+    },
+    "best_fitness_epoch": {
+      "epoch": 10,
+      "precision": 0.7683,
+      "recall": 0.8317,
+      "mAP50": 0.8439,
+      "mAP50_95": 0.6118
+    },
+    "peak_map50_epoch": {
+      "epoch": 17,
+      "precision": 0.8448,
+      "recall": 0.7871,
+      "mAP50": 0.8645,
+      "mAP50_95": 0.5915
+    },
+    "final_epoch": {
+      "epoch": 20,
+      "precision": 0.4885,
+      "recall": 0.6287,
+      "mAP50": 0.4266,
+      "mAP50_95": 0.2391
+    },
+    "post_train_validate_best_pt": {
+      "precision": 0.7679,
+      "recall": 0.8267,
+      "mAP50": 0.8416,
+      "mAP50_95": 0.6091
+    }
+  },
+  "evaluation": {
+    "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+    "scope": "preholdout_postval_canary",
+    "canary_am": {
+      "status": "pending"
+    }
+  },
+  "correction": "Not hung at ep20. EarlyStopping fired (best fitness ep10). GPU was later reclaimed for V3.1 after this run had already finished."
+}

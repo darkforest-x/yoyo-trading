@@ -1,0 +1,62 @@
+{
+  "schema": "yoyo_canary_compare_v1",
+  "per_v5": true,
+  "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+  "block": "am_20260503_00_12UTC",
+  "evaluation_scope": "preholdout_postval_canary",
+  "holdout_use_number": 0,
+  "matched_contract": {
+    "bar_endpoints": 10320,
+    "window_exposures": 82560,
+    "window_lengths": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "confidence": 0.25,
+    "nms_iou": 0.7,
+    "event_gap_bars": 5,
+    "symbols": 215
+  },
+  "feature_stack": "SMA+EMA 20/60/120 (six lines) via yoyo.layers.l1_detection add_mas+render",
+  "models": [
+    {
+      "model": "baseline_v1_ft",
+      "raw_detections": 22037,
+      "deduplicated_events": 732,
+      "events_per_day": 1464.0,
+      "raw_per_1k_exp": 266.92,
+      "events_per_1k_exp": 8.87
+    },
+    {
+      "model": "R1",
+      "raw_detections": 8268,
+      "deduplicated_events": 331,
+      "events_per_day": 662.0,
+      "raw_per_1k_exp": 100.15,
+      "events_per_1k_exp": 4.01
+    },
+    {
+      "model": "R3A",
+      "raw_detections": 10057,
+      "deduplicated_events": 464,
+      "events_per_day": 928.0,
+      "raw_per_1k_exp": 121.81,
+      "events_per_1k_exp": 5.62
+    }
+  ],
+  "r3a_vs_r1": {
+    "delta_events": 133,
+    "delta_raw": 1789,
+    "events_ratio_vs_r1": 1.402,
+    "raw_ratio_vs_r1": 1.216,
+    "note": "Higher events/raw vs R1 means denser firing; V5 wants lower FP at similar recall — density alone is NOT success. Shape-YES audit still required."
+  },
+  "r3a_weights_sha256": "3042c16d766ede358e89db0a33fa2983ec7a2d22893731d2b34ed44c39f010f7",
+  "generated_at": "2026-08-12T15:40:27.105814+00:00"
+}

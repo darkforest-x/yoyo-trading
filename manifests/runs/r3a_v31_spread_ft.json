@@ -1,0 +1,118 @@
+{
+  "schema": "yoyo_run_manifest_v1",
+  "per_v5": true,
+  "arm": "R3A_on_V3.1_position_spread",
+  "name": "yoyo_r3a_v31_spread_ft",
+  "generated_at": "2026-08-12T16:05:56.842664+00:00",
+  "updated_at": "2026-08-12T16:43:00+00:00",
+  "status": "train_complete_early_stop_canary_pending",
+  "holdout_read": false,
+  "holdout_consumption_n": 0,
+  "promoted": false,
+  "single_variable": "dataset_v3_1_position_spread vs v3 gold core (crop L/M/R)",
+  "feature_stack": "SMA20/60/120 + EMA20/60/120",
+  "lineage": {
+    "yoyo_trading_commit": "cb1e23a0aeb3e9d3a861e64f505ce1db336481e0",
+    "fable_trading_source_commit": "bb59960910c6138ddd0f20e7c5cda63b2e343adf",
+    "dataset": "dataset_v3_1_position_spread_v1",
+    "dataset_manifest_path": "manifests/dataset_v3_1_position_spread_v1.json",
+    "dataset_manifest_sha256": "2cf6d0d27a144511f964bc6375fe52f25759af0bd57ce34ff35d2563d6dc1474",
+    "dataset_images_manifest_sha256": "1e6f087a8a5c7f5918f44da9b9d3f54694518228034760edee119ef311bc7b3e",
+    "window_protocol": "owner_w12_19_causal_end_at_decision_position_spread",
+    "dataset_counts": {
+      "total": 3453,
+      "positive": 1345,
+      "negative": 2108,
+      "train_positive": 1143,
+      "val_positive": 202
+    },
+    "positive_core_position": {
+      "left": 72,
+      "middle": 636,
+      "right": 637
+    },
+    "init_weights": {
+      "role": "frozen_R1",
+      "sha256": "029f80a52b5beda2e32f6bb5a188a39fd7f74fe0a3fef4dffa79ae620384f537",
+      "expected_prefix": "029f80a5"
+    },
+    "train_config": {
+      "epochs": 40,
+      "patience": 10,
+      "batch": 8,
+      "imgsz": 960,
+      "seed": 0,
+      "finetune": true,
+      "optimizer": "AdamW",
+      "lr0": 0.0001
+    },
+    "args_yaml_sha256": "9faa047e5d82c49a63dcc34c35e8665ce029f4eb55ec5fd111c3fe402cf1c586",
+    "hardware": {
+      "host": "zzc@192.168.1.4",
+      "gpu": "RTX 3060"
+    },
+    "remote_name": "yoyo_r3a_v31_spread_ft",
+    "remote_log": "C:/fable/logs/yoyo_r3a_v31_spread_ft.train.log",
+    "remote_run_dir": "C:/fable/runs/detect/yoyo_r3a_v31_spread_ft"
+  },
+  "weights": {
+    "best": {
+      "path": "runs/r3a_v31_spread_ft/weights/best.pt",
+      "sha256": "f7dc007f7a79267410a1a1a106e9e0387f6b9b1681a59927d701d44939b9854d",
+      "bytes": 19185818
+    },
+    "last": {
+      "path": "runs/r3a_v31_spread_ft/weights/last.pt",
+      "sha256": "9cf8b0108354fc490e4721b29fe49bbe52f2b5b2093744b659121dcba1ddeea2",
+      "bytes": 19185818
+    }
+  },
+  "static_val": {
+    "note": "V5 §8.5: mAP is not a promotion criterion. Drop vs V3-center 0.90 is expected: boxes are no longer all mid-frame.",
+    "early_stop": {
+      "stopped_epoch": 25,
+      "patience": 10,
+      "ultralytics_best_epoch": 15,
+      "ultralytics_fitness_rule": "0.1*mAP50 + 0.9*mAP50-95",
+      "wall_hours": 0.411
+    },
+    "best_fitness_epoch": {
+      "epoch": 15,
+      "precision": 0.5396,
+      "recall": 0.7774,
+      "mAP50": 0.6636,
+      "mAP50_95": 0.4437
+    },
+    "peak_map50_epoch": {
+      "epoch": 16,
+      "precision": 0.5434,
+      "recall": 0.7602,
+      "mAP50": 0.6670,
+      "mAP50_95": 0.4350
+    },
+    "final_epoch": {
+      "epoch": 25,
+      "precision": 0.4345,
+      "recall": 0.6782,
+      "mAP50": 0.5060,
+      "mAP50_95": 0.3353
+    },
+    "post_train_validate_best_pt": {
+      "precision": 0.5418,
+      "recall": 0.7434,
+      "mAP50": 0.6459,
+      "mAP50_95": 0.4257
+    }
+  },
+  "evaluation": {
+    "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+    "scope": "preholdout_postval_canary",
+    "canary_am": {
+      "status": "scanning",
+      "out_dir": "runs/r3a_v31_spread_ft/canary_am_20260503",
+      "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+      "block": "am_20260503_00_12UTC"
+    }
+  },
+  "note": "R3B on V3 left hung/incomplete at ep20; GPU taken for V3.1 arm as Owner requested 开. Train finished via EarlyStopping; canary not started."
+}
