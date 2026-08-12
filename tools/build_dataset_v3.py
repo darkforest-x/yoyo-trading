@@ -141,9 +141,14 @@ def render_group(
         label_path.write_text(rendered["label"], encoding="utf-8")
         image_sha = sha256_bytes(image_path.read_bytes())
         label_sha = sha256_bytes(rendered["label"].encode("utf-8"))
+        window = enriched.iloc[int(item["win_start"]) : int(item["win_end"]) + 1]
+        high, low = float(window["high"].max()), float(window["low"].min())
         written.append(
             {
                 "sample_id": item["sample_id"],
+                "window_start_time": window["open_time"].iloc[0].isoformat(),
+                "decision_time": window["open_time"].iloc[-1].isoformat(),
+                "causal_span_pct": round((high / low - 1.0) * 100, 4) if low else None,
                 "event_id": item.get("event_id"),
                 "symbol": symbol,
                 "timeframe": "15m",
@@ -300,6 +305,40 @@ def build(
         else None,
         "symbols": len({row["symbol"] for row in rows}),
         "window_lengths": dict(sorted(Counter(row["window_length"] for row in rows).items())),
+        "by_month": dict(sorted(Counter(row["decision_time"][:7] for row in rows).items())),
+        "by_causal_span_bucket": dict(
+            sorted(
+                Counter(
+                    "unknown"
+                    if row["causal_span_pct"] is None
+                    else "lt1"
+                    if row["causal_span_pct"] < 1
+                    else "1to2"
+                    if row["causal_span_pct"] < 2
+                    else "2to4"
+                    if row["causal_span_pct"] < 4
+                    else "ge4"
+                    for row in rows
+                ).items()
+            )
+        ),
+        "positive_core_position": dict(
+            sorted(
+                Counter(
+                    "left"
+                    if position < 1 / 3
+                    else "middle"
+                    if position < 2 / 3
+                    else "right"
+                    for position in (
+                        ((row["box_start_bar"] + row["box_end_bar"]) / 2 - row["window_start_bar"])
+                        / max(1, row["window_end_bar"] - row["window_start_bar"])
+                        for row in rows
+                        if row["class_name"]
+                    )
+                ).items()
+            )
+        ),
         "reused_samples_checked_for_parity": len(reused),
         "parity_failures": len(parity_failures),
         "duplicate_windows": len(duplicates),
