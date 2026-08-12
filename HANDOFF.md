@@ -6,7 +6,31 @@
 ---
 
 
-## 2026-08-13 — 按 V5 继续：R3B 已训完（更正），V3.1+R3B canary 开扫
+## 2026-08-13 — 纠偏：严格按文档，V3.1 降为下一轮
+
+工作目录：`/Users/zhangzc/yoyo-trading`。
+
+**本轮主线只有**：Dataset V3（W12–19 **center-crop**）上的 R3A vs R3B。  
+合同 §4 / 实验 §7：位置捷径本轮只许汇报，不许改裁剪。V3.1 是下一轮单变量，不是补丁。
+
+**质量门**：`reports/dataset_v3_pretrain_acceptance.md` → **未过**（kappa / 错标率未做）。  
+V3 / V3.1 清单已改为 `training_eligible: false`。已发生的训练不抹掉，但**不再开新训、不 promote**。
+
+Owner 争议 60 张已决议：FLIP 36 · REBOX 14 · KEEP 10。  
+只把你审过的样本收成 `dataset_v3_2_reviewed_core_v1`：**79 正 / 142 负**（train 71/122，val 8/20）。  
+22 张 REBOX **按 Owner 直接丢掉**，不再画框。不扩未审样本。  
+合同已由我根据复审写进 `docs/DATASET_CONTRACT.md`（v3.2）：伪粘合/纵轴压缩为负；「虚线>紫带均价」只当审图过滤，不是 L1。  
+当前可训池仍是 79 正 / 142 负，`training_eligible: false`（量太小 + 未再做 kappa）。
+
+## 2026-08-13 — Owner 叫停
+
+扫描、8766/8767 审核页已关。R3B canary 停在约 160/215，无 `_SUCCESS`。不训、不 promote。接着做等你开口。
+
+仍在跑的 V3.1 canary 不杀（避免浪费），结果只作附录。本轮必须先拿到 R3B 同口径 canary。
+
+---
+
+## 2026-08-13 — （已降级）V3.1 预览臂 / R3B 训完更正
 
 工作目录：`/Users/zhangzc/yoyo-trading`。扫描脚本入口也写在本仓 `tools/`；底层复用 fable scanner。
 

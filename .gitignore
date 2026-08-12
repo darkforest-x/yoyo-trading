@@ -2,6 +2,9 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+venv/
+.env
+.env.*
 .DS_Store
 
 # pip install -e build metadata: regenerated on every install

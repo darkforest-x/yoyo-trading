@@ -1,1 +1,4 @@
-V3.1 canary scanning
+PAUSED_BY_OWNER 2026-08-13T02:21:26+08:00
+R3B canary incomplete (~160/215)
+V3.1 canary appendix done (258 events)
+no train no promote

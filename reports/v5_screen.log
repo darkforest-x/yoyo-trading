@@ -18,3 +18,320 @@ scan [70/215] exposures=26880 raw=2057 wall_min=19.1
 scan [75/215] exposures=28800 raw=2166 wall_min=20.2
 scan [80/215] exposures=30720 raw=2270 wall_min=21.5
 scan [85/215] exposures=32640 raw=2320 wall_min=22.9
+scan [90/215] exposures=34560 raw=2397 wall_min=24.9
+scan [95/215] exposures=36480 raw=2434 wall_min=26.5
+scan [100/215] exposures=38400 raw=2528 wall_min=28.5
+scan [105/215] exposures=40320 raw=2608 wall_min=30.4
+scan [110/215] exposures=42240 raw=2668 wall_min=31.8
+scan [115/215] exposures=44160 raw=2875 wall_min=33.7
+scan [120/215] exposures=46080 raw=2909 wall_min=35.4
+scan [125/215] exposures=48000 raw=3029 wall_min=36.6
+scan [130/215] exposures=49920 raw=3122 wall_min=38.2
+scan [135/215] exposures=51840 raw=3185 wall_min=39.4
+scan [140/215] exposures=53760 raw=3308 wall_min=40.5
+scan [145/215] exposures=55680 raw=3443 wall_min=41.5
+scan [150/215] exposures=57600 raw=3503 wall_min=42.5
+scan [155/215] exposures=59520 raw=3673 wall_min=43.6
+scan [160/215] exposures=61440 raw=3750 wall_min=44.5
+scan [165/215] exposures=63360 raw=3764 wall_min=45.7
+scan [170/215] exposures=65280 raw=4039 wall_min=47.0
+scan [175/215] exposures=67200 raw=4157 wall_min=48.0
+scan [180/215] exposures=69120 raw=4257 wall_min=49.1
+scan [185/215] exposures=71040 raw=4316 wall_min=50.2
+scan [190/215] exposures=72960 raw=4348 wall_min=51.1
+scan [195/215] exposures=74880 raw=4480 wall_min=52.2
+scan [200/215] exposures=76800 raw=4768 wall_min=53.1
+scan [205/215] exposures=78720 raw=4921 wall_min=54.3
+scan [210/215] exposures=80640 raw=4995 wall_min=55.4
+scan [215/215] exposures=82560 raw=5046 wall_min=56.4
+{
+  "protocol": "owner_short_gold_center_recent2d_v1_20260811",
+  "generated_at": "2026-08-12T17:48:25.382343+00:00",
+  "weights": "/Users/zhangzc/yoyo-trading/runs/r3a_v31_spread_ft/weights/best.pt",
+  "weights_sha256": "f7dc007f7a79267410a1a1a106e9e0387f6b9b1681a59927d701d44939b9854d",
+  "snapshot_dir": "/Users/zhangzc/fable-trading/analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/kline_snapshot",
+  "symbols": 215,
+  "scanned_symbols": [
+    "0G_USDT_SWAP",
+    "1INCH_USDT_SWAP",
+    "2Z_USDT_SWAP",
+    "AAVE_USDT_SWAP",
+    "ACH_USDT_SWAP",
+    "ACU_USDT_SWAP",
+    "ADA_USDT_SWAP",
+    "AERO_USDT_SWAP",
+    "AEVO_USDT_SWAP",
+    "AGLD_USDT_SWAP",
+    "AIXBT_USDT_SWAP",
+    "ALLO_USDT_SWAP",
+    "ANIME_USDT_SWAP",
+    "APE_USDT_SWAP",
+    "API3_USDT_SWAP",
+    "APR_USDT_SWAP",
+    "APT_USDT_SWAP",
+    "ARB_USDT_SWAP",
+    "ARKM_USDT_SWAP",
+    "ASTER_USDT_SWAP",
+    "ATH_USDT_SWAP",
+    "ATOM_USDT_SWAP",
+    "AT_USDT_SWAP",
+    "AUCTION_USDT_SWAP",
+    "AVAX_USDT_SWAP",
+    "AVNT_USDT_SWAP",
+    "AXS_USDT_SWAP",
+    "AZTEC_USDT_SWAP",
+    "A_USDT_SWAP",
+    "BAND_USDT_SWAP",
+    "BARD_USDT_SWAP",
+    "BAT_USDT_SWAP",
+    "BEAT_USDT_SWAP",
+    "BERA_USDT_SWAP",
+    "BICO_USDT_SWAP",
+    "BLUR_USDT_SWAP",
+    "BNB_USDT_SWAP",
+    "BOME_USDT_SWAP",
+    "BONK_USDT_SWAP",
+    "BRETT_USDT_SWAP",
+    "BREV_USDT_SWAP",
+    "BSB_USDT_SWAP",
+    "CC_USDT_SWAP",
+    "CELO_USDT_SWAP",
+    "CFX_USDT_SWAP",
+    "CHZ_USDT_SWAP",
+    "COAI_USDT_SWAP",
+    "COIN_USDT_SWAP",
+    "COMP_USDT_SWAP",
+    "CORE_USDT_SWAP",
+    "CRO_USDT_SWAP",
+    "CRV_USDT_SWAP",
+    "DASH_USDT_SWAP",
+    "DOGE_USDT_SWAP",
+    "DOOD_USDT_SWAP",
+    "DOT_USDT_SWAP",
+    "DYDX_USDT_SWAP",
+    "EDEN_USDT_SWAP",
+    "EGLD_USDT_SWAP",
+    "ENA_USDT_SWAP",
+    "ENJ_USDT_SWAP",
+    "ENSO_USDT_SWAP",
+    "ENS_USDT_SWAP",
+    "ESP_USDT_SWAP",
+    "ETC_USDT_SWAP",
+    "ETHFI_USDT_SWAP",
+    "ETH_USDT_SWAP",
+    "FARTCOIN_USDT_SWAP",
+    "FIL_USDT_SWAP",
+    "FLOKI_USDT_SWAP",
+    "FLOW_USDT_SWAP",
+    "FOGO_USDT_SWAP",
+    "GALA_USDT_SWAP",
+    "GAS_USDT_SWAP",
+    "GIGGLE_USDT_SWAP",
+    "GLM_USDT_SWAP",
+    "GMT_USDT_SWAP",
+    "GMX_USDT_SWAP",
+    "GPS_USDT_SWAP",
+    "GRT_USDT_SWAP",
+    "HBAR_USDT_SWAP",
+    "HMSTR_USDT_SWAP",
+    "HOME_USDT_SWAP",
+    "HOOD_USDT_SWAP",
+    "HUMA_USDT_SWAP",
+    "HYPE_USDT_SWAP",
+    "H_USDT_SWAP",
+    "ICP_USDT_SWAP",
+    "ICX_USDT_SWAP",
+    "INIT_USDT_SWAP",
+    "INJ_USDT_SWAP",
+    "IOST_USDT_SWAP",
+    "IOTA_USDT_SWAP",
+    "JELLYJELLY_USDT_SWAP",
+    "JTO_USDT_SWAP",
+    "JUP_USDT_SWAP",
+    "KAITO_USDT_SWAP",
+    "KGEN_USDT_SWAP",
+    "KITE_USDT_SWAP",
+    "KMNO_USDT_SWAP",
+    "KSM_USDT_SWAP",
+    "LAYER_USDT_SWAP",
+    "LA_USDT_SWAP",
+    "LIGHT_USDT_SWAP",
+    "LINEA_USDT_SWAP",
+    "LINK_USDT_SWAP",
+    "LIT_USDT_SWAP",
+    "LPT_USDT_SWAP",
+    "LQTY_USDT_SWAP",
+    "LRC_USDT_SWAP",
+    "LTC_USDT_SWAP",
+    "LUNA_USDT_SWAP",
+    "MAGIC_USDT_SWAP",
+    "MANA_USDT_SWAP",
+    "MASK_USDT_SWAP",
+    "MEME_USDT_SWAP",
+    "MERL_USDT_SWAP",
+    "METIS_USDT_SWAP",
+    "MEW_USDT_SWAP",
+    "MMT_USDT_SWAP",
+    "MON_USDT_SWAP",
+    "MOODENG_USDT_SWAP",
+    "MORPHO_USDT_SWAP",
+    "MOVE_USDT_SWAP",
+    "MUBARAK_USDT_SWAP",
+    "NEIRO_USDT_SWAP",
+    "NEO_USDT_SWAP",
+    "NG_USDT_SWAP",
+    "NIGHT_USDT_SWAP",
+    "NMR_USDT_SWAP",
+    "NOT_USDT_SWAP",
+    "OFC_USDT_SWAP",
+    "OKB_USDT_SWAP",
+    "OL_USDT_SWAP",
+    "ONDO_USDT_SWAP",
+    "ONE_USDT_SWAP",
+    "ONT_USDT_SWAP",
+    "OP_USDT_SWAP",
+    "ORCL_USDT_SWAP",
+    "ORDER_USDT_SWAP",
+    "ORDI_USDT_SWAP",
+    "PARTI_USDT_SWAP",
+    "PENGU_USDT_SWAP",
+    "PEOPLE_USDT_SWAP",
+    "PEPE_USDT_SWAP",
+    "PIEVERSE_USDT_SWAP",
+    "PIPPIN_USDT_SWAP",
+    "PI_USDT_SWAP",
+    "PLUME_USDT_SWAP",
+    "PNUT_USDT_SWAP",
+    "PROVE_USDT_SWAP",
+    "PUMP_USDT_SWAP",
+    "QTUM_USDT_SWAP",
+    "RAVE_USDT_SWAP",
+    "RAY_USDT_SWAP",
+    "RESOLV_USDT_SWAP",
+    "RLS_USDT_SWAP",
+    "RSR_USDT_SWAP",
+    "RVN_USDT_SWAP",
+    "SAHARA_USDT_SWAP",
+    "SAND_USDT_SWAP",
+    "SAPIEN_USDT_SWAP",
+    "SEI_USDT_SWAP",
+    "SENT_USDT_SWAP",
+    "SHELL_USDT_SWAP",
+    "SHIB_USDT_SWAP",
+    "SIGN_USDT_SWAP",
+    "SKY_USDT_SWAP",
+    "SNX_USDT_SWAP",
+    "SOL_USDT_SWAP",
+    "SOON_USDT_SWAP",
+    "SPK_USDT_SWAP",
+    "SPX_USDT_SWAP",
+    "STABLE_USDT_SWAP",
+    "STRK_USDT_SWAP",
+    "STX_USDT_SWAP",
+    "SUI_USDT_SWAP",
+    "SUSHI_USDT_SWAP",
+    "SYRUP_USDT_SWAP",
+    "S_USDT_SWAP",
+    "TAO_USDT_SWAP",
+    "THETA_USDT_SWAP",
+    "TIA_USDT_SWAP",
+    "TRB_USDT_SWAP",
+    "TRUMP_USDT_SWAP",
+    "TRUST_USDT_SWAP",
+    "TRUTH_USDT_SWAP",
+    "TRX_USDT_SWAP",
+    "TURBO_USDT_SWAP",
+    "UMA_USDT_SWAP",
+    "UNI_USDT_SWAP",
+    "USELESS_USDT_SWAP",
+    "VANA_USDT_SWAP",
+    "WCT_USDT_SWAP",
+    "WET_USDT_SWAP",
+    "WIF_USDT_SWAP",
+    "WLD_USDT_SWAP",
+    "WOO_USDT_SWAP",
+    "W_USDT_SWAP",
+    "XLM_USDT_SWAP",
+    "XPT_USDT_SWAP",
+    "XRP_USDT_SWAP",
+    "XTZ_USDT_SWAP",
+    "YFI_USDT_SWAP",
+    "YGG_USDT_SWAP",
+    "ZAMA_USDT_SWAP",
+    "ZBT_USDT_SWAP",
+    "ZEC_USDT_SWAP",
+    "ZEN_USDT_SWAP",
+    "ZETA_USDT_SWAP",
+    "ZIL_USDT_SWAP",
+    "ZKP_USDT_SWAP",
+    "ZK_USDT_SWAP",
+    "ZORA_USDT_SWAP",
+    "ZRO_USDT_SWAP"
+  ],
+  "stale_symbols": [],
+  "latest_bar": "2026-05-03T12:00:00+00:00",
+  "replay_start_exclusive": "2026-05-03T00:00:00+00:00",
+  "hours": 12.0,
+  "window_lengths": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "confidence": 0.25,
+  "nms_iou": 0.7,
+  "event_gap_bars": 5,
+  "bar_endpoints": 10320,
+  "window_exposures": 82560,
+  "raw_detections": 5046,
+  "deduplicated_events": 258,
+  "wall_seconds": 3384.023,
+  "evaluation_scope": "preholdout_postval_canary",
+  "holdout_use_number": 0,
+  "owner_authorized_in_conversation": false,
+  "promoted": false,
+  "orders_placed": false,
+  "shard_index": 0,
+  "shard_count": 1
+}
+V3.1 canary done
+V3.1 canary done
+R3B canary scanning
+R3B canary scanning
+scan symbols=215 stale=0 latest=2026-05-03 12:00:00+00:00 start=2026-05-03 00:00:00+00:00 W=12-19 conf=0.25
+scan [5/215] exposures=1920 raw=215 wall_min=1.1
+scan [10/215] exposures=3840 raw=541 wall_min=2.2
+scan [15/215] exposures=5760 raw=714 wall_min=3.4
+scan [20/215] exposures=7680 raw=935 wall_min=4.4
+scan [25/215] exposures=9600 raw=1206 wall_min=5.4
+scan [30/215] exposures=11520 raw=1532 wall_min=6.3
+scan [35/215] exposures=13440 raw=1850 wall_min=7.3
+scan [40/215] exposures=15360 raw=2069 wall_min=8.3
+scan [45/215] exposures=17280 raw=2175 wall_min=9.3
+scan [50/215] exposures=19200 raw=2383 wall_min=10.3
+scan [55/215] exposures=21120 raw=2644 wall_min=11.2
+scan [60/215] exposures=23040 raw=2939 wall_min=12.2
+scan [65/215] exposures=24960 raw=3211 wall_min=13.1
+scan [70/215] exposures=26880 raw=3536 wall_min=14.1
+scan [75/215] exposures=28800 raw=3713 wall_min=15.0
+scan [80/215] exposures=30720 raw=3971 wall_min=16.0
+scan [85/215] exposures=32640 raw=4207 wall_min=17.0
+scan [90/215] exposures=34560 raw=4408 wall_min=18.0
+scan [95/215] exposures=36480 raw=4553 wall_min=19.0
+scan [100/215] exposures=38400 raw=4786 wall_min=20.1
+scan [105/215] exposures=40320 raw=5027 wall_min=21.1
+scan [110/215] exposures=42240 raw=5303 wall_min=22.1
+scan [115/215] exposures=44160 raw=5651 wall_min=23.0
+scan [120/215] exposures=46080 raw=5793 wall_min=23.9
+scan [125/215] exposures=48000 raw=6060 wall_min=24.9
+scan [130/215] exposures=49920 raw=6260 wall_min=25.9
+scan [135/215] exposures=51840 raw=6403 wall_min=26.9
+scan [140/215] exposures=53760 raw=6623 wall_min=28.0
+scan [145/215] exposures=55680 raw=6961 wall_min=29.1
+scan [150/215] exposures=57600 raw=7242 wall_min=30.1
+scan [155/215] exposures=59520 raw=7579 wall_min=31.1
+scan [160/215] exposures=61440 raw=7718 wall_min=32.0

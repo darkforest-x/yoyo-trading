@@ -87,14 +87,14 @@
       "epoch": 16,
       "precision": 0.5434,
       "recall": 0.7602,
-      "mAP50": 0.6670,
-      "mAP50_95": 0.4350
+      "mAP50": 0.667,
+      "mAP50_95": 0.435
     },
     "final_epoch": {
       "epoch": 25,
       "precision": 0.4345,
       "recall": 0.6782,
-      "mAP50": 0.5060,
+      "mAP50": 0.506,
       "mAP50_95": 0.3353
     },
     "post_train_validate_best_pt": {
@@ -114,5 +114,7 @@
       "block": "am_20260503_00_12UTC"
     }
   },
-  "note": "R3B on V3 left hung/incomplete at ep20; GPU taken for V3.1 arm as Owner requested 开. Train finished via EarlyStopping; canary not started."
+  "note": "R3B on V3 left hung/incomplete at ep20; GPU taken for V3.1 arm as Owner requested 开. Train finished via EarlyStopping; canary not started.",
+  "protocol_role": "next_round_preview_not_first_round_arm",
+  "first_round": false
 }

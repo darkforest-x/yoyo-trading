@@ -1,0 +1,2786 @@
+{
+  "protocol": "yoyo_v3_blind_review_r1_20260813",
+  "question": "这张局部图（decision 及以前）里，有没有你认的均线密集核心？不管后面涨跌、也不管值不值得开空。",
+  "choices": [
+    "YES",
+    "NO",
+    "IGNORE"
+  ],
+  "n": 345,
+  "draw": "manifests/v3_blind_review_sample_v1.jsonl",
+  "shuffle_seed": 1,
+  "items": [
+    {
+      "review_id": "0001",
+      "image": "images/0001.png",
+      "prefilter_pass": false,
+      "decision_close": 0.18655,
+      "purple_mean_close": 0.18758541666666664,
+      "prefilter_delta": -0.0010354166666666498
+    },
+    {
+      "review_id": "0002",
+      "image": "images/0002.png",
+      "prefilter_pass": true,
+      "decision_close": 89.94,
+      "purple_mean_close": 88.30624999999999,
+      "prefilter_delta": 1.6337500000000063
+    },
+    {
+      "review_id": "0003",
+      "image": "images/0003.png",
+      "prefilter_pass": true,
+      "decision_close": 16.95,
+      "purple_mean_close": 16.865,
+      "prefilter_delta": 0.08500000000000085
+    },
+    {
+      "review_id": "0004",
+      "image": "images/0004.png",
+      "prefilter_pass": false,
+      "decision_close": 0.9428,
+      "purple_mean_close": 0.9505374999999999,
+      "prefilter_delta": -0.007737499999999953
+    },
+    {
+      "review_id": "0005",
+      "image": "images/0005.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4501,
+      "purple_mean_close": 0.4452041666666667,
+      "prefilter_delta": 0.0048958333333333215
+    },
+    {
+      "review_id": "0006",
+      "image": "images/0006.png",
+      "prefilter_pass": true,
+      "decision_close": 2847.24,
+      "purple_mean_close": 2830.1124999999997,
+      "prefilter_delta": 17.127500000000055
+    },
+    {
+      "review_id": "0007",
+      "image": "images/0007.png",
+      "prefilter_pass": false,
+      "decision_close": 13.9,
+      "purple_mean_close": 13.9325,
+      "prefilter_delta": -0.03249999999999886
+    },
+    {
+      "review_id": "0008",
+      "image": "images/0008.png",
+      "prefilter_pass": true,
+      "decision_close": 0.000282,
+      "purple_mean_close": 0.00027635833333333336,
+      "prefilter_delta": 5.641666666666664e-06
+    },
+    {
+      "review_id": "0009",
+      "image": "images/0009.png",
+      "prefilter_pass": true,
+      "decision_close": 87.36,
+      "purple_mean_close": 84.07625,
+      "prefilter_delta": 3.2837499999999977
+    },
+    {
+      "review_id": "0010",
+      "image": "images/0010.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09211,
+      "purple_mean_close": 0.09188083333333334,
+      "prefilter_delta": 0.0002291666666666553
+    },
+    {
+      "review_id": "0011",
+      "image": "images/0011.png",
+      "prefilter_pass": false,
+      "decision_close": 0.09561,
+      "purple_mean_close": 0.09703083333333334,
+      "prefilter_delta": -0.0014208333333333434
+    },
+    {
+      "review_id": "0012",
+      "image": "images/0012.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4254,
+      "purple_mean_close": 0.42401249999999996,
+      "prefilter_delta": 0.0013875000000000415
+    },
+    {
+      "review_id": "0013",
+      "image": "images/0013.png",
+      "prefilter_pass": false,
+      "decision_close": 0.8896,
+      "purple_mean_close": 0.8961125,
+      "prefilter_delta": -0.006512500000000032
+    },
+    {
+      "review_id": "0014",
+      "image": "images/0014.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05236,
+      "purple_mean_close": 0.05291583333333333,
+      "prefilter_delta": -0.0005558333333333318
+    },
+    {
+      "review_id": "0015",
+      "image": "images/0015.png",
+      "prefilter_pass": false,
+      "decision_close": 0.0416,
+      "purple_mean_close": 0.04187791666666666,
+      "prefilter_delta": -0.0002779166666666624
+    },
+    {
+      "review_id": "0016",
+      "image": "images/0016.png",
+      "prefilter_pass": true,
+      "decision_close": 0.28561,
+      "purple_mean_close": 0.2800975,
+      "prefilter_delta": 0.005512499999999976
+    },
+    {
+      "review_id": "0017",
+      "image": "images/0017.png",
+      "prefilter_pass": true,
+      "decision_close": 0.05064,
+      "purple_mean_close": 0.048979166666666664,
+      "prefilter_delta": 0.0016608333333333336
+    },
+    {
+      "review_id": "0018",
+      "image": "images/0018.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04983,
+      "purple_mean_close": 0.04932541666666667,
+      "prefilter_delta": 0.0005045833333333291
+    },
+    {
+      "review_id": "0019",
+      "image": "images/0019.png",
+      "prefilter_pass": false,
+      "decision_close": 14.84,
+      "purple_mean_close": 15.127499999999998,
+      "prefilter_delta": -0.28749999999999787
+    },
+    {
+      "review_id": "0020",
+      "image": "images/0020.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6819,
+      "purple_mean_close": 0.6674291666666669,
+      "prefilter_delta": 0.0144708333333331
+    },
+    {
+      "review_id": "0021",
+      "image": "images/0021.png",
+      "prefilter_pass": false,
+      "decision_close": 0.683,
+      "purple_mean_close": 0.6851875,
+      "prefilter_delta": -0.002187499999999898
+    },
+    {
+      "review_id": "0022",
+      "image": "images/0022.png",
+      "prefilter_pass": true,
+      "decision_close": 0.13792,
+      "purple_mean_close": 0.13754458333333333,
+      "prefilter_delta": 0.00037541666666665585
+    },
+    {
+      "review_id": "0023",
+      "image": "images/0023.png",
+      "prefilter_pass": true,
+      "decision_close": 2.539,
+      "purple_mean_close": 2.511833333333333,
+      "prefilter_delta": 0.027166666666667005
+    },
+    {
+      "review_id": "0024",
+      "image": "images/0024.png",
+      "prefilter_pass": true,
+      "decision_close": 0.119,
+      "purple_mean_close": 0.11640416666666668,
+      "prefilter_delta": 0.002595833333333311
+    },
+    {
+      "review_id": "0025",
+      "image": "images/0025.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1904,
+      "purple_mean_close": 0.18705833333333333,
+      "prefilter_delta": 0.003341666666666687
+    },
+    {
+      "review_id": "0026",
+      "image": "images/0026.png",
+      "prefilter_pass": true,
+      "decision_close": 0.05405,
+      "purple_mean_close": 0.05262875,
+      "prefilter_delta": 0.001421249999999999
+    },
+    {
+      "review_id": "0027",
+      "image": "images/0027.png",
+      "prefilter_pass": true,
+      "decision_close": 355.3,
+      "purple_mean_close": 346.40416666666664,
+      "prefilter_delta": 8.895833333333371
+    },
+    {
+      "review_id": "0028",
+      "image": "images/0028.png",
+      "prefilter_pass": true,
+      "decision_close": 0.06976,
+      "purple_mean_close": 0.06877,
+      "prefilter_delta": 0.0009900000000000048
+    },
+    {
+      "review_id": "0029",
+      "image": "images/0029.png",
+      "prefilter_pass": false,
+      "decision_close": 0.04708,
+      "purple_mean_close": 0.04713291666666666,
+      "prefilter_delta": -5.291666666666639e-05
+    },
+    {
+      "review_id": "0030",
+      "image": "images/0030.png",
+      "prefilter_pass": false,
+      "decision_close": 0.11451,
+      "purple_mean_close": 0.11461499999999998,
+      "prefilter_delta": -0.00010499999999998011
+    },
+    {
+      "review_id": "0031",
+      "image": "images/0031.png",
+      "prefilter_pass": true,
+      "decision_close": 0.005746,
+      "purple_mean_close": 0.005582625000000001,
+      "prefilter_delta": 0.00016337499999999946
+    },
+    {
+      "review_id": "0032",
+      "image": "images/0032.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04099,
+      "purple_mean_close": 0.039995416666666665,
+      "prefilter_delta": 0.0009945833333333334
+    },
+    {
+      "review_id": "0033",
+      "image": "images/0033.png",
+      "prefilter_pass": true,
+      "decision_close": 0.551,
+      "purple_mean_close": 0.5393416666666666,
+      "prefilter_delta": 0.011658333333333437
+    },
+    {
+      "review_id": "0034",
+      "image": "images/0034.png",
+      "prefilter_pass": false,
+      "decision_close": 0.88,
+      "purple_mean_close": 0.890375,
+      "prefilter_delta": -0.010375000000000023
+    },
+    {
+      "review_id": "0035",
+      "image": "images/0035.png",
+      "prefilter_pass": false,
+      "decision_close": 0.01236,
+      "purple_mean_close": 0.012388750000000002,
+      "prefilter_delta": -2.8750000000002732e-05
+    },
+    {
+      "review_id": "0036",
+      "image": "images/0036.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1627,
+      "purple_mean_close": 0.1601875,
+      "prefilter_delta": 0.002512500000000001
+    },
+    {
+      "review_id": "0037",
+      "image": "images/0037.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1174,
+      "purple_mean_close": 0.11625,
+      "prefilter_delta": 0.0011499999999999982
+    },
+    {
+      "review_id": "0038",
+      "image": "images/0038.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6337,
+      "purple_mean_close": 0.623675,
+      "prefilter_delta": 0.010025000000000062
+    },
+    {
+      "review_id": "0039",
+      "image": "images/0039.png",
+      "prefilter_pass": true,
+      "decision_close": 27.641,
+      "purple_mean_close": 27.322083333333335,
+      "prefilter_delta": 0.31891666666666296
+    },
+    {
+      "review_id": "0040",
+      "image": "images/0040.png",
+      "prefilter_pass": false,
+      "decision_close": 0.03081,
+      "purple_mean_close": 0.031046666666666667,
+      "prefilter_delta": -0.00023666666666666628
+    },
+    {
+      "review_id": "0041",
+      "image": "images/0041.png",
+      "prefilter_pass": false,
+      "decision_close": 0.3216,
+      "purple_mean_close": 0.32879583333333334,
+      "prefilter_delta": -0.007195833333333346
+    },
+    {
+      "review_id": "0042",
+      "image": "images/0042.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4661,
+      "purple_mean_close": 0.46256249999999993,
+      "prefilter_delta": 0.0035375000000000822
+    },
+    {
+      "review_id": "0043",
+      "image": "images/0043.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01252,
+      "purple_mean_close": 0.0124125,
+      "prefilter_delta": 0.00010749999999999996
+    },
+    {
+      "review_id": "0044",
+      "image": "images/0044.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2482,
+      "purple_mean_close": 0.24659583333333335,
+      "prefilter_delta": 0.0016041666666666565
+    },
+    {
+      "review_id": "0045",
+      "image": "images/0045.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8249,
+      "purple_mean_close": 0.8180708333333334,
+      "prefilter_delta": 0.006829166666666553
+    },
+    {
+      "review_id": "0046",
+      "image": "images/0046.png",
+      "prefilter_pass": true,
+      "decision_close": 3.623,
+      "purple_mean_close": 3.6090416666666663,
+      "prefilter_delta": 0.013958333333333961
+    },
+    {
+      "review_id": "0047",
+      "image": "images/0047.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2087,
+      "purple_mean_close": 0.20768333333333333,
+      "prefilter_delta": 0.0010166666666666657
+    },
+    {
+      "review_id": "0048",
+      "image": "images/0048.png",
+      "prefilter_pass": false,
+      "decision_close": 9.058e-06,
+      "purple_mean_close": 9.167458333333333e-06,
+      "prefilter_delta": -1.0945833333333279e-07
+    },
+    {
+      "review_id": "0049",
+      "image": "images/0049.png",
+      "prefilter_pass": false,
+      "decision_close": 0.2038,
+      "purple_mean_close": 0.20425416666666665,
+      "prefilter_delta": -0.0004541666666666444
+    },
+    {
+      "review_id": "0050",
+      "image": "images/0050.png",
+      "prefilter_pass": false,
+      "decision_close": 0.5123,
+      "purple_mean_close": 0.515075,
+      "prefilter_delta": -0.002774999999999972
+    },
+    {
+      "review_id": "0051",
+      "image": "images/0051.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09015,
+      "purple_mean_close": 0.08959958333333333,
+      "prefilter_delta": 0.0005504166666666643
+    },
+    {
+      "review_id": "0052",
+      "image": "images/0052.png",
+      "prefilter_pass": false,
+      "decision_close": 0.08422,
+      "purple_mean_close": 0.08440666666666667,
+      "prefilter_delta": -0.0001866666666666683
+    },
+    {
+      "review_id": "0053",
+      "image": "images/0053.png",
+      "prefilter_pass": true,
+      "decision_close": 0.05394,
+      "purple_mean_close": 0.05382541666666666,
+      "prefilter_delta": 0.00011458333333334153
+    },
+    {
+      "review_id": "0054",
+      "image": "images/0054.png",
+      "prefilter_pass": false,
+      "decision_close": 0.005138,
+      "purple_mean_close": 0.005199625,
+      "prefilter_delta": -6.162500000000005e-05
+    },
+    {
+      "review_id": "0055",
+      "image": "images/0055.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4812,
+      "purple_mean_close": 0.47694583333333335,
+      "prefilter_delta": 0.00425416666666667
+    },
+    {
+      "review_id": "0056",
+      "image": "images/0056.png",
+      "prefilter_pass": true,
+      "decision_close": 0.05743,
+      "purple_mean_close": 0.05701583333333334,
+      "prefilter_delta": 0.0004141666666666599
+    },
+    {
+      "review_id": "0057",
+      "image": "images/0057.png",
+      "prefilter_pass": true,
+      "decision_close": 0.5355,
+      "purple_mean_close": 0.5309166666666666,
+      "prefilter_delta": 0.004583333333333384
+    },
+    {
+      "review_id": "0058",
+      "image": "images/0058.png",
+      "prefilter_pass": false,
+      "decision_close": 0.9311,
+      "purple_mean_close": 0.9333583333333334,
+      "prefilter_delta": -0.002258333333333362
+    },
+    {
+      "review_id": "0059",
+      "image": "images/0059.png",
+      "prefilter_pass": true,
+      "decision_close": 1.231,
+      "purple_mean_close": 1.2176666666666667,
+      "prefilter_delta": 0.01333333333333342
+    },
+    {
+      "review_id": "0060",
+      "image": "images/0060.png",
+      "prefilter_pass": false,
+      "decision_close": 0.03428,
+      "purple_mean_close": 0.03453916666666667,
+      "prefilter_delta": -0.00025916666666667143
+    },
+    {
+      "review_id": "0061",
+      "image": "images/0061.png",
+      "prefilter_pass": true,
+      "decision_close": 7.928,
+      "purple_mean_close": 7.741083333333333,
+      "prefilter_delta": 0.18691666666666684
+    },
+    {
+      "review_id": "0062",
+      "image": "images/0062.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08231,
+      "purple_mean_close": 0.08190333333333334,
+      "prefilter_delta": 0.0004066666666666524
+    },
+    {
+      "review_id": "0063",
+      "image": "images/0063.png",
+      "prefilter_pass": true,
+      "decision_close": 6.946e-06,
+      "purple_mean_close": 6.896083333333333e-06,
+      "prefilter_delta": 4.991666666666685e-08
+    },
+    {
+      "review_id": "0064",
+      "image": "images/0064.png",
+      "prefilter_pass": false,
+      "decision_close": 35.9,
+      "purple_mean_close": 36.189166666666665,
+      "prefilter_delta": -0.28916666666666657
+    },
+    {
+      "review_id": "0065",
+      "image": "images/0065.png",
+      "prefilter_pass": false,
+      "decision_close": 0.20069,
+      "purple_mean_close": 0.20480166666666666,
+      "prefilter_delta": -0.004111666666666652
+    },
+    {
+      "review_id": "0066",
+      "image": "images/0066.png",
+      "prefilter_pass": true,
+      "decision_close": 0.06807,
+      "purple_mean_close": 0.06767666666666666,
+      "prefilter_delta": 0.00039333333333334275
+    },
+    {
+      "review_id": "0067",
+      "image": "images/0067.png",
+      "prefilter_pass": true,
+      "decision_close": 13.93,
+      "purple_mean_close": 13.701666666666668,
+      "prefilter_delta": 0.22833333333333172
+    },
+    {
+      "review_id": "0068",
+      "image": "images/0068.png",
+      "prefilter_pass": true,
+      "decision_close": 6.396,
+      "purple_mean_close": 6.303541666666667,
+      "prefilter_delta": 0.09245833333333309
+    },
+    {
+      "review_id": "0069",
+      "image": "images/0069.png",
+      "prefilter_pass": false,
+      "decision_close": 0.4054,
+      "purple_mean_close": 0.40659166666666663,
+      "prefilter_delta": -0.0011916666666666464
+    },
+    {
+      "review_id": "0070",
+      "image": "images/0070.png",
+      "prefilter_pass": false,
+      "decision_close": 0.7643,
+      "purple_mean_close": 0.7658958333333333,
+      "prefilter_delta": -0.0015958333333333519
+    },
+    {
+      "review_id": "0071",
+      "image": "images/0071.png",
+      "prefilter_pass": false,
+      "decision_close": 0.2992,
+      "purple_mean_close": 0.30014583333333333,
+      "prefilter_delta": -0.0009458333333333124
+    },
+    {
+      "review_id": "0072",
+      "image": "images/0072.png",
+      "prefilter_pass": false,
+      "decision_close": 0.07093,
+      "purple_mean_close": 0.07255,
+      "prefilter_delta": -0.0016199999999999964
+    },
+    {
+      "review_id": "0073",
+      "image": "images/0073.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04918,
+      "purple_mean_close": 0.04861458333333333,
+      "prefilter_delta": 0.0005654166666666724
+    },
+    {
+      "review_id": "0074",
+      "image": "images/0074.png",
+      "prefilter_pass": false,
+      "decision_close": 0.731,
+      "purple_mean_close": 0.7436208333333333,
+      "prefilter_delta": -0.012620833333333303
+    },
+    {
+      "review_id": "0075",
+      "image": "images/0075.png",
+      "prefilter_pass": false,
+      "decision_close": 1.85,
+      "purple_mean_close": 1.8537083333333333,
+      "prefilter_delta": -0.0037083333333332025
+    },
+    {
+      "review_id": "0076",
+      "image": "images/0076.png",
+      "prefilter_pass": false,
+      "decision_close": 0.3227,
+      "purple_mean_close": 0.3238875,
+      "prefilter_delta": -0.001187500000000008
+    },
+    {
+      "review_id": "0077",
+      "image": "images/0077.png",
+      "prefilter_pass": true,
+      "decision_close": 0.06877,
+      "purple_mean_close": 0.06742374999999999,
+      "prefilter_delta": 0.0013462500000000072
+    },
+    {
+      "review_id": "0078",
+      "image": "images/0078.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3889,
+      "purple_mean_close": 0.38805,
+      "prefilter_delta": 0.0008500000000000174
+    },
+    {
+      "review_id": "0079",
+      "image": "images/0079.png",
+      "prefilter_pass": true,
+      "decision_close": 5.167,
+      "purple_mean_close": 5.13625,
+      "prefilter_delta": 0.03074999999999939
+    },
+    {
+      "review_id": "0080",
+      "image": "images/0080.png",
+      "prefilter_pass": false,
+      "decision_close": 2.586,
+      "purple_mean_close": 2.600375,
+      "prefilter_delta": -0.014375000000000249
+    },
+    {
+      "review_id": "0081",
+      "image": "images/0081.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6778,
+      "purple_mean_close": 0.6700958333333333,
+      "prefilter_delta": 0.007704166666666623
+    },
+    {
+      "review_id": "0082",
+      "image": "images/0082.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2026,
+      "purple_mean_close": 0.20057500000000003,
+      "prefilter_delta": 0.0020249999999999713
+    },
+    {
+      "review_id": "0083",
+      "image": "images/0083.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1179,
+      "purple_mean_close": 0.11451666666666667,
+      "prefilter_delta": 0.0033833333333333354
+    },
+    {
+      "review_id": "0084",
+      "image": "images/0084.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1216,
+      "purple_mean_close": 0.12280833333333334,
+      "prefilter_delta": -0.001208333333333339
+    },
+    {
+      "review_id": "0085",
+      "image": "images/0085.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01488,
+      "purple_mean_close": 0.01458625,
+      "prefilter_delta": 0.0002937500000000006
+    },
+    {
+      "review_id": "0086",
+      "image": "images/0086.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05667,
+      "purple_mean_close": 0.05758041666666667,
+      "prefilter_delta": -0.0009104166666666705
+    },
+    {
+      "review_id": "0087",
+      "image": "images/0087.png",
+      "prefilter_pass": false,
+      "decision_close": 0.15389,
+      "purple_mean_close": 0.15431958333333332,
+      "prefilter_delta": -0.00042958333333331655
+    },
+    {
+      "review_id": "0088",
+      "image": "images/0088.png",
+      "prefilter_pass": true,
+      "decision_close": 6.531,
+      "purple_mean_close": 6.509666666666668,
+      "prefilter_delta": 0.021333333333331872
+    },
+    {
+      "review_id": "0089",
+      "image": "images/0089.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01105,
+      "purple_mean_close": 0.011029166666666666,
+      "prefilter_delta": 2.083333333333451e-05
+    },
+    {
+      "review_id": "0090",
+      "image": "images/0090.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01485,
+      "purple_mean_close": 0.014793333333333334,
+      "prefilter_delta": 5.666666666666667e-05
+    },
+    {
+      "review_id": "0091",
+      "image": "images/0091.png",
+      "prefilter_pass": false,
+      "decision_close": 0.03657,
+      "purple_mean_close": 0.036734166666666665,
+      "prefilter_delta": -0.00016416666666666663
+    },
+    {
+      "review_id": "0092",
+      "image": "images/0092.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1756,
+      "purple_mean_close": 0.17532499999999998,
+      "prefilter_delta": 0.0002750000000000252
+    },
+    {
+      "review_id": "0093",
+      "image": "images/0093.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01855,
+      "purple_mean_close": 0.018545833333333334,
+      "prefilter_delta": 4.166666666666208e-06
+    },
+    {
+      "review_id": "0094",
+      "image": "images/0094.png",
+      "prefilter_pass": true,
+      "decision_close": 6.107e-06,
+      "purple_mean_close": 6.0309999999999995e-06,
+      "prefilter_delta": 7.600000000000063e-08
+    },
+    {
+      "review_id": "0095",
+      "image": "images/0095.png",
+      "prefilter_pass": true,
+      "decision_close": 4.219,
+      "purple_mean_close": 4.201583333333333,
+      "prefilter_delta": 0.017416666666667524
+    },
+    {
+      "review_id": "0096",
+      "image": "images/0096.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1422,
+      "purple_mean_close": 0.141675,
+      "prefilter_delta": 0.0005249999999999977
+    },
+    {
+      "review_id": "0097",
+      "image": "images/0097.png",
+      "prefilter_pass": true,
+      "decision_close": 0.009326,
+      "purple_mean_close": 0.009170416666666667,
+      "prefilter_delta": 0.00015558333333333223
+    },
+    {
+      "review_id": "0098",
+      "image": "images/0098.png",
+      "prefilter_pass": true,
+      "decision_close": 0.002748,
+      "purple_mean_close": 0.0027367499999999996,
+      "prefilter_delta": 1.1250000000000409e-05
+    },
+    {
+      "review_id": "0099",
+      "image": "images/0099.png",
+      "prefilter_pass": false,
+      "decision_close": 0.11241,
+      "purple_mean_close": 0.11272416666666667,
+      "prefilter_delta": -0.0003141666666666709
+    },
+    {
+      "review_id": "0100",
+      "image": "images/0100.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2322,
+      "purple_mean_close": 0.23197500000000001,
+      "prefilter_delta": 0.00022499999999997522
+    },
+    {
+      "review_id": "0101",
+      "image": "images/0101.png",
+      "prefilter_pass": true,
+      "decision_close": 0.9271,
+      "purple_mean_close": 0.9223374999999999,
+      "prefilter_delta": 0.004762500000000114
+    },
+    {
+      "review_id": "0102",
+      "image": "images/0102.png",
+      "prefilter_pass": false,
+      "decision_close": 3099.73,
+      "purple_mean_close": 3106.8604166666664,
+      "prefilter_delta": -7.130416666666406
+    },
+    {
+      "review_id": "0103",
+      "image": "images/0103.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1069,
+      "purple_mean_close": 0.10594583333333334,
+      "prefilter_delta": 0.0009541666666666587
+    },
+    {
+      "review_id": "0104",
+      "image": "images/0104.png",
+      "prefilter_pass": true,
+      "decision_close": 0.03242,
+      "purple_mean_close": 0.032095,
+      "prefilter_delta": 0.0003249999999999989
+    },
+    {
+      "review_id": "0105",
+      "image": "images/0105.png",
+      "prefilter_pass": true,
+      "decision_close": 0.14445,
+      "purple_mean_close": 0.14225083333333333,
+      "prefilter_delta": 0.0021991666666666687
+    },
+    {
+      "review_id": "0106",
+      "image": "images/0106.png",
+      "prefilter_pass": false,
+      "decision_close": 54.44,
+      "purple_mean_close": 54.57041666666667,
+      "prefilter_delta": -0.13041666666666885
+    },
+    {
+      "review_id": "0107",
+      "image": "images/0107.png",
+      "prefilter_pass": false,
+      "decision_close": 0.2252,
+      "purple_mean_close": 0.22582916666666664,
+      "prefilter_delta": -0.0006291666666666251
+    },
+    {
+      "review_id": "0108",
+      "image": "images/0108.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04556,
+      "purple_mean_close": 0.04532125,
+      "prefilter_delta": 0.00023875000000000285
+    },
+    {
+      "review_id": "0109",
+      "image": "images/0109.png",
+      "prefilter_pass": true,
+      "decision_close": 0.12667,
+      "purple_mean_close": 0.11475916666666668,
+      "prefilter_delta": 0.011910833333333329
+    },
+    {
+      "review_id": "0110",
+      "image": "images/0110.png",
+      "prefilter_pass": true,
+      "decision_close": 0.03453,
+      "purple_mean_close": 0.03386583333333333,
+      "prefilter_delta": 0.0006641666666666671
+    },
+    {
+      "review_id": "0111",
+      "image": "images/0111.png",
+      "prefilter_pass": false,
+      "decision_close": 0.0007019,
+      "purple_mean_close": 0.0007161791666666665,
+      "prefilter_delta": -1.4279166666666542e-05
+    },
+    {
+      "review_id": "0112",
+      "image": "images/0112.png",
+      "prefilter_pass": true,
+      "decision_close": 1.217,
+      "purple_mean_close": 1.2082916666666668,
+      "prefilter_delta": 0.008708333333333318
+    },
+    {
+      "review_id": "0113",
+      "image": "images/0113.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04068,
+      "purple_mean_close": 0.04027125,
+      "prefilter_delta": 0.0004087499999999994
+    },
+    {
+      "review_id": "0114",
+      "image": "images/0114.png",
+      "prefilter_pass": false,
+      "decision_close": 0.065618,
+      "purple_mean_close": 0.06601425,
+      "prefilter_delta": -0.00039625000000000077
+    },
+    {
+      "review_id": "0115",
+      "image": "images/0115.png",
+      "prefilter_pass": true,
+      "decision_close": 1.907,
+      "purple_mean_close": 1.9005458333333334,
+      "prefilter_delta": 0.00645416666666665
+    },
+    {
+      "review_id": "0116",
+      "image": "images/0116.png",
+      "prefilter_pass": false,
+      "decision_close": 0.27203,
+      "purple_mean_close": 0.2742245833333333,
+      "prefilter_delta": -0.002194583333333333
+    },
+    {
+      "review_id": "0117",
+      "image": "images/0117.png",
+      "prefilter_pass": true,
+      "decision_close": 0.23976,
+      "purple_mean_close": 0.23738291666666667,
+      "prefilter_delta": 0.002377083333333335
+    },
+    {
+      "review_id": "0118",
+      "image": "images/0118.png",
+      "prefilter_pass": true,
+      "decision_close": 9.165,
+      "purple_mean_close": 9.122124999999999,
+      "prefilter_delta": 0.04287500000000044
+    },
+    {
+      "review_id": "0119",
+      "image": "images/0119.png",
+      "prefilter_pass": true,
+      "decision_close": 0.004044,
+      "purple_mean_close": 0.003933,
+      "prefilter_delta": 0.00011099999999999999
+    },
+    {
+      "review_id": "0120",
+      "image": "images/0120.png",
+      "prefilter_pass": false,
+      "decision_close": 0.004441,
+      "purple_mean_close": 0.00447175,
+      "prefilter_delta": -3.0750000000000395e-05
+    },
+    {
+      "review_id": "0121",
+      "image": "images/0121.png",
+      "prefilter_pass": true,
+      "decision_close": 0.9542,
+      "purple_mean_close": 0.9519541666666668,
+      "prefilter_delta": 0.0022458333333332803
+    },
+    {
+      "review_id": "0122",
+      "image": "images/0122.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1913,
+      "purple_mean_close": 0.19261666666666666,
+      "prefilter_delta": -0.0013166666666666604
+    },
+    {
+      "review_id": "0123",
+      "image": "images/0123.png",
+      "prefilter_pass": false,
+      "decision_close": 0.06304,
+      "purple_mean_close": 0.06354791666666666,
+      "prefilter_delta": -0.0005079166666666635
+    },
+    {
+      "review_id": "0124",
+      "image": "images/0124.png",
+      "prefilter_pass": false,
+      "decision_close": 11.28,
+      "purple_mean_close": 11.344583333333333,
+      "prefilter_delta": -0.06458333333333321
+    },
+    {
+      "review_id": "0125",
+      "image": "images/0125.png",
+      "prefilter_pass": true,
+      "decision_close": 0.0008906,
+      "purple_mean_close": 0.0008883833333333332,
+      "prefilter_delta": 2.2166666666667296e-06
+    },
+    {
+      "review_id": "0126",
+      "image": "images/0126.png",
+      "prefilter_pass": false,
+      "decision_close": 7.657,
+      "purple_mean_close": 7.694208333333333,
+      "prefilter_delta": -0.037208333333333066
+    },
+    {
+      "review_id": "0127",
+      "image": "images/0127.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08157,
+      "purple_mean_close": 0.08083916666666667,
+      "prefilter_delta": 0.0007308333333333333
+    },
+    {
+      "review_id": "0128",
+      "image": "images/0128.png",
+      "prefilter_pass": false,
+      "decision_close": 1.2873e-05,
+      "purple_mean_close": 1.2878375e-05,
+      "prefilter_delta": -5.374999999999927e-09
+    },
+    {
+      "review_id": "0129",
+      "image": "images/0129.png",
+      "prefilter_pass": true,
+      "decision_close": 6.561,
+      "purple_mean_close": 6.554666666666667,
+      "prefilter_delta": 0.00633333333333308
+    },
+    {
+      "review_id": "0130",
+      "image": "images/0130.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2405,
+      "purple_mean_close": 0.2396125,
+      "prefilter_delta": 0.0008874999999999855
+    },
+    {
+      "review_id": "0131",
+      "image": "images/0131.png",
+      "prefilter_pass": true,
+      "decision_close": 1.794,
+      "purple_mean_close": 1.781,
+      "prefilter_delta": 0.013000000000000123
+    },
+    {
+      "review_id": "0132",
+      "image": "images/0132.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4445,
+      "purple_mean_close": 0.4288541666666667,
+      "prefilter_delta": 0.015645833333333303
+    },
+    {
+      "review_id": "0133",
+      "image": "images/0133.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6717,
+      "purple_mean_close": 0.6656791666666666,
+      "prefilter_delta": 0.006020833333333364
+    },
+    {
+      "review_id": "0134",
+      "image": "images/0134.png",
+      "prefilter_pass": false,
+      "decision_close": 2.908,
+      "purple_mean_close": 2.9282916666666665,
+      "prefilter_delta": -0.020291666666666597
+    },
+    {
+      "review_id": "0135",
+      "image": "images/0135.png",
+      "prefilter_pass": true,
+      "decision_close": 0.12864,
+      "purple_mean_close": 0.1284316666666667,
+      "prefilter_delta": 0.0002083333333333104
+    },
+    {
+      "review_id": "0136",
+      "image": "images/0136.png",
+      "prefilter_pass": true,
+      "decision_close": 106.63,
+      "purple_mean_close": 105.985,
+      "prefilter_delta": 0.644999999999996
+    },
+    {
+      "review_id": "0137",
+      "image": "images/0137.png",
+      "prefilter_pass": false,
+      "decision_close": 6.142,
+      "purple_mean_close": 6.174333333333333,
+      "prefilter_delta": -0.03233333333333288
+    },
+    {
+      "review_id": "0138",
+      "image": "images/0138.png",
+      "prefilter_pass": true,
+      "decision_close": 0.34525,
+      "purple_mean_close": 0.3441237499999999,
+      "prefilter_delta": 0.0011262500000001063
+    },
+    {
+      "review_id": "0139",
+      "image": "images/0139.png",
+      "prefilter_pass": false,
+      "decision_close": 9.412,
+      "purple_mean_close": 9.499916666666666,
+      "prefilter_delta": -0.08791666666666487
+    },
+    {
+      "review_id": "0140",
+      "image": "images/0140.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3474,
+      "purple_mean_close": 0.3415458333333334,
+      "prefilter_delta": 0.005854166666666605
+    },
+    {
+      "review_id": "0141",
+      "image": "images/0141.png",
+      "prefilter_pass": false,
+      "decision_close": 0.099,
+      "purple_mean_close": 0.09960416666666667,
+      "prefilter_delta": -0.0006041666666666695
+    },
+    {
+      "review_id": "0142",
+      "image": "images/0142.png",
+      "prefilter_pass": false,
+      "decision_close": 29.116,
+      "purple_mean_close": 29.1945,
+      "prefilter_delta": -0.07850000000000179
+    },
+    {
+      "review_id": "0143",
+      "image": "images/0143.png",
+      "prefilter_pass": true,
+      "decision_close": 0.03198,
+      "purple_mean_close": 0.03164416666666667,
+      "prefilter_delta": 0.0003358333333333338
+    },
+    {
+      "review_id": "0144",
+      "image": "images/0144.png",
+      "prefilter_pass": true,
+      "decision_close": 2.035,
+      "purple_mean_close": 1.9995,
+      "prefilter_delta": 0.03550000000000009
+    },
+    {
+      "review_id": "0145",
+      "image": "images/0145.png",
+      "prefilter_pass": true,
+      "decision_close": 0.17894,
+      "purple_mean_close": 0.17360916666666668,
+      "prefilter_delta": 0.0053308333333333124
+    },
+    {
+      "review_id": "0146",
+      "image": "images/0146.png",
+      "prefilter_pass": true,
+      "decision_close": 7.921,
+      "purple_mean_close": 6.9956249999999995,
+      "prefilter_delta": 0.9253750000000007
+    },
+    {
+      "review_id": "0147",
+      "image": "images/0147.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6842,
+      "purple_mean_close": 0.6827916666666667,
+      "prefilter_delta": 0.0014083333333333448
+    },
+    {
+      "review_id": "0148",
+      "image": "images/0148.png",
+      "prefilter_pass": false,
+      "decision_close": 2.435,
+      "purple_mean_close": 2.439416666666667,
+      "prefilter_delta": -0.004416666666666735
+    },
+    {
+      "review_id": "0149",
+      "image": "images/0149.png",
+      "prefilter_pass": false,
+      "decision_close": 0.001825,
+      "purple_mean_close": 0.0018634166666666667,
+      "prefilter_delta": -3.8416666666666634e-05
+    },
+    {
+      "review_id": "0150",
+      "image": "images/0150.png",
+      "prefilter_pass": false,
+      "decision_close": 0.8574,
+      "purple_mean_close": 0.8600125000000002,
+      "prefilter_delta": -0.0026125000000001286
+    },
+    {
+      "review_id": "0151",
+      "image": "images/0151.png",
+      "prefilter_pass": true,
+      "decision_close": 0.27107,
+      "purple_mean_close": 0.2625633333333333,
+      "prefilter_delta": 0.008506666666666662
+    },
+    {
+      "review_id": "0152",
+      "image": "images/0152.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01822,
+      "purple_mean_close": 0.018188333333333334,
+      "prefilter_delta": 3.1666666666665955e-05
+    },
+    {
+      "review_id": "0153",
+      "image": "images/0153.png",
+      "prefilter_pass": true,
+      "decision_close": 0.005584,
+      "purple_mean_close": 0.005521083333333334,
+      "prefilter_delta": 6.291666666666685e-05
+    },
+    {
+      "review_id": "0154",
+      "image": "images/0154.png",
+      "prefilter_pass": false,
+      "decision_close": 0.01793,
+      "purple_mean_close": 0.017982916666666668,
+      "prefilter_delta": -5.291666666666639e-05
+    },
+    {
+      "review_id": "0155",
+      "image": "images/0155.png",
+      "prefilter_pass": false,
+      "decision_close": 0.29502,
+      "purple_mean_close": 0.29527875000000003,
+      "prefilter_delta": -0.0002587500000000298
+    },
+    {
+      "review_id": "0156",
+      "image": "images/0156.png",
+      "prefilter_pass": true,
+      "decision_close": 1.874,
+      "purple_mean_close": 1.857375,
+      "prefilter_delta": 0.016625000000000112
+    },
+    {
+      "review_id": "0157",
+      "image": "images/0157.png",
+      "prefilter_pass": false,
+      "decision_close": 1.441,
+      "purple_mean_close": 1.4493749999999999,
+      "prefilter_delta": -0.0083749999999998
+    },
+    {
+      "review_id": "0158",
+      "image": "images/0158.png",
+      "prefilter_pass": true,
+      "decision_close": 0.5152,
+      "purple_mean_close": 0.5014124999999999,
+      "prefilter_delta": 0.013787500000000064
+    },
+    {
+      "review_id": "0159",
+      "image": "images/0159.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1005,
+      "purple_mean_close": 0.10005416666666667,
+      "prefilter_delta": 0.00044583333333333974
+    },
+    {
+      "review_id": "0160",
+      "image": "images/0160.png",
+      "prefilter_pass": true,
+      "decision_close": 3.374,
+      "purple_mean_close": 3.2846249999999997,
+      "prefilter_delta": 0.08937500000000043
+    },
+    {
+      "review_id": "0161",
+      "image": "images/0161.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3151,
+      "purple_mean_close": 0.3057375,
+      "prefilter_delta": 0.009362499999999996
+    },
+    {
+      "review_id": "0162",
+      "image": "images/0162.png",
+      "prefilter_pass": false,
+      "decision_close": 4.851,
+      "purple_mean_close": 4.8922083333333335,
+      "prefilter_delta": -0.04120833333333351
+    },
+    {
+      "review_id": "0163",
+      "image": "images/0163.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6814,
+      "purple_mean_close": 0.6624166666666667,
+      "prefilter_delta": 0.018983333333333352
+    },
+    {
+      "review_id": "0164",
+      "image": "images/0164.png",
+      "prefilter_pass": true,
+      "decision_close": 0.7776,
+      "purple_mean_close": 0.7692625,
+      "prefilter_delta": 0.008337499999999998
+    },
+    {
+      "review_id": "0165",
+      "image": "images/0165.png",
+      "prefilter_pass": true,
+      "decision_close": 0.00356,
+      "purple_mean_close": 0.0033784583333333336,
+      "prefilter_delta": 0.00018154166666666622
+    },
+    {
+      "review_id": "0166",
+      "image": "images/0166.png",
+      "prefilter_pass": false,
+      "decision_close": 3.102,
+      "purple_mean_close": 3.102291666666666,
+      "prefilter_delta": -0.00029166666666613494
+    },
+    {
+      "review_id": "0167",
+      "image": "images/0167.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1443,
+      "purple_mean_close": 0.15355416666666669,
+      "prefilter_delta": -0.009254166666666674
+    },
+    {
+      "review_id": "0168",
+      "image": "images/0168.png",
+      "prefilter_pass": false,
+      "decision_close": 0.03111,
+      "purple_mean_close": 0.03164416666666667,
+      "prefilter_delta": -0.0005341666666666689
+    },
+    {
+      "review_id": "0169",
+      "image": "images/0169.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1015,
+      "purple_mean_close": 0.09930833333333333,
+      "prefilter_delta": 0.002191666666666675
+    },
+    {
+      "review_id": "0170",
+      "image": "images/0170.png",
+      "prefilter_pass": false,
+      "decision_close": 0.2899,
+      "purple_mean_close": 0.2928041666666667,
+      "prefilter_delta": -0.0029041666666667076
+    },
+    {
+      "review_id": "0171",
+      "image": "images/0171.png",
+      "prefilter_pass": true,
+      "decision_close": 0.0773,
+      "purple_mean_close": 0.07450291666666665,
+      "prefilter_delta": 0.002797083333333339
+    },
+    {
+      "review_id": "0172",
+      "image": "images/0172.png",
+      "prefilter_pass": true,
+      "decision_close": 3.207,
+      "purple_mean_close": 3.1646249999999996,
+      "prefilter_delta": 0.042375000000000274
+    },
+    {
+      "review_id": "0173",
+      "image": "images/0173.png",
+      "prefilter_pass": true,
+      "decision_close": 0.002152,
+      "purple_mean_close": 0.0021050833333333334,
+      "prefilter_delta": 4.691666666666646e-05
+    },
+    {
+      "review_id": "0174",
+      "image": "images/0174.png",
+      "prefilter_pass": false,
+      "decision_close": 0.011239,
+      "purple_mean_close": 0.011363958333333334,
+      "prefilter_delta": -0.00012495833333333282
+    },
+    {
+      "review_id": "0175",
+      "image": "images/0175.png",
+      "prefilter_pass": true,
+      "decision_close": 15.53,
+      "purple_mean_close": 15.282083333333333,
+      "prefilter_delta": 0.24791666666666679
+    },
+    {
+      "review_id": "0176",
+      "image": "images/0176.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08833,
+      "purple_mean_close": 0.08508125,
+      "prefilter_delta": 0.0032487500000000086
+    },
+    {
+      "review_id": "0177",
+      "image": "images/0177.png",
+      "prefilter_pass": true,
+      "decision_close": 8.939,
+      "purple_mean_close": 8.872,
+      "prefilter_delta": 0.06700000000000017
+    },
+    {
+      "review_id": "0178",
+      "image": "images/0178.png",
+      "prefilter_pass": false,
+      "decision_close": 0.764,
+      "purple_mean_close": 0.7684291666666666,
+      "prefilter_delta": -0.004429166666666595
+    },
+    {
+      "review_id": "0179",
+      "image": "images/0179.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1535,
+      "purple_mean_close": 0.1516875,
+      "prefilter_delta": 0.0018124999999999947
+    },
+    {
+      "review_id": "0180",
+      "image": "images/0180.png",
+      "prefilter_pass": false,
+      "decision_close": 0.07703,
+      "purple_mean_close": 0.07711499999999999,
+      "prefilter_delta": -8.499999999998786e-05
+    },
+    {
+      "review_id": "0181",
+      "image": "images/0181.png",
+      "prefilter_pass": true,
+      "decision_close": 0.06018,
+      "purple_mean_close": 0.05894333333333333,
+      "prefilter_delta": 0.0012366666666666706
+    },
+    {
+      "review_id": "0182",
+      "image": "images/0182.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2301,
+      "purple_mean_close": 0.22712500000000002,
+      "prefilter_delta": 0.0029749999999999777
+    },
+    {
+      "review_id": "0183",
+      "image": "images/0183.png",
+      "prefilter_pass": true,
+      "decision_close": 14.19,
+      "purple_mean_close": 11.545416666666668,
+      "prefilter_delta": 2.6445833333333315
+    },
+    {
+      "review_id": "0184",
+      "image": "images/0184.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3314,
+      "purple_mean_close": 0.33092083333333333,
+      "prefilter_delta": 0.00047916666666664165
+    },
+    {
+      "review_id": "0185",
+      "image": "images/0185.png",
+      "prefilter_pass": true,
+      "decision_close": 6.141,
+      "purple_mean_close": 6.103000000000001,
+      "prefilter_delta": 0.03799999999999937
+    },
+    {
+      "review_id": "0186",
+      "image": "images/0186.png",
+      "prefilter_pass": true,
+      "decision_close": 2042.95,
+      "purple_mean_close": 2042.894166666667,
+      "prefilter_delta": 0.05583333333311202
+    },
+    {
+      "review_id": "0187",
+      "image": "images/0187.png",
+      "prefilter_pass": true,
+      "decision_close": 0.12979,
+      "purple_mean_close": 0.12823500000000002,
+      "prefilter_delta": 0.001554999999999973
+    },
+    {
+      "review_id": "0188",
+      "image": "images/0188.png",
+      "prefilter_pass": true,
+      "decision_close": 6.977,
+      "purple_mean_close": 6.875875000000001,
+      "prefilter_delta": 0.10112499999999969
+    },
+    {
+      "review_id": "0189",
+      "image": "images/0189.png",
+      "prefilter_pass": false,
+      "decision_close": 1.903,
+      "purple_mean_close": 1.9252500000000001,
+      "prefilter_delta": -0.022250000000000103
+    },
+    {
+      "review_id": "0190",
+      "image": "images/0190.png",
+      "prefilter_pass": true,
+      "decision_close": 0.15895,
+      "purple_mean_close": 0.15508708333333335,
+      "prefilter_delta": 0.0038629166666666603
+    },
+    {
+      "review_id": "0191",
+      "image": "images/0191.png",
+      "prefilter_pass": true,
+      "decision_close": 14.31,
+      "purple_mean_close": 13.996250000000002,
+      "prefilter_delta": 0.31374999999999886
+    },
+    {
+      "review_id": "0192",
+      "image": "images/0192.png",
+      "prefilter_pass": true,
+      "decision_close": 201.65,
+      "purple_mean_close": 197.77999999999997,
+      "prefilter_delta": 3.870000000000033
+    },
+    {
+      "review_id": "0193",
+      "image": "images/0193.png",
+      "prefilter_pass": true,
+      "decision_close": 0.5406,
+      "purple_mean_close": 0.5330041666666666,
+      "prefilter_delta": 0.007595833333333357
+    },
+    {
+      "review_id": "0194",
+      "image": "images/0194.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04117,
+      "purple_mean_close": 0.039858333333333336,
+      "prefilter_delta": 0.0013116666666666624
+    },
+    {
+      "review_id": "0195",
+      "image": "images/0195.png",
+      "prefilter_pass": true,
+      "decision_close": 0.002263,
+      "purple_mean_close": 0.0022570833333333336,
+      "prefilter_delta": 5.916666666666223e-06
+    },
+    {
+      "review_id": "0196",
+      "image": "images/0196.png",
+      "prefilter_pass": true,
+      "decision_close": 0.07997,
+      "purple_mean_close": 0.07956416666666667,
+      "prefilter_delta": 0.0004058333333333275
+    },
+    {
+      "review_id": "0197",
+      "image": "images/0197.png",
+      "prefilter_pass": true,
+      "decision_close": 0.343,
+      "purple_mean_close": 0.3407625,
+      "prefilter_delta": 0.0022375000000000034
+    },
+    {
+      "review_id": "0198",
+      "image": "images/0198.png",
+      "prefilter_pass": true,
+      "decision_close": 0.05178,
+      "purple_mean_close": 0.04954708333333333,
+      "prefilter_delta": 0.0022329166666666678
+    },
+    {
+      "review_id": "0199",
+      "image": "images/0199.png",
+      "prefilter_pass": true,
+      "decision_close": 0.10148,
+      "purple_mean_close": 0.10056708333333335,
+      "prefilter_delta": 0.0009129166666666522
+    },
+    {
+      "review_id": "0200",
+      "image": "images/0200.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1335,
+      "purple_mean_close": 0.13287083333333333,
+      "prefilter_delta": 0.0006291666666666806
+    },
+    {
+      "review_id": "0201",
+      "image": "images/0201.png",
+      "prefilter_pass": true,
+      "decision_close": 10.43,
+      "purple_mean_close": 10.269583333333332,
+      "prefilter_delta": 0.1604166666666682
+    },
+    {
+      "review_id": "0202",
+      "image": "images/0202.png",
+      "prefilter_pass": true,
+      "decision_close": 357.5,
+      "purple_mean_close": 354.0541666666666,
+      "prefilter_delta": 3.4458333333333826
+    },
+    {
+      "review_id": "0203",
+      "image": "images/0203.png",
+      "prefilter_pass": true,
+      "decision_close": 0.194,
+      "purple_mean_close": 0.19255,
+      "prefilter_delta": 0.0014500000000000068
+    },
+    {
+      "review_id": "0204",
+      "image": "images/0204.png",
+      "prefilter_pass": true,
+      "decision_close": 0.00519,
+      "purple_mean_close": 0.005185625,
+      "prefilter_delta": 4.375000000000039e-06
+    },
+    {
+      "review_id": "0205",
+      "image": "images/0205.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8961,
+      "purple_mean_close": 0.8805833333333334,
+      "prefilter_delta": 0.015516666666666623
+    },
+    {
+      "review_id": "0206",
+      "image": "images/0206.png",
+      "prefilter_pass": true,
+      "decision_close": 0.07843,
+      "purple_mean_close": 0.07750041666666667,
+      "prefilter_delta": 0.0009295833333333309
+    },
+    {
+      "review_id": "0207",
+      "image": "images/0207.png",
+      "prefilter_pass": false,
+      "decision_close": 0.4898,
+      "purple_mean_close": 0.4905333333333333,
+      "prefilter_delta": -0.0007333333333333081
+    },
+    {
+      "review_id": "0208",
+      "image": "images/0208.png",
+      "prefilter_pass": true,
+      "decision_close": 2.417,
+      "purple_mean_close": 2.3804583333333333,
+      "prefilter_delta": 0.03654166666666647
+    },
+    {
+      "review_id": "0209",
+      "image": "images/0209.png",
+      "prefilter_pass": false,
+      "decision_close": 3.5476,
+      "purple_mean_close": 3.6489499999999997,
+      "prefilter_delta": -0.10134999999999961
+    },
+    {
+      "review_id": "0210",
+      "image": "images/0210.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1298,
+      "purple_mean_close": 0.1295625,
+      "prefilter_delta": 0.0002375000000000016
+    },
+    {
+      "review_id": "0211",
+      "image": "images/0211.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09558,
+      "purple_mean_close": 0.09415666666666667,
+      "prefilter_delta": 0.001423333333333332
+    },
+    {
+      "review_id": "0212",
+      "image": "images/0212.png",
+      "prefilter_pass": true,
+      "decision_close": 0.0115,
+      "purple_mean_close": 0.011259583333333332,
+      "prefilter_delta": 0.0002404166666666683
+    },
+    {
+      "review_id": "0213",
+      "image": "images/0213.png",
+      "prefilter_pass": true,
+      "decision_close": 0.4093,
+      "purple_mean_close": 0.3994,
+      "prefilter_delta": 0.00990000000000002
+    },
+    {
+      "review_id": "0214",
+      "image": "images/0214.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01268,
+      "purple_mean_close": 0.012295,
+      "prefilter_delta": 0.0003849999999999999
+    },
+    {
+      "review_id": "0215",
+      "image": "images/0215.png",
+      "prefilter_pass": true,
+      "decision_close": 0.03504,
+      "purple_mean_close": 0.03441458333333334,
+      "prefilter_delta": 0.000625416666666663
+    },
+    {
+      "review_id": "0216",
+      "image": "images/0216.png",
+      "prefilter_pass": true,
+      "decision_close": 0.06593,
+      "purple_mean_close": 0.06442166666666667,
+      "prefilter_delta": 0.0015083333333333337
+    },
+    {
+      "review_id": "0217",
+      "image": "images/0217.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05114,
+      "purple_mean_close": 0.051338749999999995,
+      "prefilter_delta": -0.00019874999999999754
+    },
+    {
+      "review_id": "0218",
+      "image": "images/0218.png",
+      "prefilter_pass": false,
+      "decision_close": 0.04019,
+      "purple_mean_close": 0.04076041666666667,
+      "prefilter_delta": -0.0005704166666666705
+    },
+    {
+      "review_id": "0219",
+      "image": "images/0219.png",
+      "prefilter_pass": false,
+      "decision_close": 7.414,
+      "purple_mean_close": 7.455916666666667,
+      "prefilter_delta": -0.04191666666666727
+    },
+    {
+      "review_id": "0220",
+      "image": "images/0220.png",
+      "prefilter_pass": true,
+      "decision_close": 1.0273,
+      "purple_mean_close": 1.0206041666666668,
+      "prefilter_delta": 0.006695833333333345
+    },
+    {
+      "review_id": "0221",
+      "image": "images/0221.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08291,
+      "purple_mean_close": 0.08204375000000001,
+      "prefilter_delta": 0.0008662499999999851
+    },
+    {
+      "review_id": "0222",
+      "image": "images/0222.png",
+      "prefilter_pass": true,
+      "decision_close": 0.7834,
+      "purple_mean_close": 0.7720583333333333,
+      "prefilter_delta": 0.011341666666666694
+    },
+    {
+      "review_id": "0223",
+      "image": "images/0223.png",
+      "prefilter_pass": false,
+      "decision_close": 0.14275,
+      "purple_mean_close": 0.14331791666666668,
+      "prefilter_delta": -0.0005679166666666957
+    },
+    {
+      "review_id": "0224",
+      "image": "images/0224.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1907,
+      "purple_mean_close": 0.19012916666666668,
+      "prefilter_delta": 0.000570833333333326
+    },
+    {
+      "review_id": "0225",
+      "image": "images/0225.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04449,
+      "purple_mean_close": 0.04435708333333333,
+      "prefilter_delta": 0.00013291666666667007
+    },
+    {
+      "review_id": "0226",
+      "image": "images/0226.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1293,
+      "purple_mean_close": 0.13051666666666664,
+      "prefilter_delta": -0.0012166666666666437
+    },
+    {
+      "review_id": "0227",
+      "image": "images/0227.png",
+      "prefilter_pass": false,
+      "decision_close": 2.253,
+      "purple_mean_close": 2.2712499999999998,
+      "prefilter_delta": -0.018249999999999655
+    },
+    {
+      "review_id": "0228",
+      "image": "images/0228.png",
+      "prefilter_pass": true,
+      "decision_close": 2.423,
+      "purple_mean_close": 2.4149583333333333,
+      "prefilter_delta": 0.008041666666666725
+    },
+    {
+      "review_id": "0229",
+      "image": "images/0229.png",
+      "prefilter_pass": false,
+      "decision_close": 0.001868,
+      "purple_mean_close": 0.0018821250000000001,
+      "prefilter_delta": -1.4125000000000032e-05
+    },
+    {
+      "review_id": "0230",
+      "image": "images/0230.png",
+      "prefilter_pass": false,
+      "decision_close": 1.1942e-05,
+      "purple_mean_close": 1.1984041666666666e-05,
+      "prefilter_delta": -4.204166666666568e-08
+    },
+    {
+      "review_id": "0231",
+      "image": "images/0231.png",
+      "prefilter_pass": true,
+      "decision_close": 0.001812,
+      "purple_mean_close": 0.0018001250000000003,
+      "prefilter_delta": 1.1874999999999733e-05
+    },
+    {
+      "review_id": "0232",
+      "image": "images/0232.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1694,
+      "purple_mean_close": 0.16884166666666667,
+      "prefilter_delta": 0.0005583333333333274
+    },
+    {
+      "review_id": "0233",
+      "image": "images/0233.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2754,
+      "purple_mean_close": 0.27379166666666666,
+      "prefilter_delta": 0.0016083333333333227
+    },
+    {
+      "review_id": "0234",
+      "image": "images/0234.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1836,
+      "purple_mean_close": 0.18392083333333334,
+      "prefilter_delta": -0.00032083333333332575
+    },
+    {
+      "review_id": "0235",
+      "image": "images/0235.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3972,
+      "purple_mean_close": 0.39254999999999995,
+      "prefilter_delta": 0.004650000000000043
+    },
+    {
+      "review_id": "0236",
+      "image": "images/0236.png",
+      "prefilter_pass": true,
+      "decision_close": 15.06,
+      "purple_mean_close": 14.84625,
+      "prefilter_delta": 0.213750000000001
+    },
+    {
+      "review_id": "0237",
+      "image": "images/0237.png",
+      "prefilter_pass": false,
+      "decision_close": 0.9632,
+      "purple_mean_close": 0.9663916666666666,
+      "prefilter_delta": -0.0031916666666667037
+    },
+    {
+      "review_id": "0238",
+      "image": "images/0238.png",
+      "prefilter_pass": true,
+      "decision_close": 0.2462,
+      "purple_mean_close": 0.241475,
+      "prefilter_delta": 0.004725000000000007
+    },
+    {
+      "review_id": "0239",
+      "image": "images/0239.png",
+      "prefilter_pass": false,
+      "decision_close": 1.386,
+      "purple_mean_close": 1.389916666666667,
+      "prefilter_delta": -0.0039166666666670125
+    },
+    {
+      "review_id": "0240",
+      "image": "images/0240.png",
+      "prefilter_pass": true,
+      "decision_close": 0.07825,
+      "purple_mean_close": 0.07722666666666667,
+      "prefilter_delta": 0.0010233333333333344
+    },
+    {
+      "review_id": "0241",
+      "image": "images/0241.png",
+      "prefilter_pass": false,
+      "decision_close": 0.4168,
+      "purple_mean_close": 0.424225,
+      "prefilter_delta": -0.007425000000000015
+    },
+    {
+      "review_id": "0242",
+      "image": "images/0242.png",
+      "prefilter_pass": true,
+      "decision_close": 0.11406,
+      "purple_mean_close": 0.11388374999999999,
+      "prefilter_delta": 0.0001762500000000028
+    },
+    {
+      "review_id": "0243",
+      "image": "images/0243.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1468,
+      "purple_mean_close": 0.14564583333333334,
+      "prefilter_delta": 0.0011541666666666783
+    },
+    {
+      "review_id": "0244",
+      "image": "images/0244.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1111,
+      "purple_mean_close": 0.10801791666666666,
+      "prefilter_delta": 0.0030820833333333464
+    },
+    {
+      "review_id": "0245",
+      "image": "images/0245.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6315,
+      "purple_mean_close": 0.6252625,
+      "prefilter_delta": 0.006237499999999896
+    },
+    {
+      "review_id": "0246",
+      "image": "images/0246.png",
+      "prefilter_pass": true,
+      "decision_close": 1.3393,
+      "purple_mean_close": 1.3383833333333335,
+      "prefilter_delta": 0.0009166666666664547
+    },
+    {
+      "review_id": "0247",
+      "image": "images/0247.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01581,
+      "purple_mean_close": 0.015550833333333333,
+      "prefilter_delta": 0.00025916666666666796
+    },
+    {
+      "review_id": "0248",
+      "image": "images/0248.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3716,
+      "purple_mean_close": 0.37105000000000005,
+      "prefilter_delta": 0.0005499999999999394
+    },
+    {
+      "review_id": "0249",
+      "image": "images/0249.png",
+      "prefilter_pass": true,
+      "decision_close": 0.04311,
+      "purple_mean_close": 0.04305,
+      "prefilter_delta": 6.0000000000004494e-05
+    },
+    {
+      "review_id": "0250",
+      "image": "images/0250.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1158,
+      "purple_mean_close": 0.11498333333333333,
+      "prefilter_delta": 0.0008166666666666739
+    },
+    {
+      "review_id": "0251",
+      "image": "images/0251.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1586,
+      "purple_mean_close": 0.15880583333333334,
+      "prefilter_delta": -0.00020583333333334952
+    },
+    {
+      "review_id": "0252",
+      "image": "images/0252.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08746,
+      "purple_mean_close": 0.08628208333333333,
+      "prefilter_delta": 0.0011779166666666674
+    },
+    {
+      "review_id": "0253",
+      "image": "images/0253.png",
+      "prefilter_pass": false,
+      "decision_close": 0.06736,
+      "purple_mean_close": 0.06754791666666667,
+      "prefilter_delta": -0.00018791666666666262
+    },
+    {
+      "review_id": "0254",
+      "image": "images/0254.png",
+      "prefilter_pass": true,
+      "decision_close": 0.0005228,
+      "purple_mean_close": 0.0005220416666666666,
+      "prefilter_delta": 7.583333333333834e-07
+    },
+    {
+      "review_id": "0255",
+      "image": "images/0255.png",
+      "prefilter_pass": true,
+      "decision_close": 0.0299,
+      "purple_mean_close": 0.029810416666666662,
+      "prefilter_delta": 8.958333333333734e-05
+    },
+    {
+      "review_id": "0256",
+      "image": "images/0256.png",
+      "prefilter_pass": true,
+      "decision_close": 0.005212,
+      "purple_mean_close": 0.005196625,
+      "prefilter_delta": 1.5374999999999764e-05
+    },
+    {
+      "review_id": "0257",
+      "image": "images/0257.png",
+      "prefilter_pass": true,
+      "decision_close": 2.58,
+      "purple_mean_close": 2.578291666666667,
+      "prefilter_delta": 0.0017083333333332007
+    },
+    {
+      "review_id": "0258",
+      "image": "images/0258.png",
+      "prefilter_pass": true,
+      "decision_close": 2.949,
+      "purple_mean_close": 2.9205416666666664,
+      "prefilter_delta": 0.028458333333333474
+    },
+    {
+      "review_id": "0259",
+      "image": "images/0259.png",
+      "prefilter_pass": true,
+      "decision_close": 0.5995,
+      "purple_mean_close": 0.5985708333333334,
+      "prefilter_delta": 0.0009291666666666476
+    },
+    {
+      "review_id": "0260",
+      "image": "images/0260.png",
+      "prefilter_pass": false,
+      "decision_close": 0.34182,
+      "purple_mean_close": 0.3437779166666666,
+      "prefilter_delta": -0.001957916666666615
+    },
+    {
+      "review_id": "0261",
+      "image": "images/0261.png",
+      "prefilter_pass": false,
+      "decision_close": 0.02819,
+      "purple_mean_close": 0.0283075,
+      "prefilter_delta": -0.00011749999999999955
+    },
+    {
+      "review_id": "0262",
+      "image": "images/0262.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05477,
+      "purple_mean_close": 0.05512333333333333,
+      "prefilter_delta": -0.0003533333333333305
+    },
+    {
+      "review_id": "0263",
+      "image": "images/0263.png",
+      "prefilter_pass": false,
+      "decision_close": 0.23743,
+      "purple_mean_close": 0.23892083333333333,
+      "prefilter_delta": -0.0014908333333333301
+    },
+    {
+      "review_id": "0264",
+      "image": "images/0264.png",
+      "prefilter_pass": false,
+      "decision_close": 3433.0,
+      "purple_mean_close": 3453.375,
+      "prefilter_delta": -20.375
+    },
+    {
+      "review_id": "0265",
+      "image": "images/0265.png",
+      "prefilter_pass": true,
+      "decision_close": 0.12462,
+      "purple_mean_close": 0.12300458333333335,
+      "prefilter_delta": 0.001615416666666647
+    },
+    {
+      "review_id": "0266",
+      "image": "images/0266.png",
+      "prefilter_pass": false,
+      "decision_close": 0.006619,
+      "purple_mean_close": 0.006622,
+      "prefilter_delta": -3.000000000000398e-06
+    },
+    {
+      "review_id": "0267",
+      "image": "images/0267.png",
+      "prefilter_pass": true,
+      "decision_close": 0.02376,
+      "purple_mean_close": 0.023646249999999997,
+      "prefilter_delta": 0.00011375000000000274
+    },
+    {
+      "review_id": "0268",
+      "image": "images/0268.png",
+      "prefilter_pass": true,
+      "decision_close": 0.009869,
+      "purple_mean_close": 0.009684125,
+      "prefilter_delta": 0.00018487499999999928
+    },
+    {
+      "review_id": "0269",
+      "image": "images/0269.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1654,
+      "purple_mean_close": 0.16417916666666665,
+      "prefilter_delta": 0.0012208333333333377
+    },
+    {
+      "review_id": "0270",
+      "image": "images/0270.png",
+      "prefilter_pass": true,
+      "decision_close": 23.356,
+      "purple_mean_close": 23.33275,
+      "prefilter_delta": 0.02325000000000088
+    },
+    {
+      "review_id": "0271",
+      "image": "images/0271.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1429,
+      "purple_mean_close": 0.13994583333333332,
+      "prefilter_delta": 0.0029541666666666744
+    },
+    {
+      "review_id": "0272",
+      "image": "images/0272.png",
+      "prefilter_pass": false,
+      "decision_close": 0.09225,
+      "purple_mean_close": 0.09231166666666668,
+      "prefilter_delta": -6.166666666668208e-05
+    },
+    {
+      "review_id": "0273",
+      "image": "images/0273.png",
+      "prefilter_pass": true,
+      "decision_close": 0.7472,
+      "purple_mean_close": 0.7430208333333334,
+      "prefilter_delta": 0.004179166666666623
+    },
+    {
+      "review_id": "0274",
+      "image": "images/0274.png",
+      "prefilter_pass": true,
+      "decision_close": 0.7805,
+      "purple_mean_close": 0.7663458333333333,
+      "prefilter_delta": 0.01415416666666669
+    },
+    {
+      "review_id": "0275",
+      "image": "images/0275.png",
+      "prefilter_pass": false,
+      "decision_close": 0.3824,
+      "purple_mean_close": 0.3916041666666667,
+      "prefilter_delta": -0.00920416666666668
+    },
+    {
+      "review_id": "0276",
+      "image": "images/0276.png",
+      "prefilter_pass": true,
+      "decision_close": 0.001567,
+      "purple_mean_close": 0.0015562083333333333,
+      "prefilter_delta": 1.0791666666666762e-05
+    },
+    {
+      "review_id": "0277",
+      "image": "images/0277.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05735,
+      "purple_mean_close": 0.05821958333333333,
+      "prefilter_delta": -0.0008695833333333333
+    },
+    {
+      "review_id": "0278",
+      "image": "images/0278.png",
+      "prefilter_pass": true,
+      "decision_close": 0.13261,
+      "purple_mean_close": 0.1324575,
+      "prefilter_delta": 0.00015249999999999986
+    },
+    {
+      "review_id": "0279",
+      "image": "images/0279.png",
+      "prefilter_pass": false,
+      "decision_close": 0.07516,
+      "purple_mean_close": 0.07529875,
+      "prefilter_delta": -0.00013874999999999305
+    },
+    {
+      "review_id": "0280",
+      "image": "images/0280.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09801,
+      "purple_mean_close": 0.09756625000000001,
+      "prefilter_delta": 0.00044374999999999276
+    },
+    {
+      "review_id": "0281",
+      "image": "images/0281.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3554,
+      "purple_mean_close": 0.35537083333333336,
+      "prefilter_delta": 2.91666666666357e-05
+    },
+    {
+      "review_id": "0282",
+      "image": "images/0282.png",
+      "prefilter_pass": false,
+      "decision_close": 1.2637,
+      "purple_mean_close": 1.2677708333333333,
+      "prefilter_delta": -0.004070833333333246
+    },
+    {
+      "review_id": "0283",
+      "image": "images/0283.png",
+      "prefilter_pass": true,
+      "decision_close": 0.01133,
+      "purple_mean_close": 0.011194166666666667,
+      "prefilter_delta": 0.0001358333333333333
+    },
+    {
+      "review_id": "0284",
+      "image": "images/0284.png",
+      "prefilter_pass": true,
+      "decision_close": 0.16885,
+      "purple_mean_close": 0.16259958333333333,
+      "prefilter_delta": 0.006250416666666675
+    },
+    {
+      "review_id": "0285",
+      "image": "images/0285.png",
+      "prefilter_pass": true,
+      "decision_close": 1.22,
+      "purple_mean_close": 1.2180416666666667,
+      "prefilter_delta": 0.001958333333333284
+    },
+    {
+      "review_id": "0286",
+      "image": "images/0286.png",
+      "prefilter_pass": true,
+      "decision_close": 0.6208,
+      "purple_mean_close": 0.6120333333333333,
+      "prefilter_delta": 0.0087666666666667
+    },
+    {
+      "review_id": "0287",
+      "image": "images/0287.png",
+      "prefilter_pass": true,
+      "decision_close": 0.142,
+      "purple_mean_close": 0.14007916666666667,
+      "prefilter_delta": 0.001920833333333316
+    },
+    {
+      "review_id": "0288",
+      "image": "images/0288.png",
+      "prefilter_pass": false,
+      "decision_close": 0.12717,
+      "purple_mean_close": 0.12848708333333334,
+      "prefilter_delta": -0.0013170833333333298
+    },
+    {
+      "review_id": "0289",
+      "image": "images/0289.png",
+      "prefilter_pass": true,
+      "decision_close": 0.08576,
+      "purple_mean_close": 0.08459375000000001,
+      "prefilter_delta": 0.0011662499999999937
+    },
+    {
+      "review_id": "0290",
+      "image": "images/0290.png",
+      "prefilter_pass": false,
+      "decision_close": 9.679,
+      "purple_mean_close": 9.784708333333333,
+      "prefilter_delta": -0.1057083333333324
+    },
+    {
+      "review_id": "0291",
+      "image": "images/0291.png",
+      "prefilter_pass": true,
+      "decision_close": 3.8703,
+      "purple_mean_close": 3.8450375,
+      "prefilter_delta": 0.025262499999999743
+    },
+    {
+      "review_id": "0292",
+      "image": "images/0292.png",
+      "prefilter_pass": false,
+      "decision_close": 2375.39,
+      "purple_mean_close": 2382.7545833333334,
+      "prefilter_delta": -7.364583333333485
+    },
+    {
+      "review_id": "0293",
+      "image": "images/0293.png",
+      "prefilter_pass": false,
+      "decision_close": 0.006757,
+      "purple_mean_close": 0.006760291666666667,
+      "prefilter_delta": -3.2916666666670674e-06
+    },
+    {
+      "review_id": "0294",
+      "image": "images/0294.png",
+      "prefilter_pass": false,
+      "decision_close": 0.08355,
+      "purple_mean_close": 0.08612208333333334,
+      "prefilter_delta": -0.002572083333333336
+    },
+    {
+      "review_id": "0295",
+      "image": "images/0295.png",
+      "prefilter_pass": true,
+      "decision_close": 243.1,
+      "purple_mean_close": 242.05416666666667,
+      "prefilter_delta": 1.04583333333332
+    },
+    {
+      "review_id": "0296",
+      "image": "images/0296.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8377,
+      "purple_mean_close": 0.8340833333333334,
+      "prefilter_delta": 0.0036166666666666014
+    },
+    {
+      "review_id": "0297",
+      "image": "images/0297.png",
+      "prefilter_pass": true,
+      "decision_close": 3.993,
+      "purple_mean_close": 3.9338750000000005,
+      "prefilter_delta": 0.05912499999999943
+    },
+    {
+      "review_id": "0298",
+      "image": "images/0298.png",
+      "prefilter_pass": true,
+      "decision_close": 0.645,
+      "purple_mean_close": 0.6228666666666666,
+      "prefilter_delta": 0.02213333333333345
+    },
+    {
+      "review_id": "0299",
+      "image": "images/0299.png",
+      "prefilter_pass": false,
+      "decision_close": 0.01492,
+      "purple_mean_close": 0.014994166666666664,
+      "prefilter_delta": -7.416666666666509e-05
+    },
+    {
+      "review_id": "0300",
+      "image": "images/0300.png",
+      "prefilter_pass": false,
+      "decision_close": 0.6731,
+      "purple_mean_close": 0.6850541666666666,
+      "prefilter_delta": -0.011954166666666599
+    },
+    {
+      "review_id": "0301",
+      "image": "images/0301.png",
+      "prefilter_pass": false,
+      "decision_close": 0.5354,
+      "purple_mean_close": 0.5409166666666666,
+      "prefilter_delta": -0.005516666666666614
+    },
+    {
+      "review_id": "0302",
+      "image": "images/0302.png",
+      "prefilter_pass": false,
+      "decision_close": 0.1682,
+      "purple_mean_close": 0.17045416666666668,
+      "prefilter_delta": -0.002254166666666696
+    },
+    {
+      "review_id": "0303",
+      "image": "images/0303.png",
+      "prefilter_pass": false,
+      "decision_close": 0.07883,
+      "purple_mean_close": 0.07933166666666668,
+      "prefilter_delta": -0.000501666666666678
+    },
+    {
+      "review_id": "0304",
+      "image": "images/0304.png",
+      "prefilter_pass": true,
+      "decision_close": 5.938,
+      "purple_mean_close": 5.922958333333334,
+      "prefilter_delta": 0.015041666666665954
+    },
+    {
+      "review_id": "0305",
+      "image": "images/0305.png",
+      "prefilter_pass": false,
+      "decision_close": 0.003458,
+      "purple_mean_close": 0.003472916666666667,
+      "prefilter_delta": -1.4916666666666984e-05
+    },
+    {
+      "review_id": "0306",
+      "image": "images/0306.png",
+      "prefilter_pass": true,
+      "decision_close": 13.56,
+      "purple_mean_close": 13.39875,
+      "prefilter_delta": 0.16125000000000078
+    },
+    {
+      "review_id": "0307",
+      "image": "images/0307.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09394,
+      "purple_mean_close": 0.09393166666666668,
+      "prefilter_delta": 8.333333333318538e-06
+    },
+    {
+      "review_id": "0308",
+      "image": "images/0308.png",
+      "prefilter_pass": false,
+      "decision_close": 0.08215,
+      "purple_mean_close": 0.08215958333333333,
+      "prefilter_delta": -9.583333333326727e-06
+    },
+    {
+      "review_id": "0309",
+      "image": "images/0309.png",
+      "prefilter_pass": true,
+      "decision_close": 3.6729,
+      "purple_mean_close": 3.6405500000000006,
+      "prefilter_delta": 0.03234999999999921
+    },
+    {
+      "review_id": "0310",
+      "image": "images/0310.png",
+      "prefilter_pass": true,
+      "decision_close": 4.161,
+      "purple_mean_close": 4.1305000000000005,
+      "prefilter_delta": 0.030499999999999083
+    },
+    {
+      "review_id": "0311",
+      "image": "images/0311.png",
+      "prefilter_pass": false,
+      "decision_close": 0.2201,
+      "purple_mean_close": 0.22055833333333333,
+      "prefilter_delta": -0.00045833333333333837
+    },
+    {
+      "review_id": "0312",
+      "image": "images/0312.png",
+      "prefilter_pass": true,
+      "decision_close": 0.09151,
+      "purple_mean_close": 0.09130708333333333,
+      "prefilter_delta": 0.00020291666666666375
+    },
+    {
+      "review_id": "0313",
+      "image": "images/0313.png",
+      "prefilter_pass": false,
+      "decision_close": 1.3932,
+      "purple_mean_close": 1.40315,
+      "prefilter_delta": -0.009949999999999903
+    },
+    {
+      "review_id": "0314",
+      "image": "images/0314.png",
+      "prefilter_pass": true,
+      "decision_close": 7.86,
+      "purple_mean_close": 6.8008750000000004,
+      "prefilter_delta": 1.0591249999999999
+    },
+    {
+      "review_id": "0315",
+      "image": "images/0315.png",
+      "prefilter_pass": true,
+      "decision_close": 0.1948,
+      "purple_mean_close": 0.18824583333333333,
+      "prefilter_delta": 0.0065541666666666665
+    },
+    {
+      "review_id": "0316",
+      "image": "images/0316.png",
+      "prefilter_pass": false,
+      "decision_close": 0.00993,
+      "purple_mean_close": 0.009946666666666666,
+      "prefilter_delta": -1.6666666666666566e-05
+    },
+    {
+      "review_id": "0317",
+      "image": "images/0317.png",
+      "prefilter_pass": true,
+      "decision_close": 0.008289,
+      "purple_mean_close": 0.007987166666666665,
+      "prefilter_delta": 0.0003018333333333345
+    },
+    {
+      "review_id": "0318",
+      "image": "images/0318.png",
+      "prefilter_pass": true,
+      "decision_close": 0.7957,
+      "purple_mean_close": 0.7900416666666666,
+      "prefilter_delta": 0.005658333333333321
+    },
+    {
+      "review_id": "0319",
+      "image": "images/0319.png",
+      "prefilter_pass": false,
+      "decision_close": 0.05142,
+      "purple_mean_close": 0.05149208333333333,
+      "prefilter_delta": -7.208333333332678e-05
+    },
+    {
+      "review_id": "0320",
+      "image": "images/0320.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3092,
+      "purple_mean_close": 0.3032708333333333,
+      "prefilter_delta": 0.005929166666666652
+    },
+    {
+      "review_id": "0321",
+      "image": "images/0321.png",
+      "prefilter_pass": true,
+      "decision_close": 0.10124,
+      "purple_mean_close": 0.10118625000000002,
+      "prefilter_delta": 5.374999999997743e-05
+    },
+    {
+      "review_id": "0322",
+      "image": "images/0322.png",
+      "prefilter_pass": true,
+      "decision_close": 0.02342,
+      "purple_mean_close": 0.023352916666666668,
+      "prefilter_delta": 6.708333333333219e-05
+    },
+    {
+      "review_id": "0323",
+      "image": "images/0323.png",
+      "prefilter_pass": true,
+      "decision_close": 0.008708,
+      "purple_mean_close": 0.008558791666666668,
+      "prefilter_delta": 0.0001492083333333328
+    },
+    {
+      "review_id": "0324",
+      "image": "images/0324.png",
+      "prefilter_pass": true,
+      "decision_close": 0.29478,
+      "purple_mean_close": 0.2941595833333333,
+      "prefilter_delta": 0.0006204166666666788
+    },
+    {
+      "review_id": "0325",
+      "image": "images/0325.png",
+      "prefilter_pass": false,
+      "decision_close": 0.3448,
+      "purple_mean_close": 0.3462416666666667,
+      "prefilter_delta": -0.00144166666666673
+    },
+    {
+      "review_id": "0326",
+      "image": "images/0326.png",
+      "prefilter_pass": false,
+      "decision_close": 0.011399,
+      "purple_mean_close": 0.011455958333333334,
+      "prefilter_delta": -5.695833333333421e-05
+    },
+    {
+      "review_id": "0327",
+      "image": "images/0327.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8339,
+      "purple_mean_close": 0.8288708333333332,
+      "prefilter_delta": 0.005029166666666751
+    },
+    {
+      "review_id": "0328",
+      "image": "images/0328.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8754,
+      "purple_mean_close": 0.8637541666666667,
+      "prefilter_delta": 0.011645833333333244
+    },
+    {
+      "review_id": "0329",
+      "image": "images/0329.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3532,
+      "purple_mean_close": 0.3530166666666667,
+      "prefilter_delta": 0.00018333333333331314
+    },
+    {
+      "review_id": "0330",
+      "image": "images/0330.png",
+      "prefilter_pass": true,
+      "decision_close": 2.206,
+      "purple_mean_close": 2.056416666666667,
+      "prefilter_delta": 0.14958333333333318
+    },
+    {
+      "review_id": "0331",
+      "image": "images/0331.png",
+      "prefilter_pass": false,
+      "decision_close": 0.11869,
+      "purple_mean_close": 0.12129333333333332,
+      "prefilter_delta": -0.0026033333333333186
+    },
+    {
+      "review_id": "0332",
+      "image": "images/0332.png",
+      "prefilter_pass": true,
+      "decision_close": 0.02853,
+      "purple_mean_close": 0.027464583333333334,
+      "prefilter_delta": 0.001065416666666666
+    },
+    {
+      "review_id": "0333",
+      "image": "images/0333.png",
+      "prefilter_pass": true,
+      "decision_close": 0.015593,
+      "purple_mean_close": 0.015334458333333334,
+      "prefilter_delta": 0.0002585416666666656
+    },
+    {
+      "review_id": "0334",
+      "image": "images/0334.png",
+      "prefilter_pass": true,
+      "decision_close": 4.684,
+      "purple_mean_close": 4.543416666666666,
+      "prefilter_delta": 0.14058333333333373
+    },
+    {
+      "review_id": "0335",
+      "image": "images/0335.png",
+      "prefilter_pass": true,
+      "decision_close": 0.02639,
+      "purple_mean_close": 0.026226250000000003,
+      "prefilter_delta": 0.00016374999999999723
+    },
+    {
+      "review_id": "0336",
+      "image": "images/0336.png",
+      "prefilter_pass": true,
+      "decision_close": 0.657,
+      "purple_mean_close": 0.6499791666666667,
+      "prefilter_delta": 0.007020833333333365
+    },
+    {
+      "review_id": "0337",
+      "image": "images/0337.png",
+      "prefilter_pass": false,
+      "decision_close": 3.661,
+      "purple_mean_close": 3.7534625,
+      "prefilter_delta": -0.09246249999999989
+    },
+    {
+      "review_id": "0338",
+      "image": "images/0338.png",
+      "prefilter_pass": true,
+      "decision_close": 0.8876,
+      "purple_mean_close": 0.8719291666666665,
+      "prefilter_delta": 0.01567083333333341
+    },
+    {
+      "review_id": "0339",
+      "image": "images/0339.png",
+      "prefilter_pass": true,
+      "decision_close": 6.423,
+      "purple_mean_close": 6.3529583333333335,
+      "prefilter_delta": 0.07004166666666656
+    },
+    {
+      "review_id": "0340",
+      "image": "images/0340.png",
+      "prefilter_pass": true,
+      "decision_close": 0.3213,
+      "purple_mean_close": 0.32006249999999997,
+      "prefilter_delta": 0.0012375000000000025
+    },
+    {
+      "review_id": "0341",
+      "image": "images/0341.png",
+      "prefilter_pass": true,
+      "decision_close": 439.0,
+      "purple_mean_close": 422.0625,
+      "prefilter_delta": 16.9375
+    },
+    {
+      "review_id": "0342",
+      "image": "images/0342.png",
+      "prefilter_pass": true,
+      "decision_close": 0.000534,
+      "purple_mean_close": 0.0005328583333333334,
+      "prefilter_delta": 1.1416666666666086e-06
+    },
+    {
+      "review_id": "0343",
+      "image": "images/0343.png",
+      "prefilter_pass": true,
+      "decision_close": 0.5978,
+      "purple_mean_close": 0.5868708333333333,
+      "prefilter_delta": 0.010929166666666656
+    },
+    {
+      "review_id": "0344",
+      "image": "images/0344.png",
+      "prefilter_pass": false,
+      "decision_close": 0.11426,
+      "purple_mean_close": 0.11493208333333334,
+      "prefilter_delta": -0.000672083333333337
+    },
+    {
+      "review_id": "0345",
+      "image": "images/0345.png",
+      "prefilter_pass": true,
+      "decision_close": 0.02785,
+      "purple_mean_close": 0.027647500000000002,
+      "prefilter_delta": 0.00020249999999999782
+    }
+  ],
+  "prefilter": {
+    "protocol": "yoyo_v3_review_prefilter_decision_gt_purple_mean_v1",
+    "generated_at": "2026-08-12T17:57:22.743832+00:00",
+    "rule": "decision_close > mean(close of next 24 bars, holdout-clipped)",
+    "uses_future": true,
+    "l1_label_rule": false,
+    "n": 345,
+    "pass": 228,
+    "fail": 117,
+    "broken": 0,
+    "pass_rate": 0.6608695652173913
+  }
+}

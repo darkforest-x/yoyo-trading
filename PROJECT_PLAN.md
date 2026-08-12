@@ -9,12 +9,12 @@
 |---|---|---|---|
 | 1 | 审计两仓 + 冻结 R1/R2 基线 | `manifests/frozen_baseline_r1_r2_v1.json`、`docs/ASSET_REUSE_MAP.md` | ✅ 2026-08-12 |
 | 2 | 最低项目规范 | CLAUDE/AGENTS/PROJECT_PLAN/HANDOFF + 6 份 docs | ✅ 2026-08-12 |
-| 3 | 最小 L1 链路 + smoke parity | 20–50 固定样本逐字节复现 | 进行中 |
-| 4 | 旧标签审计 | 迁移表 + shape/outcome 分离 + `class_status`/`box_status` | 待办 |
-| 5 | Dataset V3 Gold Core | manifest + 训练前验收报告（一致率/kappa/错标率/覆盖/泄漏） | 待办 |
-| 6 | R3A / R3B 快速筛选 | 两条臂，同数据同配方同 seed | **被 3060 阻塞** |
-| 7 | 静态评估 + 连续回放 | 与 R1/R2 同口径对照 | 待办 |
-| 8 | 优胜者 3 seed + 独立块复验 | 接受 / 拒绝裁决 | 待办 |
+| 3 | 最小 L1 链路 + smoke parity | 20–50 固定样本逐字节复现 | ✅ 45/45 |
+| 4 | 旧标签审计 | 迁移表 + shape/outcome 分离 + `class_status`/`box_status` | ✅ 表在；人工复审未做 |
+| 5 | Dataset V3 Gold Core | 训练前验收（一致率/kappa/错标率/覆盖/泄漏） | **机器过 / 人工门未过** |
+| 6 | R3A / R3B 快速筛选 | 两条臂，同数据同配方同 seed | 已训完；**在未过 kappa 门下训的** |
+| 7 | 静态评估 + 连续回放 | 与 R1 同口径；R3B canary 未完 | 进行中 |
+| 8 | 优胜者 3 seed + 独立块复验 | 接受 / 拒绝裁决 | 未开始 |
 
 ## 已锁定的决定
 
@@ -26,9 +26,8 @@
 
 ## 当前阻塞
 
-1. **3060 训练机**：`192.168.1.4` ping 通、SSH 无响应 → R3 无算力。需 Owner 开机或授权替代方案。
-2. **Owner 人工审核预算**：Dataset V3 质量门要求分层抽 10%–15% 盲重复审核算 kappa，
-   这一步只有 Owner 能做。
+1. **Owner 人工审核**：V5 §6.3 分层 10%–15% 盲重审 + kappa。抽签已写好。未过门不得新训、不得 promote。
+2. **本轮评估未完**：R3B 同口径 canary + 静态 L/中/右、FP/1000、event recall。
 
 ## 不做（R3 连续回放出结果前）
 

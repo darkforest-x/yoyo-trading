@@ -1,0 +1,12 @@
+{
+  "protocol": "yoyo_v3_blind_review_r1_20260813",
+  "generated_at": "2026-08-12T17:43:30.789036+00:00",
+  "n": 345,
+  "draw_sha256": "4e9c8dc7d5d0c1afcdd2236d7dec55ed57aea045c0e4a62533295edd4efce338",
+  "items_sha256": "c0b8d20219b49902608734131f8ce50b51ddff8f96d4c04cb6298d5b6d4b53fa",
+  "answer_key_sha256": "5cd7e38b8b0eacd23b64c01f320f1e647788e32d93ebd67eeea1997441212b33",
+  "shuffle_seed": 1,
+  "public_dir": "reviews/v3_blind_r1/public",
+  "answer_key": "reviews/v3_blind_r1/answer_key.jsonl",
+  "note": "Do not open answer_key.jsonl until the Owner finishes the pack."
+}

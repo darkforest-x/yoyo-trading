@@ -35,6 +35,11 @@
   "future_used_for_l1_label": false,
   "manifest_path": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_1_position_spread_v1/manifest.jsonl",
   "manifest_sha256": "1e6f087a8a5c7f5918f44da9b9d3f54694518228034760edee119ef311bc7b3e",
-  "training_eligible": true,
-  "note": "Left is capped by geometry: only cores far enough before decision can sit in the left third at W>=12. This is the maximum causal spread."
+  "training_eligible": false,
+  "note": "Left is capped by geometry: only cores far enough before decision can sit in the left third at W>=12. This is the maximum causal spread.",
+  "round": "next_variable_not_first_round",
+  "quality_gate": {
+    "note": "V3.1 changes crop vs locked center-crop. First-round protocol forbids this until R3A/R3B on V3 finish and Owner kappa passes.",
+    "verdict": "not_first_round"
+  }
 }

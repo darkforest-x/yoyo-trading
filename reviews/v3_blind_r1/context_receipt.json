@@ -1,0 +1,1738 @@
+{
+  "protocol": "yoyo_v3_blind_review_r1_future_assisted_20260813",
+  "generated_at": "2026-08-12T17:51:40.156025+00:00",
+  "n": 345,
+  "future_bars_requested": 24,
+  "pre_bars": 20,
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_rows_materialized": 0,
+  "label_name": "未来辅助语义裁决",
+  "not_precision": true,
+  "audit": [
+    {
+      "review_id": "0001",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0002",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0003",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0004",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0005",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0006",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0007",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0008",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0009",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0010",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0011",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0012",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0013",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0014",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0015",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0016",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0017",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0018",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0019",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0020",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0021",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0022",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0023",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0024",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0025",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0026",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0027",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0028",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0029",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0030",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0031",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0032",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0033",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0034",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0035",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0036",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0037",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0038",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0039",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0040",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0041",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0042",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0043",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0044",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0045",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0046",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0047",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0048",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0049",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0050",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0051",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0052",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0053",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0054",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0055",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0056",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0057",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0058",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0059",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0060",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0061",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0062",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0063",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0064",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0065",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0066",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0067",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0068",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0069",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0070",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0071",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0072",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0073",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0074",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0075",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0076",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0077",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0078",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0079",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0080",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0081",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0082",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0083",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0084",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0085",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0086",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0087",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0088",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0089",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0090",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0091",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0092",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0093",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0094",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0095",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0096",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0097",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0098",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0099",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0100",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0101",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0102",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0103",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0104",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0105",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0106",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0107",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0108",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0109",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0110",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0111",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0112",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0113",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0114",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0115",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0116",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0117",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0118",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0119",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0120",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0121",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0122",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0123",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0124",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0125",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0126",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0127",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0128",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0129",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0130",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0131",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0132",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0133",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0134",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0135",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0136",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0137",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0138",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0139",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0140",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0141",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0142",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0143",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0144",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0145",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0146",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0147",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0148",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0149",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0150",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0151",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0152",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0153",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0154",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0155",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0156",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0157",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0158",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0159",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0160",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0161",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0162",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0163",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0164",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0165",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0166",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0167",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0168",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0169",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0170",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0171",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0172",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0173",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0174",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0175",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0176",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0177",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0178",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0179",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0180",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0181",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0182",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0183",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0184",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0185",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0186",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0187",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0188",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0189",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0190",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0191",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0192",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0193",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0194",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0195",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0196",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0197",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0198",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0199",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0200",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0201",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0202",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0203",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0204",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0205",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0206",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0207",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0208",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0209",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0210",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0211",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0212",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0213",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0214",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0215",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0216",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0217",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0218",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0219",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0220",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0221",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0222",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0223",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0224",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0225",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0226",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0227",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0228",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0229",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0230",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0231",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0232",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0233",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0234",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0235",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0236",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0237",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0238",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0239",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0240",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0241",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0242",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0243",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0244",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0245",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0246",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0247",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0248",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0249",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0250",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0251",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0252",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0253",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0254",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0255",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0256",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0257",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0258",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0259",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0260",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0261",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0262",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0263",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0264",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0265",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0266",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0267",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0268",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0269",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0270",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0271",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0272",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0273",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0274",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0275",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0276",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0277",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0278",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0279",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0280",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0281",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0282",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0283",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0284",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0285",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0286",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0287",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0288",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0289",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0290",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0291",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0292",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0293",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0294",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0295",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0296",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0297",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0298",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0299",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0300",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0301",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0302",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0303",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0304",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0305",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0306",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0307",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0308",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0309",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0310",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0311",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0312",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0313",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0314",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0315",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0316",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0317",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0318",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0319",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0320",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0321",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0322",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0323",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0324",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0325",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0326",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0327",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0328",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0329",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0330",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0331",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0332",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0333",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0334",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0335",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0336",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0337",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0338",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0339",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0340",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0341",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0342",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0343",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0344",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    },
+    {
+      "review_id": "0345",
+      "future_bars_shown": 24,
+      "holdout_clipped": false
+    }
+  ]
+}

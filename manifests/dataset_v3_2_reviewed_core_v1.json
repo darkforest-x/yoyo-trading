@@ -1,0 +1,30 @@
+{
+  "protocol": "yoyo_dataset_v3_2_reviewed_core_v1_20260813",
+  "generated_at": "2026-08-12T18:13:40.097898+00:00",
+  "parent_dataset": "dataset_v3_gold_core_v1",
+  "class_name": "ma_dense_core",
+  "direction_scope": "short_pipeline",
+  "window_protocol": "owner_gold_center_crop_w12_19",
+  "single_variable": "labels_after_owner_blind_and_dispute",
+  "counts": {
+    "total": 221,
+    "positive": 79,
+    "negative": 142,
+    "train_positive": 71,
+    "val_positive": 8,
+    "train_negative": 122,
+    "val_negative": 20,
+    "rebox_held_out": 22,
+    "unreviewed_held_out": 3210
+  },
+  "via": {
+    "agree": 183,
+    "flip_pos_to_neg": 28,
+    "keep_gold": 10
+  },
+  "holdout_read": false,
+  "future_used_for_l1_label": false,
+  "training_eligible": false,
+  "note": "Only Owner-touched keepers: 79 pos / 142 neg. 22 REBOX dropped per Owner 2026-08-13 (do not rebox). Unreviewed V3 (3210) stays out. Val positives=8. Contract: docs/DATASET_CONTRACT.md v3.2.",
+  "dataset_dir": "datasets/dataset_v3_2_reviewed_core_v1"
+}

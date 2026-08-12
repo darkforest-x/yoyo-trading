@@ -78,5 +78,12 @@
   "holdout_read": false,
   "manifest_path": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_gold_core_v1/manifest.jsonl",
   "manifest_sha256": "db9ca3eef7b1900b932af208da03bf267be46037a750c5bff9f7ff943b9d80b3",
-  "training_eligible": true
+  "training_eligible": false,
+  "quality_gate": {
+    "machine_leakage": "pass",
+    "human_kappa": "not_done",
+    "per_v5_section": "6.3/6.8",
+    "verdict": "fail_pending_owner_blind_review",
+    "acceptance_report": "reports/dataset_v3_pretrain_acceptance.md"
+  }
 }

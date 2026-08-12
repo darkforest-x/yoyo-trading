@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>V3 盲审 · 有没有密集核心</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; font-family: -apple-system, sans-serif; background: #f4f4f1; color: #111; }
+  header { padding: 12px 20px; background: #111; color: #fff; display: flex; gap: 16px; align-items: center; }
+  header strong { font-size: 16px; }
+  #progress { opacity: .8; }
+  main { padding: 16px 20px 100px; }
+  #q { margin: 0 0 12px; font-size: 15px; max-width: 960px; }
+  #chart { display: block; width: min(1600px, 100%); background: #fff; border: 1px solid #ccc; }
+  #meta { margin-top: 8px; color: #666; font-size: 13px; }
+  nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd;
+        padding: 12px 20px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  button { font-size: 16px; padding: 10px 18px; border: 0; border-radius: 6px; cursor: pointer; }
+  #yes { background: #1b7f3a; color: #fff; }
+  #no { background: #b42318; color: #fff; }
+  #ign { background: #6b6b6b; color: #fff; }
+  #prev, #next { background: #e7e7e4; }
+  .picked { outline: 3px solid #111; }
+  #status { margin-left: auto; font-size: 13px; color: #444; }
+</style>
+</head>
+<body>
+<header>
+  <strong>V3 盲审</strong>
+  <span id="progress">…</span>
+</header>
+<main>
+  <p id="q"></p>
+  <p id="hint">青带=模型输入，紫带=decision 之后。默认只显示前置过滤通过的：虚线收盘 &gt; 紫带K线收盘均值。</p>
+  <img id="chart" alt="review chart"/>
+  <div id="meta"></div>
+</main>
+<nav>
+  <button id="prev" type="button">← 上一张</button>
+  <button id="yes" type="button">Y 有密集核心</button>
+  <button id="no" type="button">N 没有</button>
+  <button id="ign" type="button">I 看不清</button>
+  <button id="next" type="button">下一张 →</button>
+  <button id="toggle" type="button">切到训练原图</button>
+  <button id="filter" type="button">不过滤</button>
+  <span id="status"></span>
+</nav>
+<script>
+let allItems = [];
+let items = [];
+let question = "";
+let i = 0;
+let useFuture = true;
+let filterOn = true;
+const verdicts = {};
+
+function applyFilter() {
+  items = filterOn
+    ? allItems.filter((it) => it.prefilter_pass)
+    : allItems.slice();
+  if (i >= items.length) i = Math.max(0, items.length - 1);
+}
+
+function loadSaved() {
+  fetch("/api/verdicts").then(r => r.json()).then(data => {
+    Object.assign(verdicts, data.verdicts || {});
+    render();
+  }).catch(() => render());
+}
+
+function mark(choice) {
+  const id = items[i].review_id;
+  verdicts[id] = choice;
+  fetch("/api/label", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({review_id: id, verdict: choice})
+  }).then(r => r.json()).then(data => {
+    document.getElementById("status").textContent =
+      `已存 ${data.n_labeled}/${items.length}`;
+  });
+  if (i < items.length - 1) i += 1;
+  render();
+}
+
+function render() {
+  if (!items.length) return;
+  const item = items[i];
+  document.getElementById("progress").textContent =
+    `${i + 1} / ${items.length}` + (filterOn ? `（过滤后，全量 ${allItems.length}）` : "");
+  document.getElementById("q").textContent = question;
+  const src = useFuture
+    ? item.image.replace("images/", "images_future/")
+    : item.image;
+  document.getElementById("chart").src = src + "?t=" + Date.now();
+  document.getElementById("toggle").textContent = useFuture ? "切到训练原图" : "切到带未来的图";
+  document.getElementById("filter").textContent = filterOn ? "不过滤（看全部）" : "只看虚线>紫带均价";
+  const current = verdicts[item.review_id];
+  const bits = [];
+  if (current) bits.push(`本张已标：${current}`);
+  if (item.decision_close != null && item.purple_mean_close != null) {
+    bits.push(
+      `虚线收盘 ${item.decision_close.toPrecision(6)}  vs  紫带均收 ${item.purple_mean_close.toPrecision(6)}  ` +
+      (item.prefilter_pass ? "通过" : "未过")
+    );
+  }
+  document.getElementById("meta").textContent = bits.join(" · ") || "本张未标";
+  for (const [id, val] of [["yes","YES"],["no","NO"],["ign","IGNORE"]]) {
+    document.getElementById(id).classList.toggle("picked", current === val);
+  }
+  const n = Object.keys(verdicts).length;
+  document.getElementById("status").textContent = `已存 ${n}/${items.length}`;
+}
+
+document.getElementById("yes").onclick = () => mark("YES");
+document.getElementById("no").onclick = () => mark("NO");
+document.getElementById("ign").onclick = () => mark("IGNORE");
+document.getElementById("prev").onclick = () => { if (i > 0) i -= 1; render(); };
+document.getElementById("next").onclick = () => { if (i < items.length - 1) i += 1; render(); };
+document.getElementById("toggle").onclick = () => { useFuture = !useFuture; render(); };
+document.getElementById("filter").onclick = () => { filterOn = !filterOn; applyFilter(); render(); };
+document.addEventListener("keydown", (ev) => {
+  const k = ev.key.toLowerCase();
+  if (k === "y") mark("YES");
+  else if (k === "n") mark("NO");
+  else if (k === "i") mark("IGNORE");
+  else if (ev.key === "ArrowLeft" && i > 0) { i -= 1; render(); }
+  else if (ev.key === "ArrowRight" && i < items.length - 1) { i += 1; render(); }
+});
+
+fetch("items.json").then(r => r.json()).then(data => {
+  allItems = data.items;
+  question = data.question;
+  applyFilter();
+  loadSaved();
+});
+</script>
+</body>
+</html>

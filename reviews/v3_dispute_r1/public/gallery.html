@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>V3 争议复审 · 60 张</title>
+<style>
+  body { margin: 0; font-family: -apple-system, sans-serif; background: #f4f4f1; }
+  header { padding: 12px 20px; background: #4a1c1c; color: #fff; }
+  main { padding: 16px 20px 120px; }
+  #banner { font-size: 18px; margin: 0 0 8px; }
+  #sub { color: #444; }
+  img { display: block; width: min(1600px, 100%); background: #fff; border: 1px solid #ccc; margin: 8px 0; }
+  nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd;
+        padding: 12px 20px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  button { font-size: 15px; padding: 10px 14px; border: 0; border-radius: 6px; cursor: pointer; }
+  #keep { background: #888; color: #fff; }
+  #ignore { background: #6b4; color: #fff; }
+  #flip { background: #c43; color: #fff; }
+  #rebox { background: #36a; color: #fff; }
+  #prev, #next { background: #e7e7e4; }
+  .picked { outline: 3px solid #111; }
+</style>
+</head>
+<body>
+<header><strong>争议复审</strong> <span id="progress"></span></header>
+<main>
+  <p id="banner"></p>
+  <p id="sub"></p>
+  <img id="future" alt="context"/>
+  <p>上：带未来。下：训练原图。</p>
+  <img id="train" alt="train crop"/>
+</main>
+<nav>
+  <button id="prev">←</button>
+  <button id="keep">K 维持金标</button>
+  <button id="ignore">G 改 IGNORE</button>
+  <button id="flip">F 改成你的判断</button>
+  <button id="rebox">B 要重画框</button>
+  <button id="next">→</button>
+  <span id="status"></span>
+</nav>
+<script>
+let items = [];
+let i = 0;
+const dec = {};
+function render() {
+  const it = items[i];
+  document.getElementById("progress").textContent = `${i+1} / ${items.length}`;
+  const clash = it.kind === "gold_pos_owner_no"
+    ? "金标：有密集　　你上次：没有"
+    : "金标：没有　　你上次：有密集";
+  document.getElementById("banner").textContent = clash;
+  document.getElementById("sub").textContent =
+    `${it.sample_id} · ${it.split} · 过滤${it.prefilter_pass ? "过" : "没过"}`;
+  document.getElementById("future").src = it.context_image;
+  document.getElementById("train").src = it.train_image;
+  const cur = dec[it.review_id];
+  document.getElementById("status").textContent = cur
+    ? `本张：${cur} · 已定 ${Object.keys(dec).length}/${items.length}`
+    : `已定 ${Object.keys(dec).length}/${items.length}`;
+  for (const [id, val] of [["keep","KEEP_GOLD"],["ignore","MOVE_TO_IGNORE"],["flip","FLIP_TO_OWNER"],["rebox","REBOX"]]) {
+    document.getElementById(id).classList.toggle("picked", cur === val);
+  }
+}
+function mark(v) {
+  const it = items[i];
+  dec[it.review_id] = v;
+  fetch("/api/label", {method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({review_id: it.review_id, sample_id: it.sample_id, decision: v, kind: it.kind})});
+  if (i < items.length-1) i += 1;
+  render();
+}
+document.getElementById("keep").onclick = () => mark("KEEP_GOLD");
+document.getElementById("ignore").onclick = () => mark("MOVE_TO_IGNORE");
+document.getElementById("flip").onclick = () => mark("FLIP_TO_OWNER");
+document.getElementById("rebox").onclick = () => mark("REBOX");
+document.getElementById("prev").onclick = () => { if (i>0) i-=1; render(); };
+document.getElementById("next").onclick = () => { if (i<items.length-1) i+=1; render(); };
+document.addEventListener("keydown", ev => {
+  const k = ev.key.toLowerCase();
+  if (k==="k") mark("KEEP_GOLD");
+  else if (k==="g") mark("MOVE_TO_IGNORE");
+  else if (k==="f") mark("FLIP_TO_OWNER");
+  else if (k==="b") mark("REBOX");
+  else if (ev.key==="ArrowLeft" && i>0) { i-=1; render(); }
+  else if (ev.key==="ArrowRight" && i<items.length-1) { i+=1; render(); }
+});
+fetch("disputes.json").then(r=>r.json()).then(d => { items=d.items; render(); });
+</script>
+</body>
+</html>
