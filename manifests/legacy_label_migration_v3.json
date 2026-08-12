@@ -1,0 +1,110 @@
+{
+  "protocol": "yoyo_l1_legacy_label_migration_v3_20260812",
+  "generated_at": "2026-08-12T10:59:48.547959+00:00",
+  "source_repo": "/Users/zhangzc/fable-trading",
+  "dataset": "datasets/owner_short_gold_center_hardneg_r1",
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_rows_used": 0,
+  "split_bounds": {
+    "train_end": "2026-03-13T18:30:00+00:00",
+    "val_start": "2026-03-15T11:00:00+00:00"
+  },
+  "populations": {
+    "legacy_positive": 1345,
+    "legacy_easy_negative": 1343,
+    "legacy_hard_negative": 2286,
+    "owner_review_event": 1200
+  },
+  "migration_table": {
+    "KEEP_NEGATIVE": 2108,
+    "KEEP_POSITIVE": 1345,
+    "MOVE_TO_IGNORE": 1116,
+    "REBOX_REQUIRED": 235,
+    "RELABEL_REQUIRED": 1370
+  },
+  "by_population": {
+    "legacy_positive": {
+      "KEEP_POSITIVE": 1345
+    },
+    "legacy_easy_negative": {
+      "KEEP_NEGATIVE": 1343
+    },
+    "legacy_hard_negative": {
+      "MOVE_TO_IGNORE": 916,
+      "RELABEL_REQUIRED": 1370
+    },
+    "owner_review_event": {
+      "KEEP_NEGATIVE": 765,
+      "MOVE_TO_IGNORE": 200,
+      "REBOX_REQUIRED": 235
+    }
+  },
+  "class_status": {
+    "confirmed": 1578,
+    "ignore": 2488,
+    "rejected": 2108
+  },
+  "box_status": {
+    "human_gold": 916,
+    "model_proposed": 435,
+    "none": 3478,
+    "rule_verified": 1345
+  },
+  "hard_negative_kinds": {
+    "model_mined_pool": 1370,
+    "owner_long": 916
+  },
+  "review_verdicts": {
+    "NO": 869,
+    "REBOX": 2,
+    "YES": 329
+  },
+  "review_by_pack": {
+    "hardneg200_v1": {
+      "NO": 182,
+      "YES": 18
+    },
+    "positive100_v1": {
+      "NO": 55,
+      "YES": 45
+    },
+    "expansion200_v2": {
+      "NO": 175,
+      "YES": 25
+    },
+    "newblocks200_v3": {
+      "NO": 172,
+      "REBOX": 2,
+      "YES": 26
+    },
+    "semantic200_v2": {
+      "NO": 104,
+      "YES": 96
+    },
+    "early300_v1": {
+      "NO": 181,
+      "YES": 119
+    }
+  },
+  "usable_owner_shape_no": 765,
+  "owner_yes_awaiting_box_review": 235,
+  "events_overlapping_owner_gold_box": 100,
+  "pack_guard_flag_true": 0,
+  "duplicate_event_ids_across_packs": 0,
+  "conflicting_duplicate_verdicts": [],
+  "outcome_alignment": {
+    "YES": {
+      "agrees_with_outcome": 281,
+      "contradicts_outcome": 48
+    },
+    "NO": {
+      "agrees_with_outcome": 510,
+      "contradicts_outcome": 359
+    }
+  },
+  "forward_return_horizon_bars": 16,
+  "all_verdicts_future_assisted": true,
+  "gold_sheet_sha256": "bb7081e7e1821c5f791486fae0f29caf18307b104bbb07156c35883781071c9a",
+  "rows_path": "manifests/legacy_label_migration_v3.jsonl",
+  "rows_sha256": "b281d858f83284dae01f587d3248a4c719d59e5d89fa2994e904e088999dfca0"
+}

@@ -3,6 +3,38 @@
 > 合同：`docs/DATASET_CONTRACT.md` · 协议：`docs/EXPERIMENT_PROTOCOL.md` /
 > `docs/EVALUATION_PROTOCOL.md` · 复用：`docs/ASSET_REUSE_MAP.md` · 纪律：`CLAUDE.md`
 
+## 2026-08-12（第二次更新）— Dataset V3 已建成，机器门全过，等 3060 与人工一致性
+
+**Dataset V3 Gold Core**：`manifests/dataset_v3_gold_core_v1.json`，
+manifest SHA `db9ca3eef7b1900b…`，数据在 `datasets/dataset_v3_gold_core_v1/`（不入 git）。
+
+| 项 | train | val | 合计 |
+|---|---:|---:|---:|
+| 正例 | 1,143 | 202 | 1,345 |
+| 易负例 | 1,143 | 200 | 1,343 |
+| 硬负例（Owner shape-NO） | 765 | 0 | 765 |
+| 负正比 | **1.67:1** | — | — |
+
+唯一变量是训练负例：916 个 Owner-long 镜像与 1,370 个未审的模型挖掘硬负例移出，
+765 个 Owner 确认的 shape-NO 进入。正例、窗口协议、renderer、整个 val split 逐字节不变
+（2,688 个复用样本重建，0 SHA 漂移）。
+
+**机器质量门全过**：重复窗口 0、跨 split event 0、`visible_end<=decision` 3,453/3,453、
+future flag 全 false、val 无硬负例、purge 162 根 bar、最晚 decision 2026-05-02 23:45 UTC、
+holdout 读取 0、765 个事件窗口解析失败 0。
+
+**两道人工门未过**（只有 Owner 能过）：10%–15% 盲重复审核的一致率与 kappa、每 split 的
+标签抽查错标率。审核包尚未生成，等 Owner 点头。
+
+**已知结构缺陷**：正例核心水平位置 **middle 1,345 / left 0 / right 0**（中位 0.577）——
+center-crop 的位置 shortcut 本轮修不掉，评估必须照报左/中/右召回。
+
+**阻塞**：3060（192.168.1.4）ping 通但 SSH 挂起（探测 >25 分钟无响应），R3A/R3B 无算力。
+
+报告：`~/fable-trading/analysis/html/p3_yoyo_dataset_v3_gold_core_prereview_20260812.html`。
+
+---
+
 ## 2026-08-12 — 基线已冻结，规范已建，等 3060 与标签审计
 
 **已完成**

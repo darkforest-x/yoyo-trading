@@ -1,0 +1,82 @@
+{
+  "protocol": "yoyo_dataset_v3_gold_core_v1_20260812",
+  "generated_at": "2026-08-12T11:05:15.955474+00:00",
+  "class_name": "ma_dense_core",
+  "direction_scope": "short_pipeline",
+  "window_protocol": "owner_gold_center_crop_w12_19",
+  "dataset_dir": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_gold_core_v1",
+  "builder_commit": "ac0167a",
+  "source_repo": "/Users/zhangzc/fable-trading",
+  "legacy_dataset": "datasets/owner_short_gold_center_hardneg_r1",
+  "counts": {
+    "total": 3453,
+    "positive": 1345,
+    "negative": 2108,
+    "train_positive": 1143,
+    "train_negative": 1908,
+    "val_positive": 202,
+    "val_negative": 200,
+    "hard_negative": 765
+  },
+  "by_origin": {
+    "legacy_positive": 1345,
+    "legacy_negative": 1343,
+    "owner_confirmed_shape_no": 765
+  },
+  "by_box_status": {
+    "rule_verified": 1345,
+    "none": 2108
+  },
+  "by_class_status": {
+    "confirmed": 1345,
+    "rejected": 2108
+  },
+  "train_negative_to_positive_ratio": 1.669,
+  "symbols": 215,
+  "window_lengths": {
+    "12": 639,
+    "13": 787,
+    "14": 591,
+    "15": 374,
+    "16": 469,
+    "17": 245,
+    "18": 125,
+    "19": 223
+  },
+  "by_month": {
+    "2025-06": 261,
+    "2025-07": 306,
+    "2025-08": 310,
+    "2025-09": 385,
+    "2025-10": 357,
+    "2025-11": 483,
+    "2025-12": 244,
+    "2026-01": 375,
+    "2026-02": 223,
+    "2026-03": 312,
+    "2026-04": 192,
+    "2026-05": 5
+  },
+  "by_causal_span_bucket": {
+    "1to2": 784,
+    "2to4": 1456,
+    "ge4": 1112,
+    "lt1": 101
+  },
+  "positive_core_position": {
+    "middle": 1345
+  },
+  "reused_samples_checked_for_parity": 2688,
+  "parity_failures": 0,
+  "duplicate_windows": 0,
+  "cross_split_event_ids": [],
+  "owner_no_events_resolved": 765,
+  "owner_no_events_dropped": 0,
+  "drop_reasons": {},
+  "future_used_for_l1_label": false,
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_read": false,
+  "manifest_path": "/Users/zhangzc/yoyo-trading/datasets/dataset_v3_gold_core_v1/manifest.jsonl",
+  "manifest_sha256": "db9ca3eef7b1900b932af208da03bf267be46037a750c5bff9f7ff943b9d80b3",
+  "training_eligible": true
+}
