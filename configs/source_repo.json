@@ -1,0 +1,15 @@
+{
+  "_comment": [
+    "Read-only pointers into fable-trading, per the V5 brief section 3.3.",
+    "JSON rather than YAML on purpose: pyproject declares no dependencies and a",
+    "config parser must not be the thing that drags PyYAML into a bare venv.",
+    "yoyo-trading never writes inside these paths."
+  ],
+  "source_repo": "/Users/zhangzc/fable-trading",
+  "dataset_root": "/Users/zhangzc/fable-trading/datasets",
+  "artifact_root": "/Users/zhangzc/fable-trading/analysis/output",
+  "kline_root": "/Users/zhangzc/fable-trading/data/kline_fetched",
+  "weights_root": "/Users/zhangzc/fable-trading/models",
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "write_scope": "read_only"
+}

@@ -1,0 +1,64 @@
+{
+  "protocol": "yoyo_l1_frozen_baseline_r1_r2_v1_20260812",
+  "_comment": [
+    "What to freeze before any R3 arm runs (V5 brief section 8.1). Every value in",
+    "the produced manifest is read out of fable-trading at freeze time -- nothing",
+    "here carries a number, only where to find it. If a path moves, the freeze",
+    "fails loudly instead of silently freezing a stale figure."
+  ],
+  "detection_class": "ma_dense_core",
+  "direction_scope": "short_pipeline",
+  "window_protocol": {
+    "name": "owner_gold_center_crop_w12_19",
+    "window_lengths": [12, 13, 14, 15, 16, 17, 18, 19],
+    "owner_decision": "2026-08-12 owner chose to keep R1's dynamic W12-19 for Dataset V3 so the first R3 round changes data only; the V5 brief's literal W=30 belongs to the older P1 dense_start lineage.",
+    "known_limitation": "center-crop keeps the core near the middle; left/right position coverage cannot be fixed in this round and must be reported, not claimed."
+  },
+  "weights": {
+    "stage_a_base": "analysis/output/lsv2_stagea/owner_lsv2_stagea_randomcrop_v1_cold/weights/best.pt",
+    "baseline_v1_ft": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/weights/best.pt",
+    "r1": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/weights/best.pt",
+    "r2": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r2_ownerconfirmed_ft/weights/best.pt",
+    "official_pretrained": "models/yolo11s.pt"
+  },
+  "training_recipe_source": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/args.yaml",
+  "recipe_keys": [
+    "epochs", "patience", "batch", "imgsz", "seed", "optimizer", "rect", "deterministic",
+    "augment", "hsv_h", "hsv_s", "hsv_v", "degrees", "translate", "scale", "shear",
+    "perspective", "flipud", "fliplr", "mosaic", "mixup", "cutmix", "copy_paste", "erasing"
+  ],
+  "static_metrics": {
+    "baseline_v1_ft": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_v1_ft/mac_val_metrics.json",
+    "r1": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r1_ft/mac_val_metrics.json",
+    "r2": "analysis/output/lsv2_stageb/owner_lsv2_short_gold_center_hardneg_r2_ownerconfirmed_ft/mac_val_metrics.json"
+  },
+  "datasets": {
+    "gold_center_v1": "datasets/owner_short_gold_center_v1",
+    "gold_center_hardneg_r1": "datasets/owner_short_gold_center_hardneg_r1",
+    "gold_center_hardneg_r2": "datasets/owner_short_gold_center_hardneg_r2_ownerconfirmed"
+  },
+  "gold_geometry_source": "analysis/output/owner_side_review/review_sheet.csv",
+  "continuous_canary": {
+    "am": {
+      "baseline_v1_ft": "analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/merged_baseline/scan_summary.json",
+      "r1": "analysis/output/owner_short_gold_center_preholdout_canary_20260503_v1/merged_hardneg/scan_summary.json"
+    },
+    "pm": {
+      "r1": "analysis/output/owner_short_gold_center_preholdout_canary_20260503_pm_v1/merged_r1/scan_summary.json",
+      "r2": "analysis/output/owner_short_gold_center_preholdout_canary_20260503_pm_v1/merged_r2/scan_summary.json"
+    }
+  },
+  "canary_contract_keys": [
+    "protocol", "latest_bar", "replay_start_exclusive", "hours", "window_lengths",
+    "confidence", "nms_iou", "event_gap_bars", "bar_endpoints", "window_exposures",
+    "evaluation_scope", "holdout_use_number"
+  ],
+  "owner_review_packs": {
+    "hardneg_review200_v1": "analysis/output/owner_short_train_hardneg_review200_v1/owner_review_summary.json",
+    "positive_retrieval100_v1": "analysis/output/owner_short_train_positive_retrieval100_v1/owner_review_summary.json",
+    "hardneg_expansion200_v2": "analysis/output/owner_short_train_hardneg_expansion200_v2/owner_review_summary.json",
+    "hardneg_newblocks200_v3": "analysis/output/owner_short_train_hardneg_newblocks200_v3/owner_review_summary.json",
+    "semantic_review200_v2": "analysis/output/local_signal_v2_positive_semantic_review200_v2/owner_review_summary.json",
+    "early_frontier_review300_v1": "analysis/output/local_signal_v2_early_frontier_review300_v1/owner_review_summary.json"
+  }
+}
