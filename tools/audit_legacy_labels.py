@@ -34,7 +34,9 @@ from yoyo.datasets.legacy_audit import (
     classify_hard_negative,
     classify_positive,
     classify_review_event,
+    intersects_owner_gold_box,
     outcome_alignment,
+    owner_box_spans,
     parse_time,
     tally,
 )
@@ -204,7 +206,13 @@ def audit(source_config: Path, out_path: Path, rows_path: Path) -> dict[str, Any
                         "symbol": row["symbol"], "split": row["split"],
                         "win_len": row.get("win_len"), "candidate_kind": row.get("candidate_kind")},
                      **classify_hard_negative(row, owner_no_events)})
+    spans = owner_box_spans(positives)
     for event in events:
+        window_end = parse_time(event["decision_time"])
+        window_start = window_end - BAR * (int(event.get("window_len") or 12) - 1)
+        event["intersects_owner_gold_box"] = intersects_owner_gold_box(
+            str(event["symbol"]), window_start, window_end, spans
+        )
         verdict_row = {**event}
         verdict_row.update(classify_review_event(event, train_end, val_start))
         forward = returns.get(event["sample_id"])
@@ -273,6 +281,12 @@ def audit(source_config: Path, out_path: Path, rows_path: Path) -> dict[str, Any
         ),
         "owner_yes_awaiting_box_review": sum(
             1 for row in review_rows if row["migration"] == "REBOX_REQUIRED"
+        ),
+        "events_overlapping_owner_gold_box": sum(
+            1 for row in review_rows if row.get("intersects_owner_gold_box")
+        ),
+        "pack_guard_flag_true": sum(
+            1 for row in review_rows if row.get("touches_owner_box_guard")
         ),
         "duplicate_event_ids_across_packs": len(duplicate_events),
         "conflicting_duplicate_verdicts": sorted(conflicting),

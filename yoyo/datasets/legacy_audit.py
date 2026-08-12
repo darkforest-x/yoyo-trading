@@ -117,12 +117,15 @@ def classify_review_event(
     """Owner review verdicts: NO is directly usable, YES is class-only."""
     verdict = str(row.get("verdict"))
     decision = parse_time(row["decision_time"])
-    if row.get("touches_owner_box_guard"):
+    if row.get("touches_owner_box_guard") or row.get("intersects_owner_gold_box"):
+        # Recomputed here rather than trusted from the pack: the packs' own guard
+        # flag is false for all 1,200 events, yet ten of them do overlap a gold
+        # box once the spans are rebuilt from the positive manifest.
         return {
             "migration": MOVE_TO_IGNORE,
             "class_status": CLASS_IGNORE,
             "box_status": BOX_MODEL_PROPOSED,
-            "reason": "event overlaps an Owner gold box guard",
+            "reason": "event window overlaps an Owner gold box plus guard",
         }
     if decision >= val_start:
         return {
@@ -158,6 +161,47 @@ def classify_review_event(
         "box_status": BOX_MODEL_PROPOSED,
         "reason": f"Owner asked for a re-box ({verdict})",
     }
+
+
+def owner_box_spans(
+    positives: Iterable[dict[str, Any]], bar_minutes: int = 15, guard_bars: int = 12
+) -> dict[str, list[tuple[datetime, datetime]]]:
+    """Absolute time span of every original Owner box, widened by the guard.
+
+    Rebuilt from the positive manifest rather than read off a flag, because the
+    packs' own ``touches_owner_box_guard`` is false everywhere and still misses
+    real overlaps.
+    """
+    from datetime import timedelta
+
+    bar = timedelta(minutes=bar_minutes)
+    spans: dict[str, list[tuple[datetime, datetime]]] = {}
+    for row in positives:
+        source = row.get("source_owner_global")
+        if not source:
+            continue
+        window_start = int(row["win_start"])
+        start_time = parse_time(row["start_time"])
+        box_start, box_end = (int(value) for value in source)
+        spans.setdefault(str(row["symbol"]), []).append(
+            (
+                start_time + (box_start - window_start) * bar - guard_bars * bar,
+                start_time + (box_end - window_start) * bar + guard_bars * bar,
+            )
+        )
+    return spans
+
+
+def intersects_owner_gold_box(
+    symbol: str,
+    window_start: datetime,
+    window_end: datetime,
+    spans: dict[str, list[tuple[datetime, datetime]]],
+) -> bool:
+    return any(
+        window_start <= box_end and box_start <= window_end
+        for box_start, box_end in spans.get(symbol, ())
+    )
 
 
 def outcome_alignment(verdict: str, forward_return_bp: float | None) -> str:

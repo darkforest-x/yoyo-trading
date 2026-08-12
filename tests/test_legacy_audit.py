@@ -98,3 +98,37 @@ def test_outcome_alignment_marks_contradiction_as_the_informative_case() -> None
     assert outcome_alignment("NO", 80.0) == "agrees_with_outcome"
     assert outcome_alignment("NO", -120.0) == "contradicts_outcome"
     assert outcome_alignment("YES", None) == "unknown"
+
+
+def test_gold_box_overlap_is_recomputed_not_trusted() -> None:
+    """The packs' own guard flag is false everywhere; the recomputed span still bites."""
+    from yoyo.datasets.legacy_audit import intersects_owner_gold_box, owner_box_spans
+
+    spans = owner_box_spans(
+        [
+            {
+                "symbol": "ETH_USDT_SWAP",
+                "win_start": 100,
+                "start_time": "2026-01-01T00:00:00+00:00",
+                "source_owner_global": [104, 108],
+            }
+        ],
+        guard_bars=12,
+    )
+    box_start, box_end = spans["ETH_USDT_SWAP"][0]
+    assert intersects_owner_gold_box("ETH_USDT_SWAP", box_start, box_end, spans)
+    far_start = datetime(2026, 2, 1, tzinfo=timezone.utc)
+    assert not intersects_owner_gold_box(
+        "ETH_USDT_SWAP", far_start, far_start, spans
+    )
+    assert not intersects_owner_gold_box("SOL_USDT_SWAP", box_start, box_end, spans)
+
+
+def test_recomputed_overlap_sends_an_owner_no_to_ignore() -> None:
+    result = classify_review_event(
+        review("2026-01-15T00:00:00+00:00", "NO", intersects_owner_gold_box=True),
+        TRAIN_END,
+        VAL_START,
+    )
+    assert result["migration"] == "MOVE_TO_IGNORE"
+    assert "gold box" in result["reason"]
