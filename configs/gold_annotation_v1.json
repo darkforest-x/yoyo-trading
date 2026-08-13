@@ -1,0 +1,16 @@
+{
+  "protocol": "yoyo_gold_annotation_v1_20260813",
+  "timeframe": "15m",
+  "local_window_length": 30,
+  "context_pre_bars": 50,
+  "context_post_bars": 120,
+  "core_left_frac_min": 0.25,
+  "core_left_frac_max": 0.35,
+  "box_rule": "full_wicks_plus_six_ma",
+  "box_pad_frac": 0.04,
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "batch_size": 30,
+  "feature_stack": "SMA20/60/120 + EMA20/60/120",
+  "no_future_filter_on_candidates": true,
+  "no_confidence_prescreen": true
+}

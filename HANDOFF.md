@@ -1,10 +1,18 @@
 # HANDOFF — 当前真相
 
-> 合同：`docs/DATASET_CONTRACT.md` · 协议：`docs/EXPERIMENT_PROTOCOL.md` /
-> `docs/EVALUATION_PROTOCOL.md` · 复用：`docs/ASSET_REUSE_MAP.md` · 纪律：`CLAUDE.md`
+> 合同：`docs/DATASET_CONTRACT.md` · 标注：`docs/GOLD_ANNOTATION_GUIDE.md`
+
+## 现在做什么
+
+人工 Gold 标注系统（Label Studio V1）已落地。不训练。
+
+- 任务 JSON：`datasets/gold_labelstudio_v1/tasks.json`（30 张双图）
+- 配置：`configs/labelstudio_gold_v1.xml`
+- 启动 / 导入 / 转换：见 `docs/GOLD_ANNOTATION_GUIDE.md`
+- 示例 Gold：`datasets/gold_v1_demo.jsonl`（10 条）
+- 测试：`PYTHONPATH=. python3 -m pytest tests/test_gold_annotation.py -q`（13 passed）
 
 ---
-
 
 ## 2026-08-13 — 纠偏：严格按文档，V3.1 降为下一轮
 

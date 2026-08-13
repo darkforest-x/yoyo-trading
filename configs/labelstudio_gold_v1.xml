@@ -1,0 +1,23 @@
+<View>
+  <Header value="P / N / I 判类别。POSITIVE 后在下方局部图点 START(1) 和 END(2)。"/>
+  <View style="display:flex;gap:16px;align-items:flex-start;">
+    <View style="flex:1;min-width:0;">
+      <Header value="整体走势参考图，仅用于人工判断，不是模型输入"/>
+      <Image name="context" value="$context_image" zoom="true" zoomControl="true"/>
+    </View>
+    <View style="flex:1;min-width:0;">
+      <Header value="模型真实输入，只能看到 decision 及以前"/>
+      <Image name="local" value="$local_image" zoom="true" zoomControl="true"/>
+    </View>
+  </View>
+  <Choices name="shape" toName="local" choice="single" showInLine="true">
+    <Choice value="POSITIVE" hotkey="p"/>
+    <Choice value="NEGATIVE" hotkey="n"/>
+    <Choice value="IGNORE" hotkey="i"/>
+  </Choices>
+  <KeyPointLabels name="core" toName="local" strokeWidth="4">
+    <Label value="START" background="#1b7f3a" hotkey="1"/>
+    <Label value="END" background="#b42318" hotkey="2"/>
+  </KeyPointLabels>
+  <TextArea name="notes" toName="local" placeholder="可选备注" rows="1" maxSubmissions="1"/>
+</View>
