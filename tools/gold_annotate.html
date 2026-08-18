@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>Gold 标注</title>
+<style>
+  html, body { margin: 0; height: 100%; font-family: -apple-system, sans-serif; background: #ecebe6; }
+  header { height: 36px; padding: 0 12px; background: #111; color: #fff; display: flex; align-items: center; gap: 16px; }
+  #work { height: calc(100% - 36px - 132px); display: flex; gap: 10px; padding: 8px 12px; box-sizing: border-box; }
+  .col { flex: 1 1 50%; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+  .cap { margin: 0 0 4px; font-size: 12px; color: #444; flex: 0 0 auto; }
+  #ctx { flex: 1 1 auto; width: 100%; min-height: 0; object-fit: contain; object-position: top center; background: #fff; border: 1px solid #bbb; }
+  #stage { flex: 1 1 auto; position: relative; min-height: 0; background: #fff; border: 2px solid #333; cursor: ew-resize; }
+  #local { width: 100%; height: 100%; object-fit: contain; object-position: top center; display: block; pointer-events: none; }
+  #shade { position: absolute; top: 0; background: rgba(255, 196, 0, .30);
+           border-left: 5px solid #1b7f3a; border-right: 5px solid #c62828; pointer-events: none; display: none; }
+  footer { position: fixed; left: 0; right: 0; bottom: 0; height: 132px; background: #fff; border-top: 2px solid #111;
+           display: flex; align-items: center; gap: 10px; padding: 8px 12px; box-sizing: border-box; }
+  .step { display: flex; align-items: center; gap: 6px; background: #f4f4ee; padding: 6px; border-radius: 8px; }
+  .step b { width: 36px; }
+  .step button { width: 64px; height: 64px; font-size: 32px; border: 0; background: #ddd; border-radius: 8px; cursor: pointer; }
+  .step .n { width: 40px; text-align: center; font-size: 26px; font-weight: 800; }
+  footer .act { height: 64px; min-width: 88px; font-size: 20px; border: 0; border-radius: 8px; cursor: pointer; color: #fff; }
+  #p { background: #1b7f3a; }
+  #neg { background: #c62828; }
+  #ign { background: #666; }
+  #prev, #next { background: #ddd; color: #111; }
+  #live { margin-left: auto; font-size: 18px; font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Gold 标注</strong>
+  <span id="progress">载入中…</span>
+  <button id="exp" style="margin-left:auto;height:28px;">导出全部标注 JSON</button>
+  <span id="flash"></span>
+</header>
+<div id="work">
+  <div class="col">
+    <p class="cap">左：参考图（含未来）</p>
+    <img id="ctx" alt="context"/>
+  </div>
+  <div class="col">
+    <p class="cap">右：模型输入。在这张图上左右拖，或用底部 ＋ －</p>
+    <div id="stage"><img id="local" alt="local"/><div id="shade"></div></div>
+  </div>
+</div>
+<footer>
+  <button class="act" id="prev">←</button>
+  <div class="step">
+    <b>起点</b>
+    <button type="button" id="sm">－</button>
+    <span class="n" id="sn">10</span>
+    <button type="button" id="sp">＋</button>
+  </div>
+  <div class="step">
+    <b>终点</b>
+    <button type="button" id="em">－</button>
+    <span class="n" id="en">16</span>
+    <button type="button" id="ep">＋</button>
+  </div>
+  <button class="act" id="p">正 P</button>
+  <button class="act" id="neg">负 N</button>
+  <button class="act" id="ign">I</button>
+  <button class="act" id="next">→</button>
+  <div id="live">起点 10 — 终点 16</div>
+</footer>
+<script>
+const N=30, MARGIN=12, FOOTER=56/798;
+let tasks=[], idx=0, a=10, b=16, drag=false, ready=false;
+const saved={};
+function $(id){ return document.getElementById(id); }
+function clamp(v){ return Math.max(0, Math.min(N-1, v|0)); }
+function flash(t){ $("flash").textContent = t; }
+function shownBox(img){
+  const nw=img.naturalWidth||1280, nh=img.naturalHeight||798;
+  const cw=img.clientWidth||1, ch=img.clientHeight||1;
+  const scale=Math.min(cw/nw, ch/nh);
+  const w=nw*scale, h=nh*scale;
+  return {left:(cw-w)/2, top:0, width:w, height:h, nat:nw};
+}
+function xAt(bar, box){
+  return box.left + (MARGIN + bar/(N-1)*(box.nat-2*MARGIN)) * (box.width/box.nat);
+}
+function snap(el, clientX){
+  const img=$("local");
+  const box=shownBox(img);
+  const r=el.getBoundingClientRect();
+  const x=clientX-r.left;
+  const rel=(x-box.left-MARGIN*box.width/box.nat)/Math.max(box.width-2*MARGIN*box.width/box.nat,1);
+  return clamp(Math.round(rel*(N-1)));
+}
+function paint(){
+  if(a>b){ const t=a; a=b; b=t; }
+  $("sn").textContent=a; $("en").textContent=b;
+  $("live").textContent="起点 "+a+" — 终点 "+b+"（旧工具闭区间，含两端）";
+  const img=$("local"), sh=$("shade");
+  const box=shownBox(img);
+  sh.style.display="block";
+  sh.style.left=xAt(a,box)+"px";
+  sh.style.width=Math.max(10, xAt(b,box)-xAt(a,box))+"px";
+  sh.style.top=box.top+"px";
+  sh.style.height=Math.max(8, box.height*(1-FOOTER))+"px";
+}
+function show(){
+  if(!tasks.length){ flash("没有任务"); return; }
+  const t=tasks[idx].data;
+  const rec=saved[t.gold_id];
+  if(rec && rec.local_start_i!=null){ a=rec.local_start_i; b=rec.local_end_i; }
+  $("progress").textContent=(idx+1)+" / "+tasks.length+"  已存 "+Object.keys(saved).length;
+  $("ctx").src="/img/context/"+t.gold_id+".png";
+  $("local").onload=paint;
+  $("local").src="/img/local/"+t.gold_id+".png";
+  paint();
+  flash(rec ? ("本张已存 "+rec.shape_label) : "未保存");
+}
+function nudge(which,d){
+  if(which==="a") a=clamp(a+d); else b=clamp(b+d);
+  if(a>b){ if(which==="a") b=a; else a=b; }
+  paint();
+  flash("已调到 "+a+" → "+b);
+}
+function save(shape){
+  if(!ready){ flash("还在载入"); return; }
+  const t=tasks[idx].data;
+  fetch("/api/save",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({gold_id:t.gold_id,shape_label:shape,local_start_i:a,local_end_i:b})})
+    .then(r=>r.json()).then(d=>{
+      if(!d.ok){ flash(d.error||"保存失败"); return; }
+      saved[t.gold_id]={shape_label:shape,local_start_i:a,local_end_i:b};
+      flash("已存 "+shape+"  "+a+"→"+b);
+      if(idx<tasks.length-1){ idx++; show(); }
+    }).catch(e=>flash("网络失败 "+e));
+}
+$("sm").onclick=()=>nudge("a",-1);
+$("sp").onclick=()=>nudge("a",1);
+$("em").onclick=()=>nudge("b",-1);
+$("ep").onclick=()=>nudge("b",1);
+$("p").onclick=()=>save("POSITIVE");
+$("neg").onclick=()=>save("NEGATIVE");
+$("ign").onclick=()=>save("IGNORE");
+$("prev").onclick=()=>{ if(idx>0){ idx--; show(); } };
+$("next").onclick=()=>{ if(idx<tasks.length-1){ idx++; show(); } };
+const stage=$("stage");
+stage.addEventListener("mousedown",ev=>{ drag=true; a=b=snap(stage,ev.clientX); paint(); flash("拖到终点再松手"); ev.preventDefault(); });
+window.addEventListener("mousemove",ev=>{ if(!drag) return; b=snap(stage,ev.clientX); paint(); });
+window.addEventListener("mouseup",()=>{ if(drag){ drag=false; flash("已选 "+a+" → "+b); } });
+window.addEventListener("resize",paint);
+document.addEventListener("keydown",ev=>{
+  const k=ev.key.toLowerCase();
+  if(k==="a") nudge("a",-1);
+  else if(k==="s") nudge("a",1);
+  else if(k==="k") nudge("b",-1);
+  else if(k==="l") nudge("b",1);
+  else if(k==="p") save("POSITIVE");
+  else if(k==="n") save("NEGATIVE");
+  else if(k==="i") save("IGNORE");
+  else if(ev.key==="ArrowLeft" && idx>0){ idx--; show(); }
+  else if(ev.key==="ArrowRight" && idx<tasks.length-1){ idx++; show(); }
+});
+$("exp").onclick=()=>{
+  fetch("/api/export").then(r=>r.json()).then(d=>{
+    const blob=new Blob([JSON.stringify(d,null,2)],{type:"application/json"});
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="gold_v1_export.json";
+    a.click();
+    flash("已导出 "+d.n+" 条");
+  }).catch(e=>flash("导出失败 "+e));
+};
+fetch("/api/state").then(r=>r.json()).then(d=>{
+  tasks=d.tasks||[];
+  Object.assign(saved,d.saved||{});
+  ready=true;
+  flash("已载入 "+tasks.length+" 张");
+  show();
+}).catch(e=>flash("载入失败 "+e));
+</script>
+</body>
+</html>

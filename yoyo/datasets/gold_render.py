@@ -119,8 +119,17 @@ def render_context(
     pre_bars: int = 50,
     post_bars: int = 120,
     out_path: Path | None = None,
+    entry_bar: int | None = None,
+    exit_bar: int | None = None,
+    entry_price: float | None = None,
+    tp_price: float | None = None,
+    sl_price: float | None = None,
 ) -> dict[str, Any]:
-    """Reference chart. Future bars after decision are allowed; holdout is not."""
+    """Reference chart. Future bars after decision are allowed; holdout is not.
+
+    Optional trade overlays (entry/TP/SL/exit) are review-only. Default None
+    keeps gold-annotation charts unchanged.
+    """
     anchor = int(core_start) if core_start is not None else int(decision_bar) - 6
     lo = max(0, anchor - pre_bars)
     hi = min(len(frame) - 1, int(core_end or decision_bar) + post_bars)
@@ -153,11 +162,39 @@ def render_context(
         cs, ce = int(core_start) - lo, int(core_end) - lo
         if 0 <= cs <= ce < len(x):
             ax.axvspan(x[cs] - width / 2, x[ce] + width / 2, color="#90a4ae", alpha=0.18)
-    ax.set_title(
-        "context reference only — not model input   cyan/dash=decision   purple=after decision",
-        loc="left",
-        fontsize=10,
-    )
+    overlays = any(v is not None for v in (entry_bar, exit_bar, entry_price, tp_price, sl_price))
+    if entry_bar is not None:
+        loc = int(entry_bar) - lo
+        if 0 <= loc < len(x):
+            ax.axvline(x[loc], color="#c62828", lw=1.6, label="entry")
+    if exit_bar is not None:
+        loc = int(exit_bar) - lo
+        if 0 <= loc < len(x):
+            ax.axvline(x[loc], color="#6a1b9a", lw=1.5, ls=":", label="exit")
+    if entry_price is not None:
+        ax.axhline(float(entry_price), color="#1565c0", lw=1.1, ls="--", label="entry px")
+    if tp_price is not None:
+        ax.axhline(float(tp_price), color="#2e7d32", lw=1.1, label="TP")
+    if sl_price is not None:
+        ax.axhline(float(sl_price), color="#c62828", lw=1.1, label="SL")
+    if overlays:
+        y_lo = float(np.nanmin(np.concatenate([o, h, low, c])))
+        y_hi = float(np.nanmax(np.concatenate([o, h, low, c])))
+        for col in ALL_MA_COLS:
+            vals = segment[col].to_numpy(float)
+            if np.isfinite(vals).any():
+                y_lo = min(y_lo, float(np.nanmin(vals)))
+                y_hi = max(y_hi, float(np.nanmax(vals)))
+        pad = (y_hi - y_lo) * 0.04 if y_hi > y_lo else 1.0
+        ax.set_ylim(y_lo - pad, y_hi + pad)
+        ax.legend(loc="upper left", fontsize=8, framealpha=0.85)
+        title = (
+            "review context (future OK, not model input)   "
+            "cyan=decision  red-v=entry  green=TP  red-h=SL  dotted=exit  purple=after decision"
+        )
+    else:
+        title = "context reference only — not model input   cyan/dash=decision   purple=after decision"
+    ax.set_title(title, loc="left", fontsize=10)
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%m-%d %H:%M"))
     ax.grid(alpha=0.15)
     fig.autofmt_xdate(rotation=25)

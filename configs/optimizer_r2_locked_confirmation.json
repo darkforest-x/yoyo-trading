@@ -1,0 +1,14 @@
+{
+  "stage": "r2_locked_inner_confirmation",
+  "variable_under_test": "horizon",
+  "locked_config": {
+    "threshold": 0.3,
+    "tp_atr": 5.0,
+    "sl_atr": 3.0,
+    "horizon": 96
+  },
+  "configs": [
+    {"threshold": 0.5, "tp_atr": 5.0, "sl_atr": 2.0, "horizon": 72},
+    {"threshold": 0.3, "tp_atr": 5.0, "sl_atr": 3.0, "horizon": 96}
+  ]
+}

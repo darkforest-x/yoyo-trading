@@ -74,6 +74,7 @@ def main() -> int:
             continue
         local_path = img_l / f"{gid}.png"
         ctx_path = img_c / f"{gid}.png"
+        print(f"render {len(tasks)+1}/{len(rows)} {gid}", flush=True)
         local = render_local(frame, int(row["decision_bar"]), CFG["local_window_length"], local_path)
         ctx = render_context(
             frame,

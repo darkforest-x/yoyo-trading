@@ -5,18 +5,18 @@ Owner 用完整走势判断形态；模型只学 decision 及以前的 W30 局�
 
 ## 启动 Label Studio
 
-本机若尚未安装（当前 pip 因 `psycopg2` 可能失败），用官方方式之一：
+本机已经装过：`fable-trading/.venv_label_studio`（label-studio **1.13.1**，2025-07-10）。不要再 pip。
 
 ```bash
-# 独立环境，不要装进 yoyo 包依赖
-python3 -m venv ~/.venv-labelstudio
-~/.venv-labelstudio/bin/pip install label-studio
 LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true \
 LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/Users/zhangzc/yoyo-trading \
-~/.venv-labelstudio/bin/label-studio start --port 8080
+/Users/zhangzc/fable-trading/.venv_label_studio/bin/label-studio start \
+  --internal-host 127.0.0.1 --port 8081
 ```
 
-浏览器打开 `http://127.0.0.1:8080/`。
+或：`bash /Users/zhangzc/fable-trading/scripts/start_label_studio_review.sh`
+
+浏览器打开 `http://127.0.0.1:8081/`。
 
 ## 导入任务
 

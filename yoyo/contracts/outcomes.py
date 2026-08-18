@@ -183,3 +183,9 @@ def resolve_barrier_outcome(
 # strategies. Moved from src/judgment/labeling.py on 2026-08-03.
 HORIZON_BARS = 72
 ATR_PCT_MIN = 0.0015
+
+# Names the rule that applies ATR_PCT_MIN: the floor is read at the decision bar,
+# before any threshold gap. Candidate rows carry it so a consumer can tell a row
+# built under this rule from one built before the floor existed -- the producer and
+# every downstream validator declared the same literal separately until 2026-08-14.
+ATR_ELIGIBILITY_PROTOCOL = "decision_atr_pct_floor_v1"

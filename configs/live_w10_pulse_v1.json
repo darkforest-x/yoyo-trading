@@ -1,0 +1,62 @@
+{
+  "protocol": "live_w10_pulse_v1",
+  "schema_version": 1,
+  "side": "short",
+  "_owner_note": "阈值与新鲜度门是 Owner 决策(CLAUDE.md「不确定时停下来问」)。此处的值来自 R7 preholdout 选出的候选,状态是 preholdout_candidate_not_promoted,未经 Owner 确认前只应用于 paper。",
+
+  "l1": {
+    "weights": "runs/classify/fixed_w10_gold500_short_ownerhn_v1_cls_local_mps_b8_fg/weights/best.pt",
+    "weights_sha256": "f953797c58c0551ae6bafec7bf37d302d35ba3b2e0eb694ab0c8278fff265fce",
+    "threshold": 0.25,
+    "threshold_source": "R7 candidate_parameters.threshold (preholdout, not promoted)",
+    "renderer": "yoyo.datasets.legacy_gold_migration.renderer.render_w10",
+    "renderer_overlay": false,
+    "y_pad_frac": 0.05,
+    "transform": "white_letterbox_full_frame",
+    "imgsz": 960,
+    "window_bars": 10
+  },
+
+  "l2": {
+    "model": "experiments/fixed_w10_evolution_r5_l2_data_expansion_inner12_v1/model.txt",
+    "threshold": 0.4,
+    "threshold_source": "R7 frozen_l2_threshold (preholdout, not promoted)",
+    "feature_semantics": "side_aligned_v1",
+    "feature_count": 28
+  },
+
+  "barrier": {
+    "_note": "冻结合同,代码不得改(CLAUDE.md 铁律)。",
+    "tp_atr": 5.0,
+    "sl_atr": 2.0,
+    "horizon_bars": 72,
+    "atr_pct_min": 0.0015,
+    "entry": "next_open",
+    "same_bar_policy": "conservative_sl",
+    "gap_policy": "barrier_price",
+    "return_convention": "linear_short",
+    "min_gap_bars": 18
+  },
+
+  "costs": {
+    "net_maker": 0.0006,
+    "net_taker": 0.001
+  },
+
+  "live": {
+    "max_tip_age_bars": 2,
+    "freshness_max_minutes": 30,
+    "freshness_source": "matches scripts/live_signal_tg.py and the executor/dashboard gate",
+    "target_trades": 100,
+    "max_send_per_pulse": 8,
+    "exclude_stockish": true
+  },
+
+  "safety": {
+    "paper_only": true,
+    "places_orders": false,
+    "touches_active_bundle": false,
+    "writes_forward_log": false,
+    "auto_promote": false
+  }
+}

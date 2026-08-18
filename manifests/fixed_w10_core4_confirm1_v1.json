@@ -1,0 +1,20 @@
+{
+  "task_name": "short_dense_core_w10_core4_confirm1_v2_owner_short",
+  "training_eligible": false,
+  "counts": {
+    "train/NO_SIGNAL": 1143,
+    "train/SIGNAL": 1067,
+    "val/NO_SIGNAL": 202,
+    "val/SIGNAL": 187
+  },
+  "n_images": 2599,
+  "skipped": [],
+  "duplicate_image_sha_across_splits": 0,
+  "holdout_rows": 0,
+  "yoyo_head": "41e183cdba68a89fdef9d7f743837355a2a55612",
+  "fable_head": "9170987dcfc032856aa6661e72f074adbde38b5a",
+  "yoyo_dirty_lines": 2667,
+  "config_sha256": "6e229684c6580b6d020fdf87f6136bbba013fb98c45a954f5d01ae6b869e6342",
+  "builder_commit": "41e183cdba68a89fdef9d7f743837355a2a55612",
+  "gold_events_sha256": "aca86682a927996665da7be3216747da67ad533a13f253dcb9f3ebcca146768c"
+}

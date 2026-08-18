@@ -23,8 +23,9 @@ def main() -> int:
         default=ROOT / "datasets/dataset_v3_2_reviewed_core_v1/manifest.jsonl",
     )
     parser.add_argument("--out", type=Path, default=ROOT / "datasets/gold_candidates_v1.jsonl")
-    parser.add_argument("--n", type=int, default=30)
+    parser.add_argument("--n", type=int, default=30, help="0 = use the whole usable pool")
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--positives-only", action="store_true")
     args = parser.parse_args()
     rows = [
         json.loads(line)
@@ -33,6 +34,8 @@ def main() -> int:
     ]
     usable = []
     for row in rows:
+        if args.positives_only and not row.get("class_name"):
+            continue
         decision_t = pd.Timestamp(row["decision_time"])
         if decision_t.tzinfo is None:
             decision_t = decision_t.tz_localize("UTC")
@@ -44,7 +47,7 @@ def main() -> int:
     rng = random.Random(args.seed)
     usable.sort(key=lambda r: r["sample_id"])
     rng.shuffle(usable)
-    picked = usable[: args.n]
+    picked = usable if args.n <= 0 else usable[: args.n]
     out_rows = []
     for row in picked:
         out_rows.append(

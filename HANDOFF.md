@@ -2,9 +2,106 @@
 
 > 合同：`docs/DATASET_CONTRACT.md` · 标注：`docs/GOLD_ANNOTATION_GUIDE.md`
 
+## 2026-08-13 — W10 分类 3 天 holdout 试跑（本配置第 1 次消耗）
+
+**仅 3 天 holdout 试跑，不能当验收。未 promote、未下单、未 commit、未改 render.py。**
+
+Owner 点名用刚拉的最近 3 天。数据是 `fable-trading/analysis/output/yoyo_r3a_v3gold_ft_r1_holdout_losers3d_20260813/kline_snapshot`（26 个 USDT-SWAP，UTC 2026-08-10 00:00–2026-08-13 12:00）。canonical `kline_fetched` 停在 08-05，没用。
+
+去重后 SIGNAL **126**，已平仓 **119**，maker 净 **+0.0453**、taker **−0.0023**，胜率 **31.9%**。报告：`reports/fixed_w10_core4_confirm1_v1/holdout3d_backtest.md`。
+
+---
+
+## 2026-08-13 — W10 分类已在 3060 训完（未 promote）
+
+**未 promote、未读 holdout、未 commit、未改 render.py。** patience 早停，exit=0。
+
+- 停在 **23/100**，best **epoch 3**，val top1 **91.4%** / val loss **0.248**
+- 权重：`C:\fable\runs\classify\fixed_w10_core4_confirm1_v1_cls\weights\best.pt`
+- 日志：`C:\fable\logs\fixed_w10_core4_confirm1_v1_cls.log`
+- test **没跑**。`training_eligible` 仍是 false（DIRECT=0）
+
+---
+
+## 2026-08-13 — freeze 固定 W10 / Core4 / Confirm1 金标
+
+**training_eligible: false。已 freeze。当时未训练、未 promote、未读 holdout。未 commit。**
+
+冻了 SIGNAL **1,247** / NO_SIGNAL **1,402**。训练图 **2,649**（train 1,849 · val 350 · test 450）。  
+图在 `~/fable-trading/datasets/fixed_w10_core4_confirm1_v1/classification/`。  
+manifest SHA `20686feba41d15b82e34109402840c2d640fe1e2daea0392b35e1ea79320a7fc`。
+
+不能开训：协议 17.6 DIRECT 抽检错误率未知（迁移 DIRECT=0）。其余门已过。  
+排除 CONFLICT 44、无核 A 未当正例、17 条竞争核 SIGNAL。细节：`reports/fixed_w10_core4_confirm1_v1/freeze.md`。  
+复审页 PID 32906 未杀。未改 `datasets/gold_v1.jsonl`，未改 `render.py`。
+
+---
+
+## 2026-08-13 — 补 NO_SIGNAL 负例进复审 state（未 freeze）
+
+**training_eligible: false。未 freeze、未训练、未 promote、未读 holdout。未 commit。**
+
+Owner 授权把已有负例池收进 `review/state.jsonl`，不再一张张标。Gold 仍为 **0 / 0**。
+
+| 项 | 值 |
+|---|---|
+| 新收 N | **1,395**（易负例池 1,256 + Owner 一键无核 139） |
+| 保留已有 N | 3 |
+| 未改已有 A | 1,269 |
+| 现在 A / N | **1,269 / 1,398** |
+| 跳过 holdout / CONFLICT | **0 / 44** |
+| 冻结 SIGNAL / NO_SIGNAL | **0 / 0** |
+
+备份 `state.jsonl.bak.20260813T120319413033Z`。未改 `datasets/gold_v1.jsonl`。细节：`reports/fixed_w10_core4_confirm1_v1/no_signal_ingest.md`。下一步仍等 Owner 说 freeze。
+
+---
+
+## 2026-08-13 — Owner「全部接受」建议 4 根核（未 freeze）
+
+**training_eligible: false。未 freeze、未训练、未 promote、未读 holdout。未 commit。**
+
+Owner 授权的是批量接受 `suggest_four_bar`，不是冻结金标。Gold 仍为 **0 / 0**。
+
+| 项 | 值 |
+|---|---|
+| 新接受 A（建议 4 根核） | **1,233** |
+| 保留已有 4 根核 A | **34** |
+| 纠正误 A 负例 → N / NO_SIGNAL | **3**（2Z 20251017、ACH 20251113、ADA 20251015） |
+| 跳过 CONFLICT | **44**（其中 1 条有建议核：ALLO 20251215） |
+| 跳过无建议核 SIGNAL | **10** |
+| 跳过其余 NO_SIGNAL | **140** |
+| 复审 state | **1,270**（1,267 A + 3 N） |
+| 冻结 SIGNAL / NO_SIGNAL | **0 / 0** |
+
+写入 `~/fable-trading/datasets/fixed_w10_core4_confirm1_v1/review/state.jsonl`（备份 `state.jsonl.bak.20260813T114549915725Z`）。未改 `datasets/gold_v1.jsonl`。下一步等 Owner 说 freeze。
+
+---
+
+## 2026-08-13 — 旧金标 → 固定 W10 / Core4 / Confirm1
+
+**training_eligible: false。未训练、未 promote、未读 holdout。未 commit。**
+
+把已有标注迁成事件级半开区间，而不是重标 1,345 张。8768 的 24 条全部保住。
+
+| 项 | 值 |
+|---|---|
+| DIRECT / 一键复审 / 手调 / 冲突 / IGNORE | **0 / 152 / 1,268 / 44 / 2,259** |
+| 冻结 SIGNAL / NO_SIGNAL | 0 / 0 |
+| 8768 24 条 | 24/24 无损；23 条不是 4 根 → MANUAL_ADJUST |
+| Dataset manifest SHA | `d93626e7637fb6add6a2eead65ff517910aa0af58917661affa47cf9a395aef0` |
+
+配置：`configs/fixed_w10_core4_confirm1_v1.json`  
+数据树：`~/fable-trading/datasets/fixed_w10_core4_confirm1_v1/`  
+结论页：`reports/fixed_w10_core4_confirm1_v1/migration_summary.md`  
+复审队列 1,464 条：`review/queue.jsonl`
+
+复审页：`http://127.0.0.1:8768/`。保存写到 `fable-trading/datasets/fixed_w10_core4_confirm1_v1/review/state.jsonl`，不写 `gold_v1.jsonl`。不要开训、不要 freeze。
+
+---
+
 ## 现在做什么
 
-人工 Gold 标注系统（Label Studio V1）已落地。不训练。
+W10 分类已在 3060 上训。等这轮跑完再取回 `best.pt` 做 val。不要 promote、不要读 holdout。
 
 - 任务 JSON：`datasets/gold_labelstudio_v1/tasks.json`（30 张双图）
 - 配置：`configs/labelstudio_gold_v1.xml`

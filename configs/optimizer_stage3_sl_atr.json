@@ -1,0 +1,19 @@
+{
+  "stage": "stage3_sl_atr",
+  "variable_under_test": "sl_atr",
+  "locked_config": {
+    "threshold": 0.55,
+    "tp_atr": 5.0,
+    "sl_atr": 2.0,
+    "horizon": 72
+  },
+  "configs": [
+    {"threshold": 0.5, "tp_atr": 5.0, "sl_atr": 2.0, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 1.0, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 1.5, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 2.0, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 2.5, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 3.0, "horizon": 72},
+    {"threshold": 0.55, "tp_atr": 5.0, "sl_atr": 4.0, "horizon": 72}
+  ]
+}
